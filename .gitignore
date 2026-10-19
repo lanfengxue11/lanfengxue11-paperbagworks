@@ -5,3 +5,7 @@ dist
 .env.local
 .env.*.local
 .DS_Store
+*.log
+*.exe
+*.zip
+Paper-Bag-Works-Fresh-Eco-source/
