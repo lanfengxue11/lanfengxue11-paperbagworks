@@ -345,7 +345,7 @@ export default function ScenarioPage({ scenario, onBackToHome, onSelectScenario,
         <div className="scenario-container">
           <div className="cta-banner-content">
             <span className="cta-banner-badge">DIRECT FACTORY CONSULTATION</span>
-            <h2>Ready to Engineer Your Custom {scenario.heroHeading}?</h2>
+            <h2>Ready to Engineer Your {scenario.heroHeading}?</h2>
             <p>Send your target dimensions, logo artwork, or dieline requirements directly to our packaging engineers. We provide instant technical feedback and a competitive wholesale quotation within 2 hours.</p>
 
             <div className="cta-buttons-row">

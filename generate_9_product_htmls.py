@@ -394,7 +394,7 @@ def render_html_page(sc):
     # Base64 embedded assets for 100% self-contained rendering in any environment
     icon_src = get_base64_image("assets/images/paper-bag-works-icon.svg")
     img_src = get_base64_image(f"assets/images/scenarios/{os.path.basename(sc['heroImage'])}")
-    css_src = "../assets/main-PYYwp4t2.css"
+    css_src = "../assets/main-Cl430nRS.css"
     home_link = "../index.html"
     wa_msg = f"Hello Paper Bag Works, I would like to inquire about custom production for {sc['heroHeading']} (MOQ {sc['specs']['moq']})."
     encoded_wa = wa_msg.replace(" ", "%20").replace("&", "%26")
@@ -957,7 +957,7 @@ def render_html_page(sc):
       <div class="container">
         <div class="cta-banner-content">
           <span class="cta-banner-badge">DIRECT FACTORY CONSULTATION</span>
-          <h2>Ready to Engineer Your Custom {sc['heroHeading']}?</h2>
+          <h2>Ready to Engineer Your {sc['heroHeading']}?</h2>
           <p>Send your target dimensions, logo artwork, or dieline requirements directly to our packaging engineers. We provide instant technical feedback and a competitive wholesale quotation within 2 hours.</p>
 
           <div class="cta-buttons-row">
@@ -1024,7 +1024,7 @@ def render_html_page(sc):
 
 def render_products_hub_html():
     icon_src = get_base64_image("assets/images/paper-bag-works-icon.svg")
-    css_src = "./assets/main-PYYwp4t2.css"
+    css_src = "./assets/main-Cl430nRS.css"
     wa_general = "https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20would%20like%20to%20inquire%20about%20your%20Products%20Collection."
 
     cards_html = ""
