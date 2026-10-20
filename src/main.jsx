@@ -8,7 +8,24 @@ import './styles.css';
 export const NAV_ITEMS = [
   { label: 'Applications', href: '#applications' },
   { label: 'Products', href: '#products' },
-  { label: 'Custom Options', href: '#materials' },
+  { 
+    label: 'Custom Options', 
+    href: '#materials',
+    children: [
+      {
+        title: 'Paper Bag Selection',
+        subtitle: 'Curated Bag Styles, Handles & Finishes',
+        href: '#materials',
+        tag: 'Overview'
+      },
+      {
+        title: 'Size Options',
+        subtitle: 'Substrates, Popular Dimensions & 38 Sizes',
+        href: '/size-options.html',
+        tag: '38 Sizes'
+      }
+    ]
+  },
   { label: 'Our Process', href: '#process' },
   { label: 'FAQ', href: '#faq' },
 ];
@@ -165,11 +182,38 @@ function App() {
           <span><strong>PAPER</strong><em>BAG WORKS</em><small>Custom Paper Packaging</small></span>
         </a>
         <nav className={menuOpen ? 'main-nav is-open' : 'main-nav'} aria-label="Main navigation">
-          {NAV_ITEMS.map((item) => (
-            <a key={item.label} href={item.href} onClick={closeMenu}>
-              {item.label}
-            </a>
-          ))}
+          {NAV_ITEMS.map((item) => {
+            if (item.children) {
+              return (
+                <div key={item.label} className="nav-dropdown-wrapper">
+                  <a href={item.href} className="nav-dropdown-trigger" onClick={(e) => {
+                    if (window.innerWidth <= 900) {
+                      // on mobile let user click to navigate or explore
+                    }
+                  }}>
+                    <span>{item.label}</span>
+                    <ChevronDown size={13} className="dropdown-caret" />
+                  </a>
+                  <div className="nav-dropdown-menu">
+                    {item.children.map((sub) => (
+                      <a key={sub.title} href={sub.href} className="nav-dropdown-item" onClick={closeMenu}>
+                        <div className="nav-dropdown-item-header">
+                          <span className="nav-dropdown-item-title">{sub.title}</span>
+                          {sub.tag && <span className="nav-dropdown-item-tag">{sub.tag}</span>}
+                        </div>
+                        {sub.subtitle && <span className="nav-dropdown-item-sub">{sub.subtitle}</span>}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <a key={item.label} href={item.href} onClick={closeMenu}>
+                {item.label}
+              </a>
+            );
+          })}
           <a className="nav-quote" href="#quote" onClick={closeMenu}>Get a Quote <ArrowUpRight size={14} /></a>
         </nav>
         <button className="menu-toggle" type="button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen}>{menuOpen ? <X size={24} /> : <Menu size={24} />}</button>
