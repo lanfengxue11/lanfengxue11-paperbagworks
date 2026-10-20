@@ -394,7 +394,7 @@ def render_html_page(sc):
     # Base64 embedded assets for 100% self-contained rendering in any environment
     icon_src = get_base64_image("assets/images/paper-bag-works-icon.svg")
     img_src = get_base64_image(f"assets/images/scenarios/{os.path.basename(sc['heroImage'])}")
-    css_src = "../assets/main-CpBvL4lG.css"
+    css_src = "../assets/main-BvopYzWL.css"
     home_link = "../index.html"
     wa_msg = f"Hello Paper Bag Works, I would like to inquire about custom production for {sc['heroHeading']} (MOQ {sc['specs']['moq']})."
     encoded_wa = wa_msg.replace(" ", "%20").replace("&", "%26")
@@ -674,20 +674,8 @@ def render_html_page(sc):
 
     <nav class="main-nav" aria-label="Main navigation">
       <a href="{home_link}#applications">Applications</a>
-      <div class="nav-dropdown">
-        <button type="button" class="nav-dropdown-trigger">
-          Products &#9662;
-        </button>
-        <div class="dropdown-menu">
-          <span class="dropdown-header-label">9 Industry Product Sub-Pages</span>
-          <a href="{home_link}#products" class="dropdown-item" style="font-weight:700; border-bottom:1px solid var(--line); margin-bottom:4px;">
-            <span>&#128230; All Products Overview</span>
-            <span class="badge-pill">Overview</span>
-          </a>
-          {dropdown_links_html}
-        </div>
-      </div>
-      <a href="{home_link}#materials">Custom Options</a>
+      <a href="../products.html" style="color:var(--eco); font-weight:800;">Products</a>
+      <a href="../size-options.html">Custom Options</a>
       <a href="{home_link}#process">Our Process</a>
       <a href="{home_link}#faq">FAQ</a>
       <a class="nav-quote" href="{wa_link}" target="_blank" rel="noreferrer">
@@ -703,11 +691,11 @@ def render_html_page(sc):
         <div class="breadcrumbs">
           <a href="{home_link}">Home</a>
           <span>/</span>
-          <a href="{home_link}#products">Products</a>
+          <a href="../products.html">Products</a>
           <span>/</span>
           <span class="current">{sc['navTitle']}</span>
         </div>
-        <a href="{home_link}#products" class="back-link">&larr; Back to Products Overview</a>
+        <a href="../products.html" class="back-link">&larr; Back to Products Hub</a>
       </div>
     </nav>
 
@@ -1034,6 +1022,506 @@ def render_html_page(sc):
 """
     return html
 
+def render_products_hub_html():
+    icon_src = get_base64_image("assets/images/paper-bag-works-icon.svg")
+    css_src = "./assets/main-BvopYzWL.css"
+    wa_general = "https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20would%20like%20to%20inquire%20about%20your%20Products%20Collection."
+
+    cards_html = ""
+    for sc in SCENARIOS:
+        img_src = get_base64_image(f"assets/images/scenarios/{os.path.basename(sc['heroImage'])}")
+        wa_msg = f"Hello Paper Bag Works, I would like to inquire about custom production for {sc['heroHeading']} (MOQ {sc['specs']['moq']})."
+        encoded_wa = wa_msg.replace(" ", "%20").replace("&", "%26")
+        wa_link = f"https://wa.me/8613760699327?text={encoded_wa}"
+        subpage_link = f"./products/{sc['slug']}.html"
+
+        cards_html += f"""
+        <article class="hub-card-item" data-category="{sc['categoryTag'].lower()} {sc['slug']}">
+          <div class="hub-card-media" onclick="window.location.href='{subpage_link}'">
+            <img src="{img_src}" alt="{sc['heroHeading']}" class="hub-card-img" loading="lazy" />
+            <span class="hub-badge-pill">{sc['badge']}</span>
+            <span class="hub-num-badge">SCENARIO {sc['scenarioNum']}</span>
+          </div>
+          <div class="hub-card-body">
+            <div>
+              <div class="hub-card-category">{sc['categoryTag']}</div>
+              <h2 class="hub-card-title" onclick="window.location.href='{subpage_link}'">{sc['heroHeading']}</h2>
+              <p class="hub-card-desc">{sc['heroSubheading']}</p>
+              
+              <div class="hub-kw-row">
+                {"".join([f'<span class="hub-kw-tag">#{kw}</span>' for kw in sc['primaryKeywords'][:3]])}
+              </div>
+
+              <div class="hub-specs-box">
+                <div class="hub-spec-cell">
+                  <span class="hub-spec-k">Min. Order (MOQ)</span>
+                  <strong class="hub-spec-v" style="color:var(--eco); font-weight:800;">{sc['specs']['moq']}</strong>
+                </div>
+                <div class="hub-spec-cell">
+                  <span class="hub-spec-k">Substrate</span>
+                  <strong class="hub-spec-v">{sc['specs']['gsmRange'].split('/')[0]}</strong>
+                </div>
+                <div class="hub-spec-cell">
+                  <span class="hub-spec-k">Ready Sizes</span>
+                  <strong class="hub-spec-v">{len(sc['realSizes'])} Standard Dielines</strong>
+                </div>
+                <div class="hub-spec-cell">
+                  <span class="hub-spec-k">Lead Time</span>
+                  <strong class="hub-spec-v">{sc['specs']['leadTime']}</strong>
+                </div>
+              </div>
+
+              <div class="hub-dieline-snippet">
+                <span>Standard Tooling Size:</span>
+                <strong>{sc['realSizes'][0]['dimensions']}</strong>
+                <small>({sc['realSizes'][0]['label']})</small>
+              </div>
+            </div>
+
+            <div class="hub-card-actions">
+              <a href="{subpage_link}" class="hub-btn-view">
+                View Full Product Sub-Page &rarr;
+              </a>
+              <a href="{wa_link}" target="_blank" rel="noreferrer" class="hub-btn-wa">
+                <span>&#128172;</span> WhatsApp Direct Quote
+              </a>
+            </div>
+          </div>
+        </article>"""
+
+    dieline_rows = ""
+    for sc in SCENARIOS:
+        subpage_link = f"./products/{sc['slug']}.html"
+        dieline_rows += f"""
+        <tr>
+          <td>
+            <strong style="color:var(--ink);">{sc['scenarioNum']} · {sc['heroHeading'].replace('Custom ', '')}</strong>
+            <div style="font-size:11px; color:var(--muted); margin-top:2px;">{sc['badge']}</div>
+          </td>
+          <td>
+            <span style="font-weight:600; color:var(--ink);">{sc['materials'][0]['name']}</span>
+            <div style="font-size:11px; color:var(--muted);">{sc['specs']['gsmRange']}</div>
+          </td>
+          <td>
+            <strong style="font-family:monospace; color:var(--eco); font-size:13px;">{sc['realSizes'][0]['dimensions']}</strong>
+            <div style="font-size:11px; color:var(--muted);">{sc['realSizes'][0]['label']}</div>
+          </td>
+          <td>
+            <span style="font-weight:800; color:var(--eco); background:var(--eco-tint); padding:3px 8px; border-radius:4px; font-size:11.5px;">
+              {sc['specs']['moq']}
+            </span>
+          </td>
+          <td>
+            <a href="{subpage_link}" class="table-action-link">Explore &rarr;</a>
+          </td>
+        </tr>"""
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Paper Packaging Collection Wholesale | 9 Specialized Scenarios | Paper Bag Works</title>
+  <meta name="description" content="Explore Paper Bag Works 9 specialized commercial paper packaging collections: Bakery, Food Takeaway, Wellness, Retail, Luxury Gift, Fashion, Corporate, Cosmetics, and Jewelry paper bags. Direct factory export.">
+  <meta name="keywords" content="custom paper bags wholesale, branded shopping bags, kraft paper bags with handles, luxury gift packaging, bakery bags bulk, cosmetic paper packaging">
+  <link rel="canonical" href="https://www.paperbagworks.com/products.html">
+  <link rel="icon" type="image/svg+xml" href="{icon_src}">
+  <link rel="stylesheet" href="{css_src}">
+  <style>
+    :root {{
+      --eco: #22563a;
+      --eco-hover: #173f2a;
+      --eco-tint: #edf5ef;
+      --eco-line: #d1e2d7;
+      --bg-page: #fbfaf7;
+      --ink: #132018;
+      --muted: #586b60;
+      --line: #e3ede6;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }}
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{ font-family: var(--sans); background: var(--bg-page); color: var(--ink); line-height: 1.6; }}
+
+    /* Top Navigation (No Dropdown on Products) */
+    .topbar {{ position: fixed; top: 0; left: 0; right: 0; height: 68px; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--eco-line); display: flex; align-items: center; justify-content: space-between; padding: 0 5%; z-index: 100; }}
+    .brand {{ display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }}
+    .brand-icon {{ width: 32px; height: 32px; }}
+    .brand span {{ display: flex; flex-direction: column; line-height: 1.1; }}
+    .brand strong {{ font-size: 14px; letter-spacing: .08em; color: var(--eco); }}
+    .brand em {{ font-style: normal; font-size: 13px; font-weight: 800; color: var(--ink); }}
+    .brand small {{ font-size: 9px; color: var(--muted); letter-spacing: .04em; }}
+
+    .main-nav {{ display: flex; align-items: center; gap: 24px; }}
+    .main-nav a {{ color: var(--ink); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; transition: color 150ms ease; }}
+    .main-nav a:hover, .main-nav a.active {{ color: var(--eco); }}
+    .nav-quote {{ background: var(--eco); color: #fff !important; padding: 9px 16px; border-radius: 6px; font-weight: 800; text-decoration: none; transition: background 150ms ease; }}
+    .nav-quote:hover {{ background: var(--eco-hover); }}
+
+    .container {{ max-width: 1200px; margin: 0 auto; padding: 0 5%; }}
+    .breadcrumb-bar {{ background: #fff; border-bottom: 1px solid var(--eco-line); padding: 12px 0; font-size: 12px; }}
+    .breadcrumb-bar .container {{ display: flex; justify-content: space-between; align-items: center; }}
+    .breadcrumbs {{ display: flex; align-items: center; gap: 8px; color: var(--muted); font-weight: 600; }}
+    .breadcrumbs a {{ color: var(--muted); text-decoration: none; }}
+    .breadcrumbs a:hover {{ color: var(--eco); }}
+    .breadcrumbs span.current {{ color: var(--eco); font-weight: 700; }}
+
+    .hub-hero-section {{ padding: 54px 0 44px; background: linear-gradient(180deg, #f7f6f1 0%, #ffffff 100%); border-bottom: 1px solid var(--eco-line); }}
+    .hub-hero-content {{ max-width: 900px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; }}
+    .tag-badge {{ display: inline-block; padding: 4px 10px; border-radius: 4px; background: var(--eco-tint); color: var(--eco); font-size: 10.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 12px; border: 1px solid rgba(34,86,58,.15); }}
+    .hub-hero-title {{ font-size: clamp(30px, 3.8vw, 46px); font-weight: 900; line-height: 1.15; color: var(--ink); margin-bottom: 16px; letter-spacing: -.03em; }}
+    .hub-hero-sub {{ font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 24px; max-width: 780px; }}
+
+    .hub-trust-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; width: 100%; max-width: 860px; margin-top: 8px; }}
+    .hub-trust-item {{ display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 14px; border-radius: 6px; background: #ffffff; border: 1px solid var(--eco-line); box-shadow: 0 2px 10px rgba(20,32,24,.03); font-size: 12px; color: var(--ink); }}
+
+    /* Controls */
+    .hub-filter-section {{ position: sticky; top: 68px; z-index: 40; background: rgba(255,255,255,.96); backdrop-filter: blur(12px); border-bottom: 1px solid var(--eco-line); padding: 14px 0; }}
+    .hub-controls-row {{ display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }}
+    .hub-tabs-list {{ display: flex; align-items: center; gap: 8px; overflow-x: auto; padding-bottom: 2px; }}
+    .hub-tab-btn {{ padding: 8px 16px; border-radius: 6px; border: 1px solid var(--eco-line); background: #ffffff; color: var(--muted); font-size: 12px; font-weight: 700; cursor: pointer; transition: all 150ms ease; white-space: nowrap; }}
+    .hub-tab-btn:hover {{ color: var(--eco); border-color: var(--eco); background: var(--eco-tint); }}
+    .hub-tab-btn.is-active {{ background: var(--eco); color: #ffffff; border-color: var(--eco); box-shadow: 0 2px 8px rgba(34,86,58,.2); }}
+    .hub-search-input {{ padding: 8px 14px; border-radius: 6px; border: 1px solid var(--eco-line); background: #ffffff; font-size: 12px; color: var(--ink); outline: none; min-width: 260px; }}
+
+    /* Cards Grid */
+    .hub-products-grid-section {{ padding: 48px 0 68px; border-bottom: 1px solid var(--eco-line); }}
+    .hub-cards-grid {{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }}
+    .hub-card-item {{ border-radius: 14px; overflow: hidden; background: #ffffff; border: 1px solid var(--eco-line); box-shadow: 0 4px 20px rgba(20,32,24,.03); transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease; display: flex; flex-direction: column; }}
+    .hub-card-item:hover {{ transform: translateY(-6px); border-color: var(--eco); box-shadow: 0 16px 36px rgba(34,86,58,.12); }}
+    .hub-card-media {{ position: relative; height: 260px; overflow: hidden; background: #eae5dc; cursor: pointer; }}
+    .hub-card-img {{ width: 100%; height: 100%; object-fit: cover; transition: transform 380ms ease; }}
+    .hub-card-item:hover .hub-card-img {{ transform: scale(1.04); }}
+    .hub-badge-pill {{ position: absolute; bottom: 12px; left: 12px; padding: 4px 10px; border-radius: 4px; background: rgba(19,32,24,.88); backdrop-filter: blur(6px); color: #ffffff; font-size: 10.5px; font-weight: 700; }}
+    .hub-num-badge {{ position: absolute; top: 12px; right: 12px; padding: 3px 8px; border-radius: 4px; background: var(--eco); color: #ffffff; font-size: 9.5px; font-weight: 800; font-family: monospace; }}
+
+    .hub-card-body {{ padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; justify-content: space-between; gap: 18px; }}
+    .hub-card-category {{ font-size: 10px; font-weight: 800; color: var(--eco); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }}
+    .hub-card-title {{ margin: 0 0 10px; font-size: 18px; font-weight: 800; color: var(--ink); letter-spacing: -.02em; cursor: pointer; }}
+    .hub-card-desc {{ margin: 0 0 14px; font-size: 13px; color: var(--muted); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }}
+    .hub-kw-row {{ display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }}
+    .hub-kw-tag {{ font-size: 10px; font-weight: 600; color: var(--eco); background: rgba(34,86,58,.08); padding: 2px 7px; border-radius: 4px; }}
+
+    .hub-specs-box {{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 10px 12px; border-radius: 6px; background: #fbfaf7; border: 1px solid var(--eco-line); margin-bottom: 12px; }}
+    .hub-spec-cell {{ display: flex; flex-direction: column; gap: 1px; }}
+    .hub-spec-k {{ font-size: 9.5px; color: var(--muted); text-transform: uppercase; font-weight: 600; }}
+    .hub-spec-v {{ font-size: 11.5px; color: var(--ink); font-weight: 700; }}
+
+    .hub-dieline-snippet {{ padding: 6px 10px; border-radius: 4px; background: #f4f8f5; border: 1px dashed var(--eco-line); font-size: 11px; color: var(--muted); margin-bottom: 16px; display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }}
+    .hub-dieline-snippet strong {{ color: var(--eco); font-family: monospace; font-size: 12px; }}
+
+    .hub-card-actions {{ display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--line); padding-top: 16px; }}
+    .hub-btn-view {{ display: flex; align-items: center; justify-content: center; gap: 6px; padding: 11px 16px; border-radius: 6px; background: var(--eco); color: #ffffff; font-size: 12.5px; font-weight: 800; text-decoration: none; transition: background 150ms ease; }}
+    .hub-btn-view:hover {{ background: var(--eco-hover); }}
+    .hub-btn-wa {{ display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 16px; border-radius: 6px; background: #ffffff; color: #166534; border: 1px solid #bbf7d0; font-size: 12px; font-weight: 700; text-decoration: none; }}
+    .hub-btn-wa:hover {{ background: #f0fdf4; }}
+
+    /* Checklist & Customization */
+    .checklist-card {{ background: #fff; border: 1px solid var(--eco-line); border-radius: 12px; overflow: hidden; margin-bottom: 28px; }}
+    .checklist-table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
+    .checklist-table th {{ background: var(--eco-tint); color: var(--eco); font-weight: 800; padding: 12px 18px; text-align: left; font-size: 11.5px; border-bottom: 1px solid var(--eco-line); }}
+    .checklist-table td {{ padding: 13px 18px; border-bottom: 1px solid var(--line); color: var(--ink); vertical-align: middle; }}
+    .checklist-table tr:last-child td {{ border-bottom: none; }}
+    .table-action-link {{ color: var(--eco); font-weight: 800; text-decoration: none; }}
+
+    .section-pad {{ padding: 56px 0; border-bottom: 1px solid var(--eco-line); }}
+    .section-pad.sand {{ background: #faf9f4; }}
+    .sec-eyebrow {{ font-size: 11px; font-weight: 800; color: var(--eco); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 6px; }}
+    .sec-heading {{ font-size: 26px; font-weight: 900; color: var(--ink); margin-bottom: 10px; }}
+    .sec-sub {{ color: var(--muted); font-size: 13.5px; max-width: 650px; line-height: 1.7; margin-bottom: 26px; }}
+
+    .custom-cards-grid {{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }}
+    .custom-card {{ padding: 22px 18px; border-radius: 10px; background: #fff; border: 1px solid var(--eco-line); }}
+    .custom-card-icon {{ width: 34px; height: 34px; border-radius: 8px; background: var(--eco-tint); color: var(--eco); display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 15px; margin-bottom: 12px; }}
+    .custom-card h3 {{ font-size: 14px; font-weight: 800; color: var(--ink); margin-bottom: 6px; }}
+    .custom-card p {{ font-size: 12px; color: var(--muted); line-height: 1.6; }}
+
+    .scenario-cta-banner {{ padding: 60px 0; background: linear-gradient(135deg, var(--eco) 0%, #163e28 100%); color: #ffffff; }}
+    .cta-banner-inner {{ display: flex; align-items: center; justify-content: space-between; gap: 36px; }}
+    .cta-banner-inner h2 {{ margin: 0 0 10px; color: #ffffff; font-size: clamp(24px, 3vw, 36px); font-weight: 900; line-height: 1.2; }}
+    .cta-banner-inner p {{ margin: 0; color: rgba(255,255,255,.8); font-size: 14px; line-height: 1.7; max-width: 580px; }}
+    .btn-wa-act {{ padding: 13px 22px; border-radius: 6px; background: #25d366; color: #fff; font-size: 13.5px; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }}
+    .btn-email-act {{ padding: 13px 20px; border-radius: 6px; background: #fff; color: var(--eco); font-size: 13.5px; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }}
+
+    .footer {{ padding: 48px 0 28px; background: #0e1e15; color: #fff; }}
+    .footer-grid {{ display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; margin-bottom: 30px; }}
+    .footer-brand {{ display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }}
+    .footer-brand img {{ width: 28px; height: 28px; }}
+    .footer-brand strong {{ font-size: 14px; letter-spacing: .08em; color: #88d4a3; }}
+    .footer-desc {{ font-size: 12px; color: #a1b8aa; line-height: 1.6; max-width: 320px; }}
+    .footer h4 {{ font-size: 12px; font-weight: 800; margin-bottom: 14px; color: #88d4a3; text-transform: uppercase; }}
+    .footer-nav-list {{ list-style: none; display: flex; flex-direction: column; gap: 8px; }}
+    .footer-nav-list a {{ color: #cfe0d5; text-decoration: none; font-size: 12.5px; }}
+    .footer-contact-p {{ font-size: 12.5px; color: #cfe0d5; line-height: 1.8; }}
+    .footer-contact-p a {{ color: #88d4a3; text-decoration: none; font-weight: 700; }}
+    .footer-bottom {{ border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px; display: flex; justify-content: space-between; font-size: 11.5px; color: #7d9685; }}
+
+    @media (max-width: 1080px) {{
+      .hub-cards-grid {{ grid-template-columns: repeat(2, 1fr); }}
+      .hub-trust-grid {{ grid-template-columns: repeat(2, 1fr); }}
+      .custom-cards-grid {{ grid-template-columns: repeat(2, 1fr); }}
+    }}
+    @media (max-width: 720px) {{
+      .hub-cards-grid {{ grid-template-columns: 1fr; }}
+      .cta-banner-inner {{ flex-direction: column; align-items: flex-start; }}
+      .hub-controls-row {{ flex-direction: column; align-items: stretch; }}
+      .hub-search-input {{ min-width: auto; }}
+      .custom-cards-grid {{ grid-template-columns: 1fr; }}
+      .hub-trust-grid {{ grid-template-columns: 1fr; }}
+    }}
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar (Direct Link, No Dropdown on Products) -->
+  <header class="topbar">
+    <a class="brand" href="./index.html" aria-label="Paper Bag Works home">
+      <img class="brand-icon" src="{icon_src}" alt="Paper Bag Works" />
+      <span><strong>PAPER</strong><em>BAG WORKS</em><small>Custom Paper Packaging</small></span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="./index.html#applications">Applications</a>
+      <a href="./products.html" class="active" style="color:var(--eco); font-weight:800;">Products</a>
+      <a href="./size-options.html">Custom Options</a>
+      <a href="./index.html#process">Our Process</a>
+      <a href="./index.html#faq">FAQ</a>
+      <a class="nav-quote" href="{wa_general}" target="_blank" rel="noreferrer">
+        WhatsApp Us &rarr;
+      </a>
+    </nav>
+  </header>
+
+  <div style="padding-top: 68px;">
+    <!-- Breadcrumb Bar -->
+    <nav class="breadcrumb-bar">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="./index.html">Home</a>
+          <span>/</span>
+          <span class="current">Products Collection &amp; Industrial Scenarios</span>
+        </div>
+        <a href="./index.html" style="color:var(--eco); text-decoration:none; font-weight:700;">&larr; Back to Home</a>
+      </div>
+    </nav>
+
+    <!-- Hero Overview Header -->
+    <header class="hub-hero-section">
+      <div class="container">
+        <div class="hub-hero-content">
+          <span class="tag-badge">&#9670; DIRECT MANUFACTURER · 9 SPECIALIZED SCENARIOS</span>
+          <h1 class="hub-hero-title">Custom Paper Packaging Collection</h1>
+          <p class="hub-hero-sub">
+            Explore our comprehensive catalog of 9 specialized commercial paper bag solutions. Engineered with precision laser die-cut tooling, certified food-safe &amp; sustainable virgin substrates, and master artisan finishing — delivered at direct B2B wholesale export pricing.
+          </p>
+
+          <div class="hub-trust-grid">
+            <div class="hub-trust-item">
+              <span style="color:var(--eco); font-weight:bold;">&#10003;</span>
+              <span><strong>Low MOQs:</strong> 300 to 5,000+ PCS</span>
+            </div>
+            <div class="hub-trust-item">
+              <span style="color:var(--eco); font-weight:bold;">&#10003;</span>
+              <span><strong>FSC® &amp; Food-Safe:</strong> 100% Recyclable</span>
+            </div>
+            <div class="hub-trust-item">
+              <span style="color:var(--eco); font-weight:bold;">&#10003;</span>
+              <span><strong>38+ Ready Dielines:</strong> Zero Tooling Fee</span>
+            </div>
+            <div class="hub-trust-item">
+              <span style="color:var(--eco); font-weight:bold;">&#10003;</span>
+              <span><strong>Fast Turnaround:</strong> 5–12 Business Days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Filter & Category Section -->
+    <section class="hub-filter-section">
+      <div class="container">
+        <div class="hub-controls-row">
+          <div class="hub-tabs-list">
+            <button type="button" class="hub-tab-btn is-active" onclick="filterCategory('all', this)">All Products (9)</button>
+            <button type="button" class="hub-tab-btn" onclick="filterCategory('bread|food', this)">Bakery &amp; Food (2)</button>
+            <button type="button" class="hub-tab-btn" onclick="filterCategory('retail|fashion', this)">Retail &amp; Fashion (2)</button>
+            <button type="button" class="hub-tab-btn" onclick="filterCategory('wellness|cosmetics', this)">Beauty &amp; Wellness (2)</button>
+            <button type="button" class="hub-tab-btn" onclick="filterCategory('luxury|jewelry', this)">Luxury &amp; Boutique (2)</button>
+            <button type="button" class="hub-tab-btn" onclick="filterCategory('corporate', this)">Corporate &amp; Events (1)</button>
+          </div>
+          <div>
+            <input 
+              type="text" 
+              id="hubSearchInput" 
+              placeholder="Search packaging category or size..." 
+              class="hub-search-input"
+              oninput="filterSearch(this.value)"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 Comprehensive Scenario Product Cards -->
+    <section class="hub-products-grid-section">
+      <div class="container">
+        <div class="hub-cards-grid" id="hubCardsGrid">
+          {cards_html}
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Dieline & Parameter Comparison Table -->
+    <section class="section-pad sand">
+      <div class="container">
+        <div style="max-width:650px; margin-bottom:30px;">
+          <span class="sec-eyebrow">READY DIE-CUTTING INVENTORY</span>
+          <h2 class="sec-heading">Master Packaging Checklist &amp;<br><i>die-line specifications.</i></h2>
+          <p class="sec-sub">Compare all 9 product categories at a glance. All dimensions (W × H × D in mm) correspond to existing physical tooling with zero mold setup fees.</p>
+        </div>
+
+        <div class="checklist-card">
+          <table class="checklist-table">
+            <thead>
+              <tr>
+                <th style="width:24%;">Category / Scenario</th>
+                <th style="width:28%;">Recommended Substrate</th>
+                <th style="width:22%;">Primary Tooling Dimension</th>
+                <th style="width:14%;">Factory MOQ</th>
+                <th style="width:12%;">Direct Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {dieline_rows}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Dimensions of Custom Packaging -->
+    <section class="section-pad">
+      <div class="container">
+        <div style="max-width:650px; margin-bottom:30px;">
+          <span class="sec-eyebrow">BESPOKE TAILORING</span>
+          <h2 class="sec-heading">4 Dimensions of Custom Packaging</h2>
+          <p class="sec-sub">Every paper bag is engineered for structural integrity, luxury unboxing aesthetics, and environmental compliance.</p>
+        </div>
+
+        <div class="custom-cards-grid">
+          <div class="custom-card">
+            <div class="custom-card-icon">&#9670;</div>
+            <h3>1. Custom Dieline &amp; Dimensions</h3>
+            <p>Tailored CAD packaging dielines matching your exact product dimensions, preventing rattling and excessive void fill.</p>
+          </div>
+          <div class="custom-card">
+            <div class="custom-card-icon">&#9733;</div>
+            <h3>2. Luxury Foil &amp; Tactile Emboss</h3>
+            <p>Metallic hot foil stamping (Gold, Silver, Rose Gold, Champagne) and multi-level 3D architectural embossing.</p>
+          </div>
+          <div class="custom-card">
+            <div class="custom-card-icon">&#9678;</div>
+            <h3>3. Pantone Calibration &amp; Eco Inks</h3>
+            <p>Strict spectral density matching using certified food-safe water-based soy inks on virgin and recycled paper stocks.</p>
+          </div>
+          <div class="custom-card">
+            <div class="custom-card-icon">&#9874;</div>
+            <h3>4. Premium Handles &amp; Webbing</h3>
+            <p>Braided rope with gunmetal metal aglets, silk ribbons, grosgrain cotton twill, or reinforced automated twisted paper.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Action Consultation Banner -->
+    <section class="scenario-cta-banner">
+      <div class="container">
+        <div class="cta-banner-inner">
+          <div>
+            <span style="color:#88d4a3; font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.12em; display:block; margin-bottom:8px;">DIRECT FACTORY CONSULTATION</span>
+            <h2>Ready to customize your branded paper packaging?</h2>
+            <p>Speak directly with our senior packaging engineers. Get instant dieline advice, free physical sample kits, and formal wholesale production quotes within 2 hours.</p>
+          </div>
+          <div style="display:flex; gap:12px; flex-shrink:0; flex-wrap:wrap;">
+            <a href="https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20am%20reviewing%20your%20Products%20Collection%20and%20would%20like%20to%20get%20a%20custom%20quote." target="_blank" rel="noreferrer" class="btn-wa-act">
+              <span>&#128172;</span> WhatsApp Us (+86 13760699327)
+            </a>
+            <a href="mailto:1@paperbagworks.com?subject=Custom%20Packaging%20Inquiry%20-%20Products%20Collection" class="btn-email-act">
+              Email Specifications
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <img src="{icon_src}" alt="Paper Bag Works Icon">
+              <strong>PAPER BAG WORKS</strong>
+            </div>
+            <p class="footer-desc">Direct manufacturer of premium custom paper packaging, wholesale branded shopping bags, and sustainable dielines.<br>Facilities in Guangzhou &amp; Dongguan, China.</p>
+          </div>
+          <div>
+            <h4>Products Collection</h4>
+            <ul class="footer-nav-list">
+              <li><a href="./products/sourdough-bread-bags.html">01 · Sourdough &amp; Bakery Bags</a></li>
+              <li><a href="./products/food-takeaway-bags.html">02 · Food &amp; Beverage Takeaway</a></li>
+              <li><a href="./products/wellness-organic-bags.html">03 · Wellness &amp; Organic Bags</a></li>
+              <li><a href="./products/luxury-gift-bags.html">05 · Luxury Gift &amp; Bow Tie Bags</a></li>
+              <li><a href="./products/cosmetics-beauty-bags.html">08 · Cosmetics &amp; Beauty Bags</a></li>
+              <li><a href="./products/jewelry-boutique-bags.html">09 · Jewelry Boutique Bags</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Direct Manufacturer Contact</h4>
+            <p class="footer-contact-p">
+              Email: <a href="mailto:1@paperbagworks.com">1@paperbagworks.com</a><br>
+              WhatsApp: <a href="https://wa.me/8613760699327" target="_blank" rel="noreferrer">+86 13760699327</a><br>
+              Direct Export Factory: Guangdong, China
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 Paper Bag Works. All rights reserved.</span>
+          <span>Custom Paper Packaging · Direct Manufacturer Export</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function filterCategory(pattern, btn) {{
+      document.querySelectorAll('.hub-tab-btn').forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const cards = document.querySelectorAll('.hub-card-item');
+      if (pattern === 'all') {{
+        cards.forEach(c => c.style.display = 'flex');
+      }} else {{
+        const regex = new RegExp(pattern, 'i');
+        cards.forEach(c => {{
+          const cat = c.getAttribute('data-category') || '';
+          c.style.display = regex.test(cat) ? 'flex' : 'none';
+        }});
+      }}
+    }}
+
+    function filterSearch(query) {{
+      const q = query.toLowerCase().trim();
+      const cards = document.querySelectorAll('.hub-card-item');
+      cards.forEach(c => {{
+        const text = c.innerText.toLowerCase();
+        c.style.display = text.includes(q) ? 'flex' : 'none';
+      }});
+    }}
+  </script>
+</body>
+</html>
+"""
+    return html
+
 def main():
     base_dir = r"C:\Users\MSI\AccioWork\2026-09-04-11-01-23-046-1c20f82a\纸袋AI网站数据"
     public_products_dir = os.path.join(base_dir, "public", "products")
@@ -1041,21 +1529,30 @@ def main():
     os.makedirs(public_products_dir, exist_ok=True)
     os.makedirs(dist_products_dir, exist_ok=True)
 
+    # 1. Generate 9 scenario subpages
     for sc in SCENARIOS:
         filename = f"{sc['slug']}.html"
         html_content = render_html_page(sc)
         
-        # Write to public/products/
         pub_path = os.path.join(public_products_dir, filename)
         with open(pub_path, "w", encoding="utf-8") as f:
             f.write(html_content)
             
-        # Write to dist/products/
         dist_path = os.path.join(dist_products_dir, filename)
         with open(dist_path, "w", encoding="utf-8") as f:
             f.write(html_content)
             
-        print(f"Generated: {pub_path}")
+        print(f"Generated subpage: {pub_path}")
+
+    # 2. Generate standalone products.html hub page
+    products_hub_content = render_products_hub_html()
+    pub_hub_path = os.path.join(base_dir, "public", "products.html")
+    dist_hub_path = os.path.join(base_dir, "dist", "products.html")
+    with open(pub_hub_path, "w", encoding="utf-8") as f:
+        f.write(products_hub_content)
+    with open(dist_hub_path, "w", encoding="utf-8") as f:
+        f.write(products_hub_content)
+    print(f"Generated hub page: {pub_hub_path}")
 
     # Also generate a consolidated preview file
     preview_path = os.path.join(base_dir, "products-scenario-subpages-preview.html")

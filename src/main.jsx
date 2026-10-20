@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowUpRight, Check, ChevronDown, CircleCheck, Eye, Layers, 
 import ShowcaseSections from './ShowcaseSections';
 import { SCENARIO_PAGES } from './scenarioData';
 import ScenarioPage from './ScenarioPage';
+import ProductsHubPage from './ProductsHubPage';
 import brandIcon from './assets/images/paper-bag-works-icon.svg';
 import appV2 from './assets/images/industry-applications-v2.png';
 import processWorkflow from './assets/images/custom-manufacturing-process.png';
@@ -27,7 +28,7 @@ import './styles.css';
 // Configurable Navigation Items
 export const NAV_ITEMS = [
   { label: 'Applications', href: '#applications' },
-  { label: 'Products', href: '#products', isDropdown: true },
+  { label: 'Products', href: '/products.html' },
   { 
     label: 'Custom Options', 
     href: '#materials',
@@ -181,6 +182,12 @@ function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleOpenProductsHub = () => {
+    setCurrentView('products-hub');
+    closeMenu();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const handleOpenQuoteWithTag = (tag) => {
     setCurrentView('home');
     setPrefilledNote(`Inquiring for: ${tag}`);
@@ -256,46 +263,17 @@ function App() {
             Applications
           </a>
 
-          {/* Products Dropdown (Lists the 9 Scenario Sub-Pages) */}
-          <div className="nav-dropdown">
-            <button 
-              type="button" 
-              className="nav-dropdown-trigger"
-              onClick={() => {
-                if (currentView !== 'home') navigateToHomeSection('#products');
-              }}
-            >
-              Products <ChevronDown size={14} />
-            </button>
-            <div className="dropdown-menu" style={{ minWidth: '360px' }}>
-              <span className="dropdown-header-label">9 Industry Product Sub-Pages</span>
-              <a 
-                href="#products" 
-                className="dropdown-item all-products-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigateToHomeSection('#products');
-                }}
-              >
-                <span>📦 All Products Overview</span>
-                <span className="badge-pill">Overview</span>
-              </a>
-              {SCENARIO_PAGES.map((sc) => (
-                <a 
-                  key={sc.id} 
-                  href={`#product-${sc.id}`}
-                  className="dropdown-item"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleOpenScenario(sc.id);
-                  }}
-                >
-                  <span>{sc.navTitle}</span>
-                  <span className="badge-pill">MOQ {sc.specs.moq}</span>
-                </a>
-              ))}
-            </div>
-          </div>
+          {/* Products (Direct Click to Products Hub - No Dropdown) */}
+          <a 
+            href="/products.html" 
+            className={currentView === 'products-hub' ? 'is-active' : ''}
+            onClick={(e) => {
+              e.preventDefault();
+              handleOpenProductsHub();
+            }}
+          >
+            Products
+          </a>
 
           {/* Custom Options Dropdown */}
           <div className="nav-dropdown-wrapper">
@@ -379,10 +357,16 @@ function App() {
       </header>
 
       {/* Main Content Area */}
-      {currentView !== 'home' && activeScenario ? (
+      {currentView === 'products-hub' ? (
+        <ProductsHubPage 
+          onBackToHome={() => navigateToHomeSection('#top')}
+          onSelectScenario={handleOpenScenario}
+          onOpenQuoteWithTag={handleOpenQuoteWithTag}
+        />
+      ) : currentView !== 'home' && activeScenario ? (
         <ScenarioPage 
           scenario={activeScenario}
-          onBackToHome={() => navigateToHomeSection('#applications')}
+          onBackToHome={() => handleOpenProductsHub()}
           onSelectScenario={handleOpenScenario}
           onOpenQuoteWithTag={handleOpenQuoteWithTag}
         />
