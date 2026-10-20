@@ -393,8 +393,8 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 .form-submit { margin-top: 10px; padding: 16px; border: 0; border-radius: 6px; background: var(--eco); color: #fff; font-size: 14px; font-weight: 800; cursor: pointer; transition: background var(--ease), box-shadow var(--ease); box-shadow: 0 4px 14px rgba(34,86,58,.2); }
 .form-feedback { display: flex; align-items: center; gap: 10px; padding: 14px; border-radius: 6px; background: #edf7f0; border: 1px solid var(--eco-line); color: var(--eco); font-size: 13px; font-weight: 600; }
 
-.footer { padding-top: 72px; padding-bottom: 30px; background: #132a1d; color: #fff; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.3fr; gap: 30px; padding-bottom: 64px; }
+.footer { padding: 76px 8% 36px; background: #11261a; color: #fff; }
+.footer-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1.8fr 1.15fr 1.15fr 1.3fr; gap: 48px; padding-bottom: 56px; }
 .footer-brand strong { color: #fff; }
 .footer-brand em { color: #88d4a3; }
 .footer-brand p, .contact-text { color: rgba(255,255,255,.7); font-size: 12px; line-height: 1.9; margin: 12px 0 0; }
@@ -406,9 +406,18 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 .footer-links span { color: rgba(255,255,255,.6); font-size: 11.5px; display: block; }
 .footer-meta { display: flex; flex-direction: column; gap: 4px; margin-top: 14px; }
 .footer-meta span { color: rgba(255,255,255,.6); font-size: 11.5px; display: block; }
-.footer-badges { display: flex; gap: 8px; }
-.footer-badges span { padding: 8px 10px; border: 1px solid rgba(136,212,163,.35); color: #88d4a3; font-size: 8px; line-height: 1.25; letter-spacing: .1em; border-radius: 4px; }
-.footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 19px; border-top: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.45); font-size: 10px; }
+.footer-badges { display: flex; gap: 8px; align-items: center; }
+.footer-badges span { padding: 6px 12px; border: 1px solid rgba(136,212,163,.35); color: #88d4a3; font-size: 9px; line-height: 1.25; letter-spacing: .08em; border-radius: 4px; background: rgba(136,212,163,.06); white-space: nowrap; }
+.footer-bottom { max-width: 1240px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.55); font-size: 11px; }
+
+@media (max-width: 992px) {
+  .footer { padding-left: 5%; padding-right: 5%; }
+  .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
 
 /* Unified Floating Paper Bag Contact Widget (Enlarged 1x) */
 .floating-bag-widget { position: fixed; z-index: 99; right: 30px; bottom: 30px; }

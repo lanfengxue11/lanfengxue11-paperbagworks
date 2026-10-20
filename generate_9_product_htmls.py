@@ -394,7 +394,7 @@ def render_html_page(sc):
     # Base64 embedded assets for 100% self-contained rendering in any environment
     icon_src = get_base64_image("assets/images/paper-bag-works-icon.svg")
     img_src = get_base64_image(f"assets/images/scenarios/{os.path.basename(sc['heroImage'])}")
-    css_src = "../assets/main-Cl430nRS.css"
+    css_src = "../assets/main-Cc-dbRGM.css"
     home_link = "../index.html"
     wa_msg = f"Hello Paper Bag Works, I would like to inquire about custom production for {sc['heroHeading']} (MOQ {sc['specs']['moq']})."
     encoded_wa = wa_msg.replace(" ", "%20").replace("&", "%26")
@@ -631,21 +631,21 @@ def render_html_page(sc):
     .cta-direct-info {{ display: flex; justify-content: center; align-items: center; gap: 20px; font-size: 12px; color: #a3c4b0; flex-wrap: wrap; }}
     .cta-direct-info span {{ display: inline-flex; align-items: center; gap: 6px; }}
 
-    /* Clean Minimal Footer (No 9-row pill column) */
-    .footer {{ padding: 48px 0 28px; background: #0e1e15; color: #fff; }}
-    .footer-grid {{ display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; margin-bottom: 30px; }}
+    /* Clean Minimal Footer (Shifted right with generous side padding) */
+    .footer {{ padding: 68px 8% 36px; background: #0e1e15; color: #fff; }}
+    .footer-grid {{ max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 48px; margin-bottom: 40px; }}
     .footer-brand {{ display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }}
     .footer-brand img {{ width: 28px; height: 28px; }}
     .footer-brand strong {{ font-size: 14px; letter-spacing: .08em; color: #88d4a3; }}
-    .footer-desc {{ font-size: 12px; color: #a1b8aa; line-height: 1.6; max-width: 320px; }}
-    .footer h4 {{ font-size: 12px; font-weight: 800; margin-bottom: 14px; color: #88d4a3; text-transform: uppercase; letter-spacing: .08em; }}
-    .footer-nav-list {{ list-style: none; display: flex; flex-direction: column; gap: 8px; }}
+    .footer-desc {{ font-size: 12px; color: #a1b8aa; line-height: 1.8; max-width: 340px; }}
+    .footer h4 {{ font-size: 11.5px; font-weight: 800; margin-bottom: 16px; color: #88d4a3; text-transform: uppercase; letter-spacing: .1em; }}
+    .footer-nav-list {{ list-style: none; display: flex; flex-direction: column; gap: 9px; }}
     .footer-nav-list a {{ color: #cfe0d5; text-decoration: none; font-size: 12.5px; transition: color 150ms ease; }}
-    .footer-nav-list a:hover {{ color: #ffffff; }}
-    .footer-contact-p {{ font-size: 12.5px; color: #cfe0d5; line-height: 1.8; }}
+    .footer-nav-list a:hover {{ color: #ffffff; text-decoration: underline; }}
+    .footer-contact-p {{ font-size: 12.5px; color: #cfe0d5; line-height: 1.9; }}
     .footer-contact-p a {{ color: #88d4a3; text-decoration: none; font-weight: 700; }}
     .footer-contact-p a:hover {{ text-decoration: underline; }}
-    .footer-bottom {{ border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px; display: flex; justify-content: space-between; font-size: 11.5px; color: #7d9685; }}
+    .footer-bottom {{ max-width: 1240px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,.12); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #7d9685; }}
 
     @media (max-width: 960px) {{
       .hero-grid {{ grid-template-columns: 1fr; }}
@@ -1024,7 +1024,7 @@ def render_html_page(sc):
 
 def render_products_hub_html():
     icon_src = get_base64_image("assets/images/paper-bag-works-icon.svg")
-    css_src = "./assets/main-Cl430nRS.css"
+    css_src = "./assets/main-Cc-dbRGM.css"
     wa_general = "https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20would%20like%20to%20inquire%20about%20your%20Products%20Collection."
 
     cards_html = ""
