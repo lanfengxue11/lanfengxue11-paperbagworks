@@ -1,4 +1,10 @@
 import React from 'react';
+import fac01 from './assets/images/factory/factory-01-heidelberg-press.jpg';
+import fac02 from './assets/images/factory/factory-02-paper-guillotine.jpg';
+import fac03 from './assets/images/factory/factory-03-bag-forming-line.jpg';
+import fac04 from './assets/images/factory/factory-04-die-cutting-system.jpg';
+import fac05 from './assets/images/factory/factory-05-heidelberg-inking.jpg';
+import fac06 from './assets/images/factory/factory-06-handle-assembly.jpg';
 
 // Official High-Res Transparent Brand Logos (Base64)
 export const OFFICIAL_BRAND_LOGOS = {
@@ -33,37 +39,37 @@ const factoryItems = [
     id: '01',
     title: 'Heidelberg Speedmaster Press',
     desc: 'German multi-color offset press line equipped with spectral color management for ±0.01mm precise registration.',
-    img: '/assets/images/factory/factory-01-heidelberg-press.jpg',
+    img: fac01,
   },
   {
     id: '02',
     title: 'Precision CNC Paper Guillotine',
     desc: 'Heavy-duty programmable cutting system ensuring accurate sheet dimensioning and clean, burr-free edges.',
-    img: '/assets/images/factory/factory-02-paper-guillotine.jpg',
+    img: fac02,
   },
   {
     id: '03',
     title: 'Automated Bag-Forming Line',
     desc: 'Continuous automated tube folding, bottom gluing, and reinforcing unit delivering up to 120 bags/min.',
-    img: '/assets/images/factory/factory-03-bag-forming-line.jpg',
+    img: fac03,
   },
   {
     id: '04',
     title: 'High-Speed Die-Cutting System',
     desc: 'Laser knife plate precision die-cutting with automated waste stripping for crisp, defined fold lines.',
-    img: '/assets/images/factory/factory-04-die-cutting-system.jpg',
+    img: fac04,
   },
   {
     id: '05',
     title: 'Heidelberg Precision Inking Unit',
     desc: 'Advanced roller system and automated inking control ensuring ultra-fine image resolution and Pantone accuracy.',
-    img: '/assets/images/factory/factory-05-heidelberg-inking.jpg',
+    img: fac05,
   },
   {
     id: '06',
     title: 'Automated Handle Assembly',
     desc: 'High-precision automatic twisted paper, flat handle, and ribbon handle attachment with high load-bearing bond.',
-    img: '/assets/images/factory/factory-06-handle-assembly.jpg',
+    img: fac06,
   },
 ];
 
