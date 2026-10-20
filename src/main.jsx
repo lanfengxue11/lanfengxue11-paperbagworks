@@ -481,32 +481,6 @@ function App() {
                 ))}
               </div>
             </div>
-
-            {/* 9 Interactive Scenario Sub-Page Navigation Cards */}
-            <div className="scenario-interactive-grid">
-              {SCENARIO_PAGES.map((sc) => (
-                <div 
-                  key={sc.id} 
-                  className="scenario-card-item"
-                  onClick={() => handleOpenScenario(sc.id)}
-                >
-                  <div className="scenario-thumb-wrapper">
-                    <img src={sc.heroImage} alt={sc.seoTitle} className="scenario-thumb-img" loading="lazy" />
-                    <span className="scenario-badge-pill">{sc.categoryTag.split('·')[0]}</span>
-                  </div>
-                  <div className="scenario-card-info">
-                    <div>
-                      <h3>{sc.navTitle}</h3>
-                      <p>{sc.heroSubheading.slice(0, 95)}...</p>
-                    </div>
-                    <div className="scenario-card-footer">
-                      <span>MOQ: {sc.specs.moq}</span>
-                      <span>View Sub-Page <ArrowUpRight size={13} /></span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
           </section>
 
           {/* Products Grid */}
