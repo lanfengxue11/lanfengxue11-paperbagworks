@@ -452,14 +452,34 @@ function App() {
               <p>Explore our 9 dedicated product sub-pages below. Click any scenario to inspect real factory dielines, recommended paper substrates, and technical specifications.</p>
             </div>
 
-            {/* Visual 9-Grid Banner */}
-            <div className="applications-banner-wrapper">
+            {/* Visual 9-Grid Banner with 9 Clickable Scenario Hyperlinks */}
+            <div className="applications-banner-wrapper interactive-grid-banner">
               <img 
                 src={appV2} 
                 alt="9 Custom Paper Bag Industry Application Scenarios: Bakery, Food & Beverage, Pharmacy, E-commerce, Gift, Fashion, Corporate, Cosmetics, Jewelry & Boutique" 
                 className="applications-grid-img"
                 loading="lazy"
               />
+              <div className="banner-hotspots-grid">
+                {SCENARIO_PAGES.map((sc) => (
+                  <a
+                    key={sc.id}
+                    href={`/products/${sc.slug}.html`}
+                    className="banner-hotspot-cell"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleOpenScenario(sc.id);
+                    }}
+                    title={`Click to explore ${sc.heroHeading}`}
+                    aria-label={`View ${sc.heroHeading} details`}
+                  >
+                    <span className="hotspot-hover-pill">
+                      <span>{sc.navTitle.split('·')[1]?.trim() || sc.heroHeading}</span>
+                      <ArrowUpRight size={13} />
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
 
             {/* 9 Interactive Scenario Sub-Page Navigation Cards */}

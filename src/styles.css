@@ -202,9 +202,22 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 .stat-content span { color: var(--muted); font-size: 12px; font-weight: 600; line-height: 1.35; }
 
 .applications-section { padding-top: 104px; padding-bottom: 40px; background: #ffffff; border-bottom: 1px solid var(--line); }
-.applications-banner-wrapper { margin-top: 38px; border-radius: 12px; overflow: hidden; border: 1px solid var(--eco-line); background: #fbfdfb; box-shadow: 0 10px 32px rgba(20,32,24,.06); transition: transform var(--ease), box-shadow var(--ease); }
+.applications-banner-wrapper { margin-top: 38px; border-radius: 12px; overflow: hidden; border: 1px solid var(--eco-line); background: #fbfdfb; box-shadow: 0 10px 32px rgba(20,32,24,.06); transition: transform var(--ease), box-shadow var(--ease); position: relative; }
 .applications-banner-wrapper:hover { transform: translateY(-3px); box-shadow: 0 18px 45px rgba(34,86,58,.12); }
 .applications-grid-img { width: 100%; height: auto; display: block; object-fit: cover; }
+
+/* 9-Grid Interactive Clickable Hotspots Overlay */
+.interactive-grid-banner { position: relative; overflow: hidden; }
+.banner-hotspots-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); z-index: 10; }
+.banner-hotspot-cell { position: relative; display: flex; align-items: flex-end; justify-content: flex-end; padding: 16px; text-decoration: none; cursor: pointer; transition: all 180ms ease; border: 1px solid transparent; }
+.banner-hotspot-cell:hover { background: rgba(34, 86, 58, 0.08); border-color: rgba(34, 86, 58, 0.35); box-shadow: inset 0 0 24px rgba(34, 86, 58, 0.12); }
+.hotspot-hover-pill { opacity: 0; transform: translateY(6px); display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 20px; background: rgba(19, 32, 24, 0.92); backdrop-filter: blur(8px); color: #ffffff; font-size: 11px; font-weight: 700; letter-spacing: .02em; transition: all 180ms ease; pointer-events: none; box-shadow: 0 4px 14px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.15); }
+.banner-hotspot-cell:hover .hotspot-hover-pill { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  .banner-hotspot-cell { padding: 8px; }
+  .hotspot-hover-pill { font-size: 9.5px; padding: 4px 8px; }
+}
 
 .workflow-section { padding-top: 48px; padding-bottom: 52px; background: #fbf9f5; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .workflow-banner-wrapper { margin-top: 38px; border-radius: 12px; overflow: hidden; border: 1px solid var(--eco-line); background: #ffffff; box-shadow: 0 10px 32px rgba(20,32,24,.06); transition: transform var(--ease), box-shadow var(--ease); }
