@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { ArrowUpRight, Check, ChevronDown, CircleCheck, FileUp, Layers, Menu, MessageCircle, MoveRight, PackageCheck, Phone, ShieldCheck, ShoppingBag, Sparkles, X } from 'lucide-react';
+import { ArrowUpRight, Check, ChevronDown, CircleCheck, Layers, Menu, MessageCircle, MoveRight, PackageCheck, Phone, ShieldCheck, ShoppingBag, Sparkles, X } from 'lucide-react';
 import ShowcaseSections from './ShowcaseSections';
 import './styles.css';
 
@@ -134,7 +134,6 @@ function App() {
   const [openFaq, setOpenFaq] = useState(0);
   const [formStatus, setFormStatus] = useState('idle');
   const [errorMessage, setErrorMessage] = useState('');
-  const [selectedFileName, setSelectedFileName] = useState('');
   const [bagMenuOpen, setBagMenuOpen] = useState(false);
   const closeMenu = () => setMenuOpen(false);
 
@@ -157,7 +156,6 @@ function App() {
       if (response.ok) {
         setFormStatus('success');
         form.reset();
-        setSelectedFileName('');
       } else {
         const data = await response.json();
         if (data && data.errors) {
@@ -590,26 +588,6 @@ function App() {
               <label>Size and finish requirements
                 <textarea name="requirements" rows="3" placeholder="e.g. 220 × 120 × 280 mm, white card, gold logo foil, cotton handles..." />
               </label>
-              <div className="upload-wrapper">
-                <span className="upload-label">Upload a logo or reference file <small>PNG / AI / PDF, max 10MB</small></span>
-                <label className="custom-file-picker">
-                  <input
-                    name="attachment"
-                    type="file"
-                    accept=".png,.ai,.pdf"
-                    className="hidden-file-input"
-                    onChange={(e) => {
-                      if (e.target.files && e.target.files[0]) {
-                        setSelectedFileName(e.target.files[0].name);
-                      } else {
-                        setSelectedFileName('');
-                      }
-                    }}
-                  />
-                  <span className="file-btn"><FileUp size={15} /> Browse File</span>
-                  <span className="file-name">{selectedFileName || 'No file chosen'}</span>
-                </label>
-              </div>
               <button className="button form-submit" type="submit" disabled={formStatus === 'submitting'}>
                 {formStatus === 'submitting' ? 'Sending inquiry...' : 'Get a free quote & mockup'} <ArrowUpRight size={17} />
               </button>

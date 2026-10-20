@@ -390,15 +390,6 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 .quote-form select { color: var(--ink); }
 .quote-form option { color: #111; }
 .quote-form input:focus, .quote-form select:focus, .quote-form textarea:focus { border-color: var(--eco); background: #fff; box-shadow: 0 0 0 3px rgba(34,86,58,.1); }
-.upload-wrapper { display: grid; gap: 8px; }
-.upload-label { color: var(--ink); font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
-.upload-label small { color: var(--muted); font-size: 10px; font-weight: 500; margin-left: 6px; }
-.custom-file-picker { position: relative; display: flex; align-items: center; gap: 12px; padding: 9px 12px; border: 1px solid var(--eco-line); border-radius: 6px; background: #fbfdfb; cursor: pointer; transition: border-color var(--ease), background var(--ease), box-shadow var(--ease); }
-.custom-file-picker:hover { border-color: var(--eco); background: #f4f8f5; box-shadow: 0 0 0 3px rgba(34,86,58,.08); }
-.hidden-file-input { position: absolute; inset: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer; z-index: 2; }
-.file-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 13px; border-radius: 4px; background: #e8f2ec; color: var(--eco); font-size: 12px; font-weight: 700; letter-spacing: .02em; pointer-events: none; border: 1px solid #c9ded1; transition: background var(--ease), color var(--ease); }
-.custom-file-picker:hover .file-btn { background: var(--eco); color: #fff; border-color: var(--eco); }
-.file-name { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; pointer-events: none; }
 .form-submit { margin-top: 10px; padding: 16px; border: 0; border-radius: 6px; background: var(--eco); color: #fff; font-size: 14px; font-weight: 800; cursor: pointer; transition: background var(--ease), box-shadow var(--ease); box-shadow: 0 4px 14px rgba(34,86,58,.2); }
 .form-feedback { display: flex; align-items: center; gap: 10px; padding: 14px; border-radius: 6px; background: #edf7f0; border: 1px solid var(--eco-line); color: var(--eco); font-size: 13px; font-weight: 600; }
 
