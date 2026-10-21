@@ -741,14 +741,19 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
   .scenario-hero-title { font-size: 26px; line-height: 1.2; }
   .scenario-features-grid { grid-template-columns: 1fr; gap: 12px; }
   .scenario-specs-compact { grid-template-columns: 1fr; gap: 8px; padding: 12px; }
-  .scenario-hero-actions { flex-direction: column; width: 100%; gap: 10px; }
-  .btn-whatsapp-action, .btn-primary-action { width: 100%; justify-content: center; }
+  .scenario-hero-actions { flex-direction: column; width: 100%; gap: 10px; box-sizing: border-box; }
+  .btn-whatsapp-action, .btn-primary-action { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; justify-content: center !important; text-align: center !important; }
 
-  /* CTA Banner */
+  /* CTA Consultation Banner (Fixed Mobile Overflow) */
+  .scenario-cta-banner { padding: 44px 0; }
+  .cta-banner-inner { flex-direction: column !important; align-items: stretch !important; text-align: left !important; gap: 20px !important; width: 100% !important; box-sizing: border-box !important; }
+  .cta-banner-inner > div { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; }
+  .cta-banner-btn-group { width: 100% !important; min-width: 0 !important; max-width: 100% !important; flex-direction: column !important; align-items: stretch !important; gap: 10px !important; box-sizing: border-box !important; }
+  
   .cta-banner-section { padding: 44px 0; }
   .cta-banner-content h2 { font-size: 22px; }
-  .cta-buttons-row { flex-direction: column; width: 100%; gap: 10px; }
-  .btn-wa-large, .btn-email-large { width: 100%; justify-content: center; }
+  .cta-buttons-row { flex-direction: column !important; width: 100% !important; max-width: 100% !important; gap: 10px !important; box-sizing: border-box !important; }
+  .btn-wa-large, .btn-email-large, .btn-wa-act, .btn-email-act { width: 100% !important; max-width: 100% !important; box-sizing: border-box !important; justify-content: center !important; text-align: center !important; }
   .cta-direct-info { flex-direction: column; gap: 8px; text-align: center; }
 
   /* Footer */

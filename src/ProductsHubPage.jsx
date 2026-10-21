@@ -329,20 +329,18 @@ export default function ProductsHubPage({ onBackToHome, onSelectScenario, onOpen
               <h2>Ready to customize your branded paper packaging?</h2>
               <p>Speak directly with our senior packaging engineers. Get instant dieline advice, free physical sample kits, and formal wholesale production quotes within 2 hours.</p>
             </div>
-            <div className="hero-actions" style={{ flexShrink: 0 }}>
+            <div className="cta-banner-btn-group">
               <a
                 href="https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20am%20reviewing%20your%20Products%20Collection%20and%20would%20like%20to%20get%20a%20custom%20quote."
                 target="_blank"
                 rel="noreferrer"
                 className="btn-whatsapp-action"
-                style={{ padding: '15px 24px', fontSize: '14px' }}
               >
                 <MessageCircle size={18} /> Chat on WhatsApp (+86 13760699327)
               </a>
               <a
                 href="mailto:1@paperbagworks.com?subject=Custom%20Packaging%20Inquiry%20-%20Products%20Collection&body=Hello%20Paper%20Bag%20Works,%0A%0AI%20am%20interested%20in%20customizing%20paper%20bags%20from%20your%20collection.%0A%0ATarget%20Category:%0ADimensions:%0AQuantity:%0A%0AThank%20you!"
                 className="btn-primary-action white-bg"
-                style={{ padding: '15px 24px', fontSize: '14px' }}
               >
                 Email Specifications
               </a>

@@ -394,7 +394,7 @@ def render_html_page(sc):
     # Base64 embedded assets for 100% self-contained rendering in any environment
     icon_src = get_base64_image("assets/images/paper-bag-works-icon.svg")
     img_src = get_base64_image(f"assets/images/scenarios/{os.path.basename(sc['heroImage'])}")
-    css_src = "../assets/main-C8zh8eFU.css"
+    css_src = "../assets/main-CMYz_6Nl.css"
     home_link = "../index.html"
     wa_msg = f"Hello Paper Bag Works, I would like to inquire about custom production for {sc['heroHeading']} (MOQ {sc['specs']['moq']})."
     encoded_wa = wa_msg.replace(" ", "%20").replace("&", "%26")
@@ -1240,8 +1240,9 @@ def render_products_hub_html():
     .cta-banner-inner {{ display: flex; align-items: center; justify-content: space-between; gap: 36px; }}
     .cta-banner-inner h2 {{ margin: 0 0 10px; color: #ffffff; font-size: clamp(24px, 3vw, 36px); font-weight: 900; line-height: 1.2; }}
     .cta-banner-inner p {{ margin: 0; color: rgba(255,255,255,.8); font-size: 14px; line-height: 1.7; max-width: 580px; }}
-    .btn-wa-act {{ padding: 13px 22px; border-radius: 6px; background: #25d366; color: #fff; font-size: 13.5px; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }}
-    .btn-email-act {{ padding: 13px 20px; border-radius: 6px; background: #fff; color: var(--eco); font-size: 13.5px; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }}
+    .cta-banner-btn-group {{ display: flex; gap: 12px; flex-wrap: wrap; }}
+    .btn-wa-act {{ padding: 13px 22px; border-radius: 6px; background: #25d366; color: #fff; font-size: 13.5px; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; }}
+    .btn-email-act {{ padding: 13px 20px; border-radius: 6px; background: #fff; color: var(--eco); font-size: 13.5px; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; }}
 
     .footer {{ padding: 68px 8% 36px; background: #0e1e15; color: #fff; }}
     .footer-grid {{ max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 48px; margin-bottom: 40px; }}
@@ -1263,7 +1264,10 @@ def render_products_hub_html():
     }}
     @media (max-width: 720px) {{
       .hub-cards-grid {{ grid-template-columns: 1fr !important; gap: 20px; }}
-      .cta-banner-inner {{ flex-direction: column; align-items: flex-start; }}
+      .cta-banner-inner {{ flex-direction: column !important; align-items: stretch !important; gap: 20px !important; }}
+      .cta-banner-inner > div {{ width: 100% !important; max-width: 100% !important; }}
+      .cta-banner-btn-group {{ width: 100% !important; flex-direction: column !important; align-items: stretch !important; gap: 10px !important; }}
+      .btn-wa-act, .btn-email-act {{ width: 100% !important; max-width: 100% !important; justify-content: center !important; text-align: center !important; }}
       .hub-controls-row {{ flex-direction: column; align-items: stretch; gap: 10px; }}
       .hub-tabs-list {{ overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; }}
       .hub-tab-btn {{ flex-shrink: 0; }}
@@ -1446,7 +1450,7 @@ def render_products_hub_html():
             <h2>Ready to customize your branded paper packaging?</h2>
             <p>Speak directly with our senior packaging engineers. Get instant dieline advice, free physical sample kits, and formal wholesale production quotes within 2 hours.</p>
           </div>
-          <div style="display:flex; gap:12px; flex-shrink:0; flex-wrap:wrap;">
+          <div class="cta-banner-btn-group">
             <a href="https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20am%20reviewing%20your%20Products%20Collection%20and%20would%20like%20to%20get%20a%20custom%20quote." target="_blank" rel="noreferrer" class="btn-wa-act">
               <span>&#128172;</span> WhatsApp Us (+86 13760699327)
             </a>
