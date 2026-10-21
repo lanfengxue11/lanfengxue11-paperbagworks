@@ -891,19 +891,27 @@ function App() {
       >
         <button 
           type="button" 
-          className="bag-toggle-btn"
+          className="bag-trigger-btn"
           onClick={() => setBagMenuOpen(!bagMenuOpen)}
-          aria-label="Contact Paper Bag Works via WhatsApp or Phone"
+          aria-label="Toggle contact menu"
+          title="Contact via WhatsApp & Phone"
         >
-          <div className="bag-shape-icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 17V12C18 8.68629 20.6863 6 24 6C27.3137 6 30 8.68629 30 12V17" stroke="white" strokeWidth="3" strokeLinecap="round" />
-              <path d="M11 16H37L34.5 40C34.5 41.1046 33.6046 42 32.5 42H15.5C14.3954 42 13.5 41.1046 13.5 40L11 16Z" fill="#22563a" stroke="white" strokeWidth="2.5" />
-              <path d="M12 19H36" stroke="rgba(255,255,255,0.4)" strokeWidth="1.2" />
-              <text x="24" y="32.5" fontFamily="'Plus Jakarta Sans', system-ui, sans-serif" fontWeight="900" fontSize="10.5" fill="white" textAnchor="middle" letterSpacing="-0.5px">PB</text>
-            </svg>
+          <div className="bag-shape-container">
+            <div className="bag-rope-handle" />
+            <div className="bag-shape-body">
+              <div className="bag-monogram">PBW</div>
+              <div className="bag-icons-row">
+                <span className="wa-icon-badge" title="WhatsApp">
+                  <MessageCircle size={22} />
+                </span>
+                <span className="phone-icon-badge" title="Phone">
+                  <Phone size={20} />
+                </span>
+              </div>
+              <span className="bag-label-text">HELP</span>
+            </div>
+            <span className="bag-status-dot" />
           </div>
-          <span className="bag-status-dot" />
         </button>
 
         <div className="bag-popover">

@@ -419,8 +419,8 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
   .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
 
-/* Unified Floating Paper Bag Contact Widget (Enlarged 1x) */
-.floating-bag-widget { position: fixed; z-index: 99; right: 30px; bottom: 30px; }
+/* Unified Floating Paper Bag Contact Widget (Enlarged 1x on Desktop, Compact on Mobile) */
+.floating-bag-widget { position: fixed; z-index: 999; right: 30px; bottom: 30px; }
 
 .bag-trigger-btn { position: relative; width: 112px; height: 132px; padding: 0; background: transparent; border: none; cursor: pointer; transition: transform var(--ease); outline: none; }
 .bag-trigger-btn:hover { transform: translateY(-5px) scale(1.04); }
@@ -446,7 +446,7 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 @keyframes pulseDot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.2); opacity: .75; } }
 
 /* Popover Menu */
-.bag-popover { position: absolute; right: 0; bottom: 144px; width: 310px; background: rgba(255,255,255,.98); backdrop-filter: blur(12px); border: 1px solid var(--eco-line); border-radius: 14px; box-shadow: 0 20px 48px rgba(20,32,24,.18); padding: 18px; opacity: 0; visibility: hidden; transform: translateY(12px) scale(.96); transition: opacity var(--ease), transform var(--ease), visibility var(--ease); pointer-events: none; }
+.bag-popover { position: absolute; right: 0; bottom: 144px; width: 310px; background: rgba(255,255,255,.98); backdrop-filter: blur(12px); border: 1px solid var(--eco-line); border-radius: 14px; box-shadow: 0 20px 48px rgba(20,32,24,.18); padding: 18px; opacity: 0; visibility: hidden; transform: translateY(12px) scale(.96); transition: opacity var(--ease), transform var(--ease), visibility var(--ease); pointer-events: none; z-index: 1000; }
 
 .floating-bag-widget.is-active .bag-popover,
 .floating-bag-widget:hover .bag-popover { opacity: 1; visibility: visible; transform: translateY(0) scale(1); pointer-events: auto; }
@@ -473,6 +473,20 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 .quote-action:hover { background: var(--eco); color: #ffffff; }
 .quote-action:hover strong, .quote-action:hover span { color: #ffffff; }
 
+/* Mobile Floating Bag Widget - Scaled down cleanly so it doesn't block content */
+@media (max-width: 768px) {
+  .floating-bag-widget { right: 12px !important; bottom: 16px !important; z-index: 999 !important; }
+  .bag-trigger-btn { width: 82px !important; height: 96px !important; }
+  .bag-rope-handle { width: 40px !important; height: 26px !important; border-width: 4px !important; }
+  .bag-shape-body { width: 78px !important; height: 74px !important; padding: 6px 5px 7px !important; }
+  .bag-monogram { font-size: 11.5px !important; }
+  .wa-icon-badge, .phone-icon-badge { width: 25px !important; height: 25px !important; }
+  .wa-icon-badge svg, .phone-icon-badge svg { width: 14px !important; height: 14px !important; }
+  .bag-label-text { font-size: 9px !important; }
+  .bag-status-dot { top: 12px !important; right: 2px !important; width: 11px !important; height: 11px !important; border-width: 2px !important; }
+  .bag-popover { right: 0 !important; bottom: 108px !important; width: 285px !important; max-width: calc(100vw - 24px) !important; padding: 14px !important; }
+}
+
 @media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } .product-grid { grid-template-columns: repeat(2, 1fr); } .hero-pills { margin-top: 46px; } .factory-grid { grid-template-columns: repeat(2, 1fr); } .brand-logo-grid { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 900px) { .main-nav { gap: 17px; }.factory-section, .quote-card { gap: 5%; }.faq-section { gap: 7%; }.footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }.footer-brand { grid-row: span 2; } }
 @media (max-width: 768px) {
@@ -495,7 +509,7 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
   .factory-section, .faq-section, .quote-card { grid-template-columns: 1fr; }.factory-visual { min-height: 450px; margin-bottom: 11px; }.factory-paper { min-height: 300px; }.compare-grid { grid-template-columns: 1fr; }.faq-intro { margin-bottom: 15px; }.quote-card { padding: 38px 7%; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 38px 25px; }.footer-brand { grid-row: auto; grid-column: 1 / -1; }.footer-bottom { flex-direction: column; gap: 8px; }
 }
-@media (max-width: 520px) { .stats-grid { grid-template-columns: 1fr; gap: 12px; }.product-grid { grid-template-columns: 1fr; gap: 16px; }.factory-grid { grid-template-columns: 1fr; gap: 16px; }.brand-logo-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }.hero-points { flex-direction: column; gap: 10px; }.hero-actions { align-items: flex-start; flex-direction: column; gap: 19px; }.hero-pills { gap: 7px; }.hero-pills div { padding: 12px 11px; }.material-grid { grid-template-columns: 1fr; }.material-card-image { height: 190px; }.material-card-content { padding: 20px 21px 24px; }.form-row { grid-template-columns: 1fr; gap: 15px; }.footer-grid { grid-template-columns: 1fr; }.footer-brand { grid-column: auto; }.floating-bag-widget { right: 16px; bottom: 16px; transform: scale(.8); transform-origin: bottom right; }.bag-popover { right: -6px; width: 290px; } }
+@media (max-width: 520px) { .stats-grid { grid-template-columns: 1fr; gap: 12px; }.product-grid { grid-template-columns: 1fr; gap: 16px; }.factory-grid { grid-template-columns: 1fr; gap: 16px; }.brand-logo-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }.hero-points { flex-direction: column; gap: 10px; }.hero-actions { align-items: flex-start; flex-direction: column; gap: 19px; }.hero-pills { gap: 7px; }.hero-pills div { padding: 12px 11px; }.material-grid { grid-template-columns: 1fr; }.material-card-image { height: 190px; }.material-card-content { padding: 20px 21px 24px; }.form-row { grid-template-columns: 1fr; gap: 15px; }.footer-grid { grid-template-columns: 1fr; }.footer-brand { grid-column: auto; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
 
 

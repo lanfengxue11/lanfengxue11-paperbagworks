@@ -107,10 +107,58 @@
     }
 
     /* Interactive state transitions */
-    .tab-btn.active {
-      background-color: #1A3826;
-      color: #FFFFFF;
-      box-shadow: 0 4px 14px rgba(26, 56, 38, 0.25);
+    .catalog-tab-active {
+      background-color: #1A3826 !important;
+      color: #FCFAF7 !important;
+      border-color: #1A3826 !important;
+      box-shadow: 0 4px 12px rgba(26, 56, 38, 0.2);
+    }
+
+    /* Unified Floating Paper Bag Contact Widget */
+    .floating-bag-widget { position: fixed; z-index: 999; right: 30px; bottom: 30px; }
+    .bag-trigger-btn { position: relative; width: 112px; height: 132px; padding: 0; background: transparent; border: none; cursor: pointer; transition: transform .2s ease; outline: none; }
+    .bag-trigger-btn:hover { transform: translateY(-5px) scale(1.04); }
+    .bag-shape-container { position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; filter: drop-shadow(0 14px 28px rgba(34,86,58,.35)); }
+    .bag-rope-handle { position: absolute; top: 0; width: 56px; height: 38px; border: 5px solid #22563a; border-bottom: none; border-radius: 28px 28px 0 0; background: transparent; }
+    .bag-shape-body { position: relative; width: 106px; height: 102px; background: linear-gradient(175deg, #22563a 0%, #163e28 100%); border-radius: 8px 8px 12px 12px; clip-path: polygon(5% 0%, 95% 0%, 92% 100%, 8% 100%); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 10px 8px 11px; color: #ffffff; border-top: 1.5px solid rgba(255,255,255,.25); box-shadow: inset 0 2px 6px rgba(255,255,255,.18); }
+    .bag-monogram { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: 15px; letter-spacing: .14em; color: #c8ecd3; text-shadow: 0 1px 3px rgba(0,0,0,.35); }
+    .bag-icons-row { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin: 2px 0; }
+    .wa-icon-badge { display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; border-radius: 50%; background: #25d366; color: #ffffff; box-shadow: 0 3px 8px rgba(0,0,0,.25); transition: transform .2s ease; }
+    .phone-icon-badge { display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; border-radius: 50%; background: #c8a36e; color: #162f22; box-shadow: 0 3px 8px rgba(0,0,0,.25); transition: transform .2s ease; }
+    .bag-trigger-btn:hover .wa-icon-badge, .bag-trigger-btn:hover .phone-icon-badge { transform: scale(1.08); }
+    .bag-label-text { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 800; font-size: 12px; letter-spacing: .16em; color: #edf5ef; opacity: .95; }
+    .bag-status-dot { position: absolute; top: 20px; right: 4px; width: 14px; height: 14px; border-radius: 50%; background: #25d366; border: 2.5px solid #ffffff; box-shadow: 0 0 0 3px rgba(37,211,102,.35); animation: pulseDot 2s infinite; }
+    @keyframes pulseDot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.2); opacity: .75; } }
+
+    .bag-popover { position: absolute; right: 0; bottom: 144px; width: 310px; background: rgba(255,255,255,.98); backdrop-filter: blur(12px); border: 1px solid #D6E4DB; border-radius: 14px; box-shadow: 0 20px 48px rgba(20,32,24,.18); padding: 18px; opacity: 0; visibility: hidden; transform: translateY(12px) scale(.96); transition: opacity .2s ease, transform .2s ease, visibility .2s ease; pointer-events: none; z-index: 1000; }
+    .floating-bag-widget.is-active .bag-popover, .floating-bag-widget:hover .bag-popover { opacity: 1; visibility: visible; transform: translateY(0) scale(1); pointer-events: auto; }
+    .bag-popover-header { margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #ECE6DC; }
+    .popover-badge { display: inline-block; padding: 3px 7px; border-radius: 4px; background: #EEF4F0; color: #1A3826; font-size: 8.5px; font-weight: 800; letter-spacing: .08em; margin-bottom: 5px; }
+    .bag-popover-actions { display: flex; flex-direction: column; gap: 8px; }
+    .popover-action { display: flex; align-items: center; gap: 11px; padding: 10px 12px; border-radius: 8px; border: 1px solid #ECE6DC; background: #faf9f6; color: #1A3826; text-decoration: none; transition: transform .2s ease, background .2s ease, border-color .2s ease; font-size: 12px; }
+    .popover-action:hover { transform: translateX(3px); background: #ffffff; border-color: #1A3826; }
+    .action-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0; }
+    .action-icon.wa-bg { background: #25d366; color: #ffffff; }
+    .action-icon.phone-bg { background: #EEF4F0; color: #1A3826; }
+    .action-info { display: flex; flex-direction: column; gap: 2px; flex: 1; text-align: left; }
+    .action-info strong { font-size: 12.5px; font-weight: 700; color: #1A3826; }
+    .action-info span { font-size: 10.5px; color: #586b60; }
+    .quote-action { justify-content: space-between; background: #EEF4F0; border-color: rgba(26,56,38,.2); color: #1A3826; }
+    .quote-action strong { color: #1A3826; }
+    .quote-action:hover { background: #1A3826; color: #ffffff; }
+    .quote-action:hover strong, .quote-action:hover span { color: #ffffff; }
+
+    @media (max-width: 768px) {
+      .floating-bag-widget { right: 12px !important; bottom: 16px !important; z-index: 999 !important; }
+      .bag-trigger-btn { width: 82px !important; height: 96px !important; }
+      .bag-rope-handle { width: 40px !important; height: 26px !important; border-width: 4px !important; }
+      .bag-shape-body { width: 78px !important; height: 74px !important; padding: 6px 5px 7px !important; }
+      .bag-monogram { font-size: 11.5px !important; }
+      .wa-icon-badge, .phone-icon-badge { width: 25px !important; height: 25px !important; }
+      .wa-icon-badge svg, .phone-icon-badge svg { width: 14px !important; height: 14px !important; }
+      .bag-label-text { font-size: 9px !important; }
+      .bag-status-dot { top: 12px !important; right: 2px !important; width: 11px !important; height: 11px !important; border-width: 2px !important; }
+      .bag-popover { right: 0 !important; bottom: 108px !important; width: 285px !important; max-width: calc(100vw - 24px) !important; padding: 14px !important; }
     }
     .filter-btn.active {
       background-color: #244F36;
@@ -148,6 +196,7 @@
       <!-- Navigation Links -->
       <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-forest/80">
         <a href="/" class="hover:text-forest transition-colors">Home</a>
+        <a href="/products.html" class="hover:text-forest transition-colors">Products</a>
         
         <!-- Custom Options Dropdown -->
         <div class="relative group py-2">
@@ -3156,6 +3205,73 @@
       renderSubstrateBanner();
       renderCatalog();
     });
+  </script>
+  <!-- Unified Floating Paper Bag Contact Widget -->
+  <aside class="floating-bag-widget" id="floatingBagWidget" aria-label="Quick contact widget">
+    <div class="bag-popover" id="bagPopover">
+      <div class="bag-popover-header">
+        <span class="popover-badge">DIRECT FACTORY CONTACT</span>
+        <h4 style="margin:0; font-size:15px; font-weight:800; color:#1A3826; letter-spacing:-.02em;">Paper Bag Works</h4>
+        <p style="margin:3px 0 0; color:#586b60; font-size:11.5px;">Fast wholesale quote &amp; dieline advice</p>
+      </div>
+      <div class="bag-popover-actions">
+        <a href="https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20would%20like%20to%20inquire%20about%20custom%20paper%20bag%20production." target="_blank" rel="noreferrer" class="popover-action">
+          <div class="action-icon wa-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
+          <div class="action-info">
+            <strong>WhatsApp Chat</strong>
+            <span>+86 13760699327 · Instant reply</span>
+          </div>
+        </a>
+        <a href="tel:+8613760699327" class="popover-action">
+          <div class="action-icon phone-bg"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+          <div class="action-info">
+            <strong>Direct Call</strong>
+            <span>+86 13760699327</span>
+          </div>
+        </a>
+        <a href="mailto:1@paperbagworks.com?subject=Custom%20Paper%20Bag%20Quote%20Request" class="popover-action quote-action">
+          <strong>Request Free Sample Kit &amp; Quote</strong>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+      </div>
+    </div>
+
+    <button type="button" class="bag-trigger-btn" id="bagTriggerBtn" aria-label="Toggle contact menu" title="Contact via WhatsApp & Phone">
+      <div class="bag-shape-container">
+        <div class="bag-rope-handle"></div>
+        <div class="bag-shape-body">
+          <div class="bag-monogram">PBW</div>
+          <div class="bag-icons-row">
+            <span class="wa-icon-badge" title="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </span>
+            <span class="phone-icon-badge" title="Phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </span>
+          </div>
+          <span class="bag-label-text">HELP</span>
+        </div>
+        <span class="bag-status-dot"></span>
+      </div>
+    </button>
+  </aside>
+
+  <script>
+    (function(){
+      var widget = document.getElementById('floatingBagWidget');
+      var btn = document.getElementById('bagTriggerBtn');
+      if (btn && widget) {
+        btn.addEventListener('click', function(e){
+          e.stopPropagation();
+          widget.classList.toggle('is-active');
+        });
+        document.addEventListener('click', function(e){
+          if (!widget.contains(e.target)) {
+            widget.classList.remove('is-active');
+          }
+        });
+      }
+    })();
   </script>
 </body>
 </html>
