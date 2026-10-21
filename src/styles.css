@@ -567,8 +567,8 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 .scenario-feature-card h3 { margin: 0 0 8px; font-size: 14.5px; font-weight: 800; color: var(--ink); }
 .scenario-feature-card p { margin: 0; font-size: 12.5px; line-height: 1.65; color: var(--muted); }
 
-.checklist-card { background: #ffffff; border: 1px solid var(--eco-line); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,.03); margin-bottom: 28px; }
-.checklist-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.checklist-card { background: #ffffff; border: 1px solid var(--eco-line); border-radius: 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; box-shadow: 0 4px 18px rgba(0,0,0,.03); margin-bottom: 28px; width: 100%; }
+.checklist-table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 13px; }
 .checklist-table th { background: var(--eco-tint); color: var(--eco); font-weight: 800; padding: 14px 18px; text-align: left; font-size: 12px; letter-spacing: .04em; border-bottom: 1px solid var(--eco-line); }
 .checklist-table td { padding: 14px 18px; border-bottom: 1px solid var(--line); color: var(--ink); vertical-align: middle; }
 .checklist-table tr:last-child td { border-bottom: none; }
@@ -576,8 +576,8 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 .param-val { font-weight: 600; color: var(--muted); width: 45%; }
 .param-highlight { font-weight: 800; color: var(--eco); width: 30%; font-size: 12px; }
 
-.sizes-table-card { border-radius: 10px; overflow: hidden; background: #ffffff; border: 1px solid var(--eco-line); box-shadow: 0 4px 20px rgba(20,32,24,.03); }
-.scenario-sizes-table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+.sizes-table-card { border-radius: 10px; overflow-x: auto; -webkit-overflow-scrolling: touch; background: #ffffff; border: 1px solid var(--eco-line); box-shadow: 0 4px 20px rgba(20,32,24,.03); width: 100%; }
+.scenario-sizes-table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: 13px; text-align: left; }
 .scenario-sizes-table th { background: var(--eco-tint); color: var(--eco); font-weight: 800; padding: 14px 18px; border-bottom: 1px solid var(--eco-line); font-size: 12px; letter-spacing: .04em; }
 .scenario-sizes-table td { padding: 14px 18px; border-bottom: 1px solid var(--line); color: var(--ink); }
 .scenario-sizes-table tr:last-child td { border-bottom: none; }
@@ -688,4 +688,79 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 .btn-email-large:hover { background: #f0f7f2; transform: translateY(-2px); }
 .cta-direct-info { display: flex; justify-content: center; align-items: center; gap: 24px; font-size: 12.5px; color: #a3c4b0; flex-wrap: wrap; }
 .cta-direct-info span { display: inline-flex; align-items: center; gap: 6px; }
+
+/* =========================================================================
+   RESPONSIVE MOBILE & TABLET MEDIA QUERIES
+   ========================================================================= */
+
+@media (max-width: 1080px) {
+  .hub-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .hub-trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .custom-cards-grid { grid-template-columns: repeat(2, 1fr); }
+  .scenario-features-grid { grid-template-columns: repeat(2, 1fr); }
+  .materials-finishes-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .container, .scenario-container { padding-left: 5%; padding-right: 5%; }
+  
+  /* Hub Hero */
+  .hub-hero-section { padding: 36px 0 28px; }
+  .hub-hero-title { font-size: 26px; line-height: 1.22; }
+  .hub-hero-sub { font-size: 13.5px; margin-bottom: 20px; }
+  .hub-trust-grid { grid-template-columns: 1fr; gap: 8px; }
+  .hub-trust-item { justify-content: flex-start; }
+
+  /* Hub Filter Bar & Tabs */
+  .hub-filter-section { padding: 10px 0; }
+  .hub-controls-row { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hub-tabs-list { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .hub-tabs-list::-webkit-scrollbar { display: none; }
+  .hub-tab-btn { flex-shrink: 0; padding: 7px 14px; font-size: 11.5px; }
+  .hub-search-box { min-width: auto; width: 100%; }
+
+  /* Hub Cards Grid (Single Column on Phones!) */
+  .hub-products-grid-section { padding: 28px 0 44px; }
+  .hub-cards-grid { grid-template-columns: 1fr; gap: 22px; }
+  .hub-card-media { height: 230px; }
+  .hub-card-body { padding: 18px 18px 20px; }
+  .hub-card-title { font-size: 17px; }
+
+  /* Tables Scrollable Wrapper on Mobile */
+  .checklist-card, .sizes-table-card { border-radius: 8px; margin-bottom: 20px; }
+  .checklist-table, .scenario-sizes-table { min-width: 600px; }
+  .checklist-table th, .checklist-table td { padding: 10px 12px; font-size: 11.5px; }
+
+  /* Custom Cards & Factors */
+  .custom-cards-grid { grid-template-columns: 1fr; gap: 12px; }
+  .factors-grid { grid-template-columns: 1fr; gap: 12px; }
+  .custom-card, .factor-item { padding: 18px 16px; }
+
+  /* Subpage Hero Grid */
+  .scenario-hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .scenario-hero-title { font-size: 26px; line-height: 1.2; }
+  .scenario-features-grid { grid-template-columns: 1fr; gap: 12px; }
+  .scenario-specs-compact { grid-template-columns: 1fr; gap: 8px; padding: 12px; }
+  .scenario-hero-actions { flex-direction: column; width: 100%; gap: 10px; }
+  .btn-whatsapp-action, .btn-primary-action { width: 100%; justify-content: center; }
+
+  /* CTA Banner */
+  .cta-banner-section { padding: 44px 0; }
+  .cta-banner-content h2 { font-size: 22px; }
+  .cta-buttons-row { flex-direction: column; width: 100%; gap: 10px; }
+  .btn-wa-large, .btn-email-large { width: 100%; justify-content: center; }
+  .cta-direct-info { flex-direction: column; gap: 8px; text-align: center; }
+
+  /* Footer */
+  .footer { padding: 48px 6% 28px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; padding-bottom: 36px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .footer-badges { flex-wrap: wrap; }
+}
+
+@media (max-width: 480px) {
+  .hub-hero-title { font-size: 23px; }
+  .hub-card-title { font-size: 16px; }
+  .hub-dieline-snippet { font-size: 10.5px; }
+}
 

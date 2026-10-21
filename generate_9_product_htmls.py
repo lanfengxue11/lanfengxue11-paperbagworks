@@ -394,7 +394,7 @@ def render_html_page(sc):
     # Base64 embedded assets for 100% self-contained rendering in any environment
     icon_src = get_base64_image("assets/images/paper-bag-works-icon.svg")
     img_src = get_base64_image(f"assets/images/scenarios/{os.path.basename(sc['heroImage'])}")
-    css_src = "../assets/main-BxKyyouC.css"
+    css_src = "../assets/main-C8zh8eFU.css"
     home_link = "../index.html"
     wa_msg = f"Hello Paper Bag Works, I would like to inquire about custom production for {sc['heroHeading']} (MOQ {sc['specs']['moq']})."
     encoded_wa = wa_msg.replace(" ", "%20").replace("&", "%26")
@@ -564,8 +564,8 @@ def render_html_page(sc):
     .feat-card p {{ font-size: 12px; color: var(--muted); line-height: 1.6; }}
 
     /* Checklist Table */
-    .checklist-card {{ background: #fff; border: 1px solid var(--eco-line); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 18px rgba(0,0,0,.03); margin-bottom: 28px; }}
-    .checklist-table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
+    .checklist-card {{ background: #fff; border: 1px solid var(--eco-line); border-radius: 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; box-shadow: 0 4px 18px rgba(0,0,0,.03); margin-bottom: 28px; width: 100%; }}
+    .checklist-table {{ width: 100%; min-width: 640px; border-collapse: collapse; font-size: 13px; }}
     .checklist-table th {{ background: var(--eco-tint); color: var(--eco); font-weight: 800; padding: 12px 18px; text-align: left; font-size: 11.5px; letter-spacing: .04em; border-bottom: 1px solid var(--eco-line); }}
     .checklist-table td {{ padding: 13px 18px; border-bottom: 1px solid var(--line); color: var(--ink); vertical-align: middle; }}
     .checklist-table tr:last-child td {{ border-bottom: none; }}
@@ -574,8 +574,8 @@ def render_html_page(sc):
     .param-highlight {{ font-weight: 800; color: var(--eco); width: 30%; font-size: 12px; }}
 
     /* Dielines Table */
-    .sizes-table-card {{ background: #fff; border: 1px solid var(--eco-line); border-radius: 10px; overflow: hidden; }}
-    .sizes-table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
+    .sizes-table-card {{ background: #fff; border: 1px solid var(--eco-line); border-radius: 10px; overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; }}
+    .sizes-table {{ width: 100%; min-width: 640px; border-collapse: collapse; font-size: 13px; }}
     .sizes-table th {{ background: var(--eco-tint); color: var(--eco); font-weight: 800; padding: 12px 16px; text-align: left; font-size: 11.5px; letter-spacing: .04em; }}
     .sizes-table td {{ padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--ink); }}
     .sizes-table tr:last-child td {{ border-bottom: none; }}
@@ -1024,7 +1024,7 @@ def render_html_page(sc):
 
 def render_products_hub_html():
     icon_src = get_base64_image("assets/images/paper-bag-works-icon.svg")
-    css_src = "./assets/main-BxKyyouC.css"
+    css_src = "./assets/main-C8zh8eFU.css"
     wa_general = "https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20would%20like%20to%20inquire%20about%20your%20Products%20Collection."
 
     cards_html = ""
@@ -1217,7 +1217,8 @@ def render_products_hub_html():
 
     /* Checklist & Customization */
     .checklist-card {{ background: #fff; border: 1px solid var(--eco-line); border-radius: 12px; overflow: hidden; margin-bottom: 28px; }}
-    .checklist-table {{ width: 100%; border-collapse: collapse; font-size: 13px; }}
+    .checklist-card {{ background: #fff; border: 1px solid var(--eco-line); border-radius: 12px; overflow-x: auto; -webkit-overflow-scrolling: touch; box-shadow: 0 4px 18px rgba(0,0,0,.03); margin-bottom: 28px; width: 100%; }}
+    .checklist-table {{ width: 100%; min-width: 640px; border-collapse: collapse; font-size: 13px; }}
     .checklist-table th {{ background: var(--eco-tint); color: var(--eco); font-weight: 800; padding: 12px 18px; text-align: left; font-size: 11.5px; border-bottom: 1px solid var(--eco-line); }}
     .checklist-table td {{ padding: 13px 18px; border-bottom: 1px solid var(--line); color: var(--ink); vertical-align: middle; }}
     .checklist-table tr:last-child td {{ border-bottom: none; }}
@@ -1242,8 +1243,8 @@ def render_products_hub_html():
     .btn-wa-act {{ padding: 13px 22px; border-radius: 6px; background: #25d366; color: #fff; font-size: 13.5px; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }}
     .btn-email-act {{ padding: 13px 20px; border-radius: 6px; background: #fff; color: var(--eco); font-size: 13.5px; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }}
 
-    .footer {{ padding: 48px 0 28px; background: #0e1e15; color: #fff; }}
-    .footer-grid {{ display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 36px; margin-bottom: 30px; }}
+    .footer {{ padding: 68px 8% 36px; background: #0e1e15; color: #fff; }}
+    .footer-grid {{ max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1.2fr; gap: 48px; margin-bottom: 40px; }}
     .footer-brand {{ display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }}
     .footer-brand img {{ width: 28px; height: 28px; }}
     .footer-brand strong {{ font-size: 14px; letter-spacing: .08em; color: #88d4a3; }}
@@ -1256,17 +1257,21 @@ def render_products_hub_html():
     .footer-bottom {{ border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px; display: flex; justify-content: space-between; font-size: 11.5px; color: #7d9685; }}
 
     @media (max-width: 1080px) {{
-      .hub-cards-grid {{ grid-template-columns: repeat(2, 1fr); }}
+      .hub-cards-grid {{ grid-template-columns: repeat(2, 1fr); gap: 20px; }}
       .hub-trust-grid {{ grid-template-columns: repeat(2, 1fr); }}
       .custom-cards-grid {{ grid-template-columns: repeat(2, 1fr); }}
     }}
     @media (max-width: 720px) {{
-      .hub-cards-grid {{ grid-template-columns: 1fr; }}
+      .hub-cards-grid {{ grid-template-columns: 1fr !important; gap: 20px; }}
       .cta-banner-inner {{ flex-direction: column; align-items: flex-start; }}
-      .hub-controls-row {{ flex-direction: column; align-items: stretch; }}
-      .hub-search-input {{ min-width: auto; }}
+      .hub-controls-row {{ flex-direction: column; align-items: stretch; gap: 10px; }}
+      .hub-tabs-list {{ overflow-x: auto; flex-wrap: nowrap; padding-bottom: 6px; }}
+      .hub-tab-btn {{ flex-shrink: 0; }}
+      .hub-search-input {{ min-width: auto; width: 100%; }}
       .custom-cards-grid {{ grid-template-columns: 1fr; }}
       .hub-trust-grid {{ grid-template-columns: 1fr; }}
+      .footer {{ padding: 48px 6% 28px; }}
+      .footer-grid {{ grid-template-columns: 1fr; gap: 24px; }}
     }}
   </style>
 </head>
