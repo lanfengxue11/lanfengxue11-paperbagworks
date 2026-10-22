@@ -1204,7 +1204,7 @@ def generate_signature_pdp_html(prod):
 
           <div class="hero-media">
             <div class="visual-card">
-              <img src="{img_src}" alt="{prod['pdpTitle']}" />
+              <img src="{img_src}" alt="{prod['pdpTitle']}" loading="lazy" decoding="async" />
               <div class="badge-overlay">{prod['badge']}</div>
             </div>
           </div>
@@ -1545,7 +1545,7 @@ def generate_scenario_pdp_html(sc):
 
           <div class="hero-media">
             <div class="visual-card">
-              <img src="{img_src}" alt="{sc['heroHeading']}" />
+              <img src="{img_src}" alt="{sc['heroHeading']}" loading="lazy" decoding="async" />
               <div class="badge-overlay">{sc['badge']}</div>
             </div>
           </div>
@@ -1702,7 +1702,7 @@ def generate_products_hub_html():
         sig_cards_html += f"""
         <div class="hub-card-item" data-category="{prod['categorySlug']}" data-type="signature">
           <div class="hub-card-media" onclick="window.location.href='{pdp_link}'">
-            <img class="hub-card-img" src="{img_src}" alt="{prod['title']}" loading="lazy" />
+            <img class="hub-card-img" src="{img_src}" alt="{prod['title']}" loading="lazy" decoding="async" />
             <div class="hub-badge-pill">{prod['badge']}</div>
             <div class="hub-num-badge">SIGNATURE {prod['itemNum']}</div>
           </div>
@@ -1762,7 +1762,7 @@ def generate_products_hub_html():
         scenario_cards_html += f"""
         <div class="hub-card-item" data-category="{sc['categorySlug']}" data-type="scenario">
           <div class="hub-card-media" onclick="window.location.href='{pdp_link}'">
-            <img class="hub-card-img" src="{img_src}" alt="{sc['heroHeading']}" loading="lazy" />
+            <img class="hub-card-img" src="{img_src}" alt="{sc['heroHeading']}" loading="lazy" decoding="async" />
             <div class="hub-badge-pill">{sc['badge']}</div>
             <div class="hub-num-badge">SCENARIO {sc['scenarioNum']}</div>
           </div>

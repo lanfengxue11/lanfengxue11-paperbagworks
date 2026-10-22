@@ -146,6 +146,7 @@ export default function ProductsHubPage({ onBackToHome, onSelectScenario, onOpen
                         alt={sc.heroHeading} 
                         className="hub-card-img" 
                         loading="lazy" 
+                        decoding="async"
                       />
                       <span className="hub-badge-pill">{sc.badge}</span>
                       <span className="hub-num-badge">SCENARIO {sc.scenarioNum}</span>

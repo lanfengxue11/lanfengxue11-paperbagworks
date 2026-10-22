@@ -506,6 +506,7 @@ function App() {
                 alt="9 Custom Paper Bag Industry Application Scenarios: Bakery, Food & Beverage, Pharmacy, E-commerce, Gift, Fashion, Corporate, Cosmetics, Jewelry & Boutique" 
                 className="applications-grid-img"
                 loading="lazy"
+                decoding="async"
               />
               <div className="banner-hotspots-grid">
                 {SCENARIO_PAGES.map((sc) => (
@@ -546,6 +547,7 @@ function App() {
                       alt={product.alt} 
                       className="product-img"
                       loading="lazy"
+                      decoding="async"
                     />
                     <span className="product-number">{product.number}</span>
                   </a>
@@ -587,6 +589,7 @@ function App() {
                 alt="Paper Bag Works Custom Manufacturing Process: Requirements, Custom Design, Sampling, Mass Production, QC Inspection, Global Delivery" 
                 className="workflow-grid-img"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </section>
@@ -601,7 +604,7 @@ function App() {
             <div className="material-grid">
               {materials.map((material) => (
                 <article className="material-card" key={material.title}>
-                  <img className="material-card-image" src={material.image} alt={`${material.title} paper bag finish example`} />
+                  <img className="material-card-image" src={material.image} alt={`${material.title} paper bag finish example`} loading="lazy" decoding="async" />
                   <div className="material-card-content">
                     <span className="material-icon">{material.icon}</span>
                     <h3>{material.title}</h3>
@@ -613,7 +616,7 @@ function App() {
             </div>
             <div className="case-study">
               <div className="case-study-image">
-                <img src={matCaseStudy} alt="Three premium custom paper bag case studies in ivory, forest green and midnight navy" />
+                <img src={matCaseStudy} alt="Three premium custom paper bag case studies in ivory, forest green and midnight navy" loading="lazy" decoding="async" />
                 <div className="case-study-labels">
                   <span>IVORY / COTTON HANDLE</span>
                   <span>FOREST / MATTE STOCK</span>
@@ -646,6 +649,7 @@ function App() {
                   alt="Paper Bag Works Master Craftsman Atelier Workshop Bench with Dieline Blueprints, Pantone Swatches and Luxury Forest Green Bag" 
                   className="atelier-main-img"
                   loading="lazy"
+                  decoding="async"
                 />
                 
                 {/* Interactive Craftsmanship Hotspot Badges */}

@@ -93,6 +93,7 @@ export default function ShowcaseSections() {
                   alt={item.title} 
                   className="factory-card-img" 
                   loading="lazy" 
+                  decoding="async"
                 />
                 <div className="factory-card-overlay" />
               </div>
@@ -116,19 +117,19 @@ export default function ShowcaseSections() {
         <div className="brand-logo-grid">
           {/* Disney */}
           <div className="brand-logo-card">
-            <img src={OFFICIAL_BRAND_LOGOS.disney} alt="Disney" className="logo-disney" loading="lazy" />
+            <img src={OFFICIAL_BRAND_LOGOS.disney} alt="Disney" className="logo-disney" loading="lazy" decoding="async" />
           </div>
           {/* Sam's Club */}
           <div className="brand-logo-card">
-            <img src={OFFICIAL_BRAND_LOGOS.sams} alt="Sam's Club" className="logo-sams" loading="lazy" />
+            <img src={OFFICIAL_BRAND_LOGOS.sams} alt="Sam's Club" className="logo-sams" loading="lazy" decoding="async" />
           </div>
           {/* Taiqi */}
           <div className="brand-logo-card">
-            <img src={OFFICIAL_BRAND_LOGOS.taiqi} alt="TAIQI 泰奇食品" className="logo-taiqi" loading="lazy" />
+            <img src={OFFICIAL_BRAND_LOGOS.taiqi} alt="TAIQI 泰奇食品" className="logo-taiqi" loading="lazy" decoding="async" />
           </div>
           {/* Miniso */}
           <div className="brand-logo-card">
-            <img src={OFFICIAL_BRAND_LOGOS.miniso} alt="MINISO" className="logo-miniso" loading="lazy" />
+            <img src={OFFICIAL_BRAND_LOGOS.miniso} alt="MINISO" className="logo-miniso" loading="lazy" decoding="async" />
           </div>
           {/* UNES */}
           <div className="brand-logo-card">

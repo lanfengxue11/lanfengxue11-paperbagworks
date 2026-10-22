@@ -93,6 +93,8 @@ export default function ScenarioPage({ scenario, onBackToHome, onSelectScenario,
                 src={scenario.heroImage} 
                 alt={`${scenario.heroHeading} - ${scenario.primaryKeywords.join(', ')}`} 
                 className="scenario-visual-img"
+                loading="lazy"
+                decoding="async"
               />
               <div className="scenario-badge-overlay">
                 <ShieldCheck size={16} /> {scenario.badge}

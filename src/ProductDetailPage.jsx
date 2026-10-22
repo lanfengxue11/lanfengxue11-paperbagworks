@@ -50,7 +50,7 @@ export default function ProductDetailPage({ product, onBackToProducts, onSelectP
           {/* Column A: Gallery */}
           <div className="pdp-gallery-col">
             <div className="pdp-main-image-wrap">
-              <img src={activeImage} alt={product.amazonTitle} className="pdp-main-image" />
+              <img src={activeImage} alt={product.amazonTitle} className="pdp-main-image" loading="lazy" decoding="async" />
               <div className="pdp-image-zoom-hint">
                 <Eye size={14} /> Click thumbnails to inspect angles
               </div>
@@ -64,7 +64,7 @@ export default function ProductDetailPage({ product, onBackToProducts, onSelectP
                   className={`pdp-thumb-btn ${activeImage === imgUrl ? 'active' : ''}`}
                   onClick={() => setActiveImage(imgUrl)}
                 >
-                  <img src={imgUrl} alt={`Thumbnail ${idx + 1}`} />
+                  <img src={imgUrl} alt={`Thumbnail ${idx + 1}`} loading="lazy" decoding="async" />
                 </button>
               ))}
             </div>
