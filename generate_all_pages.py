@@ -5,16 +5,8 @@ import base64
 BASE_DIR = r"C:\Users\MSI\AccioWork\2026-09-04-11-01-23-046-1c20f82a\纸袋AI网站数据"
 
 def get_base64_image(rel_path):
-    full_path = os.path.join(BASE_DIR, "public", rel_path.lstrip("/\\"))
-    if not os.path.exists(full_path):
-        full_path = os.path.join(BASE_DIR, rel_path.lstrip("/\\"))
-    if os.path.exists(full_path):
-        with open(full_path, "rb") as f:
-            data = f.read()
-            ext = os.path.splitext(full_path)[1].lower()
-            mime = "image/svg+xml" if ext == ".svg" else ("image/jpeg" if ext in [".jpg", ".jpeg"] else "image/png")
-            return f"data:{mime};base64,{base64.b64encode(data).decode('utf-8')}"
-    return rel_path
+    # Use standard fast root-relative URL paths to keep HTML ultra-lightweight (15KB instead of 28MB)
+    return "/" + rel_path.replace("\\", "/").lstrip("/")
 
 # =========================================================================
 # 8 SIGNATURE FEATURED PRODUCTS DATA
