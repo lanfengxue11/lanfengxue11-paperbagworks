@@ -55,6 +55,7 @@ export const NAV_ITEMS = [
 const products = [
   {
     number: '01',
+    slug: 'kraft-paper-bags-with-handles',
     tag: 'BAKERY & CAFE · ECO KRAFT',
     title: 'Artisan Bakery & Coffee Takeaway Bag',
     image: p01,
@@ -65,6 +66,7 @@ const products = [
   },
   {
     number: '02',
+    slug: 'natural-kraft-lifestyle-tote',
     tag: 'ORGANIC · HERB TWILL HANDLE',
     title: 'Earthside Natural Kraft Lifestyle Tote',
     image: p02,
@@ -75,6 +77,7 @@ const products = [
   },
   {
     number: '03',
+    slug: 'die-cut-handle-flat-fold-kraft-bag',
     tag: 'MINIMALIST · FLAT PACK',
     title: 'Minimalist Die-Cut Handle Kraft Bag',
     image: p03,
@@ -85,6 +88,7 @@ const products = [
   },
   {
     number: '04',
+    slug: 'luxury-high-density-apparel-bag',
     tag: 'BOUTIQUE · STREETWEAR',
     title: 'High-Density Monochromatic Apparel Bag',
     image: p04,
@@ -95,6 +99,7 @@ const products = [
   },
   {
     number: '05',
+    slug: 'embossed-luxury-boutique-bag',
     tag: 'HAUTE COUTURE · BLIND EMBOSS',
     title: 'Architectural Embossed Boutique Bag',
     image: p05,
@@ -105,6 +110,7 @@ const products = [
   },
   {
     number: '06',
+    slug: 'rose-gold-foil-cosmetic-bag',
     tag: 'COSMETICS · ROSE GOLD FOIL',
     title: 'Rose Gold Foil Blush Cosmetic Bag',
     image: p06,
@@ -115,6 +121,7 @@ const products = [
   },
   {
     number: '07',
+    slug: 'envelope-ribbon-bow-gift-bag',
     tag: 'LUXURY GIFT · BOW TIE CLOSURE',
     title: 'Fold-Over Envelope Ribbon Bow Bag',
     image: p07,
@@ -125,6 +132,7 @@ const products = [
   },
   {
     number: '08',
+    slug: 'forest-green-embossed-holiday-bag',
     tag: 'HOLIDAY & GALA · GOLD CREST',
     title: 'Forest Green Gilded Heritage Tote',
     image: p08,
@@ -532,7 +540,7 @@ function App() {
             <div className="product-grid">
               {products.map((product) => (
                 <article className="product-card" key={product.title}>
-                  <div className="product-visual">
+                  <a href={`/products/${product.slug}.html`} className="product-visual" style={{ display: 'block', textDecoration: 'none' }} title={`View ${product.title} details`}>
                     <img 
                       src={product.image} 
                       alt={product.alt} 
@@ -540,17 +548,26 @@ function App() {
                       loading="lazy"
                     />
                     <span className="product-number">{product.number}</span>
-                  </div>
+                  </a>
                   <div className="product-card-body">
                     <span className="tag-pill">{product.tag}</span>
-                    <h3>{product.title}</h3>
+                    <h3>
+                      <a href={`/products/${product.slug}.html`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                        {product.title}
+                      </a>
+                    </h3>
                     <p>{product.description}</p>
                     <div className="spec-row">
                       {product.specs.map((spec) => <span key={spec}>{spec}</span>)}
                     </div>
-                    <a href="#quote" className="card-link" onClick={() => setPrefilledNote(`Inquiring about: ${product.title}`)}>
-                      Request Quote for this Bag <ArrowUpRight size={15} />
-                    </a>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginTop: 'auto', paddingTop: '10px' }}>
+                      <a href={`/products/${product.slug}.html`} className="card-link" style={{ fontWeight: 800 }}>
+                        View Details <ArrowUpRight size={15} />
+                      </a>
+                      <a href="#quote" className="card-link" onClick={() => setPrefilledNote(`Inquiring about: ${product.title}`)} style={{ fontSize: '11px', color: 'var(--muted)' }}>
+                        Quick Quote
+                      </a>
+                    </div>
                   </div>
                 </article>
               ))}
