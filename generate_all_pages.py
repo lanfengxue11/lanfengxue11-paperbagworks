@@ -1099,7 +1099,7 @@ def generate_signature_pdp_html(prod):
 
   <!-- Top Navigation -->
   <header class="topbar">
-    <a href="../index.html" class="brand">
+    <a href="/" class="brand">
       <img class="brand-icon" src="{icon_src}" alt="Paper Bag Works" />
       <span>
         <strong>PAPER</strong>
@@ -1109,31 +1109,31 @@ def generate_signature_pdp_html(prod):
     </a>
 
     <nav class="main-nav">
-      <a href="../index.html#applications">Applications</a>
-      <a href="../products.html" class="active">Products</a>
+      <a href="/#applications">Applications</a>
+      <a href="/products.html" class="active">Products</a>
       
       <!-- Custom Options Dropdown -->
       <div class="nav-dropdown">
-        <a href="../index.html#materials" class="nav-dropdown-trigger">
+        <a href="/#materials" class="nav-dropdown-trigger">
           <span>Custom Options</span>
           <span style="font-size: 10px;">&#9662;</span>
         </a>
         <div class="dropdown-menu">
           <span class="dropdown-header-label">Selection &amp; Specifications</span>
-          <a href="../index.html#materials" class="dropdown-item">
+          <a href="/#materials" class="dropdown-item">
             <span>Paper Bag Selection</span>
             <span class="badge-pill">Overview</span>
           </a>
-          <a href="../size-options.html" class="dropdown-item">
+          <a href="/size-options.html" class="dropdown-item">
             <span>Size Options</span>
             <span class="badge-pill">38 Sizes</span>
           </a>
         </div>
       </div>
 
-      <a href="../index.html#process">Our Process</a>
-      <a href="../index.html#faq">FAQ</a>
-      <a href="../index.html#quote" class="nav-quote">Get a Quote &rarr;</a>
+      <a href="/#process">Our Process</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#quote" class="nav-quote">Get a Quote &rarr;</a>
     </nav>
   </header>
 
@@ -1142,13 +1142,13 @@ def generate_signature_pdp_html(prod):
     <div class="breadcrumb-bar">
       <div class="container">
         <div class="breadcrumbs">
-          <a href="../index.html">Home</a>
+          <a href="/">Home</a>
           <span>&rsaquo;</span>
-          <a href="../products.html">Products</a>
+          <a href="/products.html">Products</a>
           <span>&rsaquo;</span>
           <span class="current">{prod['title']}</span>
         </div>
-        <a href="../products.html" class="back-link">&larr; Back to Products Hub</a>
+        <a href="/products.html" class="back-link">&larr; Back to Products Hub</a>
       </div>
     </div>
 
@@ -1446,7 +1446,7 @@ def generate_scenario_pdp_html(sc):
 
   <!-- Top Navigation -->
   <header class="topbar">
-    <a href="../index.html" class="brand">
+    <a href="/" class="brand">
       <img class="brand-icon" src="{icon_src}" alt="Paper Bag Works" />
       <span>
         <strong>PAPER</strong>
@@ -1456,31 +1456,31 @@ def generate_scenario_pdp_html(sc):
     </a>
 
     <nav class="main-nav">
-      <a href="../index.html#applications">Applications</a>
-      <a href="../products.html" class="active">Products</a>
+      <a href="/#applications">Applications</a>
+      <a href="/products.html" class="active">Products</a>
       
       <!-- Custom Options Dropdown -->
       <div class="nav-dropdown">
-        <a href="../index.html#materials" class="nav-dropdown-trigger">
+        <a href="/#materials" class="nav-dropdown-trigger">
           <span>Custom Options</span>
           <span style="font-size: 10px;">&#9662;</span>
         </a>
         <div class="dropdown-menu">
           <span class="dropdown-header-label">Selection &amp; Specifications</span>
-          <a href="../index.html#materials" class="dropdown-item">
+          <a href="/#materials" class="dropdown-item">
             <span>Paper Bag Selection</span>
             <span class="badge-pill">Overview</span>
           </a>
-          <a href="../size-options.html" class="dropdown-item">
+          <a href="/size-options.html" class="dropdown-item">
             <span>Size Options</span>
             <span class="badge-pill">38 Sizes</span>
           </a>
         </div>
       </div>
 
-      <a href="../index.html#process">Our Process</a>
-      <a href="../index.html#faq">FAQ</a>
-      <a href="../index.html#quote" class="nav-quote">Get a Quote &rarr;</a>
+      <a href="/#process">Our Process</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#quote" class="nav-quote">Get a Quote &rarr;</a>
     </nav>
   </header>
 
@@ -1489,13 +1489,13 @@ def generate_scenario_pdp_html(sc):
     <div class="breadcrumb-bar">
       <div class="container">
         <div class="breadcrumbs">
-          <a href="../index.html">Home</a>
+          <a href="/">Home</a>
           <span>&rsaquo;</span>
-          <a href="../products.html">Products</a>
+          <a href="/products.html">Products</a>
           <span>&rsaquo;</span>
           <span class="current">{sc['heroHeading']}</span>
         </div>
-        <a href="../products.html" class="back-link">&larr; Back to Products Hub</a>
+        <a href="/products.html" class="back-link">&larr; Back to Products Hub</a>
       </div>
     </div>
 
@@ -2129,16 +2129,23 @@ def main():
             f.write(html)
         print(f"  [OK] Generated {sc['slug']}.html")
 
-    # 4. Generate Products Hub Page (products.html)
-    print("Generating products hub aggregation page (products.html)...")
+    # 4. Generate Products Hub Page (products.html AND products/index.html)
+    print("Generating products hub aggregation page (products.html & products/index.html)...")
     hub_html = generate_products_hub_html()
     pub_hub = os.path.join(BASE_DIR, "public", "products.html")
     root_hub = os.path.join(BASE_DIR, "products.html")
+    pub_hub_idx = os.path.join(public_products_dir, "index.html")
+    root_hub_idx = os.path.join(root_products_dir, "index.html")
+    
     with open(pub_hub, "w", encoding="utf-8") as f:
         f.write(hub_html)
     with open(root_hub, "w", encoding="utf-8") as f:
         f.write(hub_html)
-    print("  [OK] Generated products.html")
+    with open(pub_hub_idx, "w", encoding="utf-8") as f:
+        f.write(hub_html)
+    with open(root_hub_idx, "w", encoding="utf-8") as f:
+        f.write(hub_html)
+    print("  [OK] Generated products.html and products/index.html")
 
     print("\nAll 8 signature product detail pages + 9 scenario pages + products hub page generated successfully!")
 
