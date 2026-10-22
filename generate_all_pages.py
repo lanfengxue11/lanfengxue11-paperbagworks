@@ -1677,6 +1677,33 @@ def generate_scenario_pdp_html(sc):
 """
     return html
 
+def get_signature_card_specs(prod):
+    specs_map = {
+        "kraft-paper-bags-with-handles": ("300 PCS", "120–150 GSM", "Twisted Rope", "5–8 Days"),
+        "natural-kraft-lifestyle-tote": ("300 PCS", "180–230 GSM", "Cotton Twill", "6–9 Days"),
+        "die-cut-handle-flat-fold-kraft-bag": ("500 PCS", "140–180 GSM", "Die-Cut Notch", "5–7 Days"),
+        "luxury-high-density-apparel-bag": ("300 PCS", "250–300 GSM", "Wide Webbing", "7–10 Days"),
+        "embossed-luxury-boutique-bag": ("200 PCS", "300–350 GSM", "Satin Ribbon", "8–12 Days"),
+        "rose-gold-foil-cosmetic-bag": ("200 PCS", "250 GSM Card", "Concealed Silk", "7–10 Days"),
+        "envelope-ribbon-bow-gift-bag": ("200 PCS", "300 GSM Board", "Satin Bow Knot", "8–11 Days"),
+        "forest-green-embossed-holiday-bag": ("200 PCS", "280 GSM Stock", "Gold Rope", "7–10 Days")
+    }
+    return specs_map.get(prod["slug"], (prod["specs"]["moq"], prod["specs"]["gsmRange"].split()[0] + " GSM", "Custom", "5–8 Days"))
+
+def get_scenario_card_specs(sc):
+    specs_map = {
+        "sourdough-bread-bags": ("500 PCS", "120–150 GSM", "Twisted Kraft", "5–8 Days"),
+        "food-takeaway-bags": ("1,000 PCS", "120–150 GSM", "Flat / Twisted", "6–10 Days"),
+        "wellness-organic-bags": ("500 PCS", "120–250 GSM", "Cotton Twill", "7–10 Days"),
+        "ecommerce-retail-bags": ("2,000 PCS", "120–150 GSM", "Flat Handle", "7–12 Days"),
+        "luxury-gift-bags": ("300 PCS", "250 GSM Board", "Satin Bow Knot", "8–14 Days"),
+        "fashion-apparel-bags": ("500 PCS", "250 GSM Card", "Wide Webbing", "7–12 Days"),
+        "corporate-event-bags": ("3,000 PCS", "250 GSM Board", "Braided Rope", "7–10 Days"),
+        "cosmetics-beauty-bags": ("500 PCS", "250 GSM Card", "Concealed Silk", "8–12 Days"),
+        "jewelry-boutique-bags": ("300 PCS", "250 GSM Card", "Gold Rope", "8–14 Days")
+    }
+    return specs_map.get(sc["slug"], (sc["specs"]["moq"], sc["specs"]["gsmRange"].split()[0] + " GSM", "Custom", "5–10 Days"))
+
 def generate_products_hub_html():
     icon_src = get_base64_image("assets/images/paper-bag-works-icon.svg")
     
@@ -1690,6 +1717,7 @@ def generate_products_hub_html():
         pdp_link = f"./products/{prod['slug']}.html"
 
         kw_tags = "".join([f'<span class="hub-kw-tag">#{kw}</span>' for kw in prod["primaryKeywords"][:3]])
+        c_moq, c_gsm, c_handle, c_lead = get_signature_card_specs(prod)
 
         sig_cards_html += f"""
         <div class="hub-card-item" data-category="{prod['categorySlug']}" data-type="signature">
@@ -1710,20 +1738,20 @@ def generate_products_hub_html():
 
               <div class="hub-specs-box">
                 <div class="hub-spec-cell">
-                  <span class="hub-spec-k">Minimum Order</span>
-                  <span class="hub-spec-v">{prod['specs']['moq']}</span>
+                  <span class="hub-spec-k">Min. Order</span>
+                  <span class="hub-spec-v">{c_moq}</span>
                 </div>
                 <div class="hub-spec-cell">
                   <span class="hub-spec-k">Paper Stock</span>
-                  <span class="hub-spec-v">{prod['specs']['gsmRange']}</span>
+                  <span class="hub-spec-v">{c_gsm}</span>
                 </div>
                 <div class="hub-spec-cell">
                   <span class="hub-spec-k">Handle Style</span>
-                  <span class="hub-spec-v" style="font-size:10.5px;">{prod['specs']['handles'].split('/')[0]}</span>
+                  <span class="hub-spec-v">{c_handle}</span>
                 </div>
                 <div class="hub-spec-cell">
                   <span class="hub-spec-k">Lead Time</span>
-                  <span class="hub-spec-v">{prod['specs']['leadTime']}</span>
+                  <span class="hub-spec-v">{c_lead}</span>
                 </div>
               </div>
             </div>
@@ -1750,6 +1778,7 @@ def generate_products_hub_html():
         pdp_link = f"./products/{sc['slug']}.html"
 
         kw_tags = "".join([f'<span class="hub-kw-tag">#{kw}</span>' for kw in sc["primaryKeywords"][:3]])
+        c_moq, c_gsm, c_handle, c_lead = get_scenario_card_specs(sc)
 
         scenario_cards_html += f"""
         <div class="hub-card-item" data-category="{sc['categorySlug']}" data-type="scenario">
@@ -1770,20 +1799,20 @@ def generate_products_hub_html():
 
               <div class="hub-specs-box">
                 <div class="hub-spec-cell">
-                  <span class="hub-spec-k">Minimum Order</span>
-                  <span class="hub-spec-v">{sc['specs']['moq']}</span>
+                  <span class="hub-spec-k">Min. Order</span>
+                  <span class="hub-spec-v">{c_moq}</span>
                 </div>
                 <div class="hub-spec-cell">
                   <span class="hub-spec-k">Paper Stock</span>
-                  <span class="hub-spec-v">{sc['specs']['gsmRange']}</span>
+                  <span class="hub-spec-v">{c_gsm}</span>
                 </div>
                 <div class="hub-spec-cell">
-                  <span class="hub-spec-k">Handles</span>
-                  <span class="hub-spec-v" style="font-size:10.5px;">{sc['specs']['handles'].split('/')[0]}</span>
+                  <span class="hub-spec-k">Handle Style</span>
+                  <span class="hub-spec-v">{c_handle}</span>
                 </div>
                 <div class="hub-spec-cell">
                   <span class="hub-spec-k">Lead Time</span>
-                  <span class="hub-spec-v">{sc['specs']['leadTime']}</span>
+                  <span class="hub-spec-v">{c_lead}</span>
                 </div>
               </div>
             </div>
