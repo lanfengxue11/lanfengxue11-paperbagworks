@@ -3,7 +3,7 @@ import json
 import base64
 
 # Base directory for Paper Bag Works project
-BASE_DIR = r"C:\Users\MSI\AccioWork\2026-09-04-11-01-23-046-1c20f82a\纸袋AI网站数据"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def get_base64_image(rel_path):
     full_path = os.path.join(BASE_DIR, "public", rel_path.lstrip("/\\"))
@@ -29,7 +29,7 @@ SCENARIOS = [
     "primaryKeywords": ["bakery paper bags", "custom bread paper bags", "food grade kraft bags", "pastry takeaway packaging", "brown paper bags with handles", "bread bags wholesale"],
     "heroHeading": "Custom Sourdough & Artisan Bread Bags",
     "heroSubheading": "Food-contact safe, breathable virgin kraft packaging engineered to keep artisan sourdough crusts crisp while resisting pastry butter and bakery oils.",
-    "heroImage": "/assets/images/scenarios/scenario-01-artisan-bakery.png",
+    "heroImage": "/assets/images/scenarios/scenario-01-artisan-bakery.webp",
     "badge": "100% Food Contact Safe",
     "specs": {
       "moq": "500 PCS",
@@ -73,7 +73,7 @@ SCENARIOS = [
     "primaryKeywords": ["takeaway bags", "food paper bags", "coffee takeaway bags", "paper bags with handles wholesale", "kraft grocery sacks", "custom restaurant bags"],
     "heroHeading": "Custom Food & Beverage Takeaway Bags",
     "heroSubheading": "High-tensile brown kraft paper bags featuring wide non-tip flat gussets and reinforced handles, built to carry hot meal containers and drink cups securely.",
-    "heroImage": "/assets/images/scenarios/scenario-02-food-cafe.png",
+    "heroImage": "/assets/images/scenarios/scenario-02-food-cafe.webp",
     "badge": "Heavy Load Tested (Up to 8kg)",
     "specs": {
       "moq": "1,000 PCS",
@@ -115,7 +115,7 @@ SCENARIOS = [
     "primaryKeywords": ["eco friendly paper bags", "organic product packaging", "pharmacy paper bags", "biodegradable paper bags", "white paper bags bulk", "cotton handle kraft bags"],
     "heroHeading": "Pure & Natural Wellness Paper Bags",
     "heroSubheading": "Botanical-inspired sustainable paper packaging crafted with pure virgin kraft and soft cotton twill handles, reflecting clean, non-toxic holistic brand values.",
-    "heroImage": "/assets/images/scenarios/scenario-03-wellness-organic.png",
+    "heroImage": "/assets/images/scenarios/scenario-03-wellness-organic.webp",
     "badge": "100% Biodegradable & Plastic-Free",
     "specs": {
       "moq": "500 PCS",
@@ -157,7 +157,7 @@ SCENARIOS = [
     "primaryKeywords": ["custom paper bags with logo", "ecommerce packaging bags", "retail shopping bags", "brown paper bags with handles", "branded paper bags", "heavy duty kraft bags"],
     "heroHeading": "Custom E-Commerce & Retail Carry Bags",
     "heroSubheading": "High-density kraft shopping bags tailored for direct-to-consumer unboxing, boutique online pickups, and premium retail order fulfillment.",
-    "heroImage": "/assets/images/scenarios/scenario-04-ecommerce-retail.png",
+    "heroImage": "/assets/images/scenarios/scenario-04-ecommerce-retail.webp",
     "badge": "High Tensile Tear Resistance",
     "specs": {
       "moq": "2,000 PCS",
@@ -198,7 +198,7 @@ SCENARIOS = [
     "primaryKeywords": ["luxury paper bags", "custom gift bags with logo", "ribbon handle paper bags", "hot foil stamped gift bags", "black paper bags bulk", "boutique shopping bags"],
     "heroHeading": "Custom Luxury Gift & Bow Tie Bags",
     "heroSubheading": "Heavyweight rigid art card bags paired with hand-tied satin ribbon bow closures and precision hot foil crests, creating a lavish luxury gift presentation.",
-    "heroImage": "/assets/images/scenarios/scenario-05-luxury-gift.png",
+    "heroImage": "/assets/images/products/product-07-lamour-ribbon-bow-gift.webp",
     "badge": "250g Rigid Cardboard Core",
     "specs": {
       "moq": "300 PCS",
@@ -238,7 +238,7 @@ SCENARIOS = [
     "primaryKeywords": ["fashion shopping bags", "apparel paper bags", "white paper bags with handles", "branded retail paper bags", "printed paper bags bulk", "luxury boutique bags"],
     "heroHeading": "Custom Fashion & Apparel Shopping Bags",
     "heroSubheading": "High-density architectural white card shopping bags engineered with wide satin ribbon handles and crisp turn-top rims for designer clothing and runway boutiques.",
-    "heroImage": "/assets/images/scenarios/scenario-06-fashion-apparel.png",
+    "heroImage": "/assets/images/scenarios/scenario-06-fashion-apparel.webp",
     "badge": "Architectural Turn-Top Hem",
     "specs": {
       "moq": "500 PCS",
@@ -279,7 +279,7 @@ SCENARIOS = [
     "primaryKeywords": ["corporate gift bags bulk", "custom paper bags with logo", "printed paper bags wholesale", "event gift bags bulk", "branded paper bags", "exhibition carry bags"],
     "heroHeading": "Custom Corporate & Exhibition Paper Bags",
     "heroSubheading": "Polished executive-grade paper bags featuring metallic gold crest stamping and durable braided rope handles, designed for international summits, expos, and VIP gifts.",
-    "heroImage": "/assets/images/scenarios/scenario-07-corporate-events.png",
+    "heroImage": "/assets/images/scenarios/scenario-07-corporate-events.webp",
     "badge": "Executive VIP Presentation",
     "specs": {
       "moq": "3,000 PCS",
@@ -319,7 +319,7 @@ SCENARIOS = [
     "primaryKeywords": ["cosmetic paper bags", "luxury beauty gift bags", "custom printed paper bags with logo", "foil stamped gift bags", "small paper gift bags", "makeup paper packaging"],
     "heroHeading": "Custom Cosmetics & Beauty Paper Bags",
     "heroSubheading": "Sensorial velvet soft-touch paper bags with sage green tones and concealed silk ribbon handles, designed for high-end skincare serums, perfumes, and cosmetics.",
-    "heroImage": "/assets/images/scenarios/scenario-08-cosmetics-beauty.png",
+    "heroImage": "/assets/images/scenarios/scenario-08-cosmetics-beauty.webp",
     "badge": "Soft-Touch Velvet Tactile Feel",
     "specs": {
       "moq": "500 PCS",
@@ -359,7 +359,7 @@ SCENARIOS = [
     "primaryKeywords": ["jewelry gift bags", "small paper gift bags", "luxury paper bags with handles", "gold foil paper bags", "boutique gift bags bulk", "custom jewelry packaging"],
     "heroHeading": "Custom Jewelry & Luxury Boutique Bags",
     "heroSubheading": "Exquisite petite paper bags featuring lustrous gold twisted ropes, warm ivory textured card, and micro-etched gold foil crests for fine jewelry, diamonds, and watches.",
-    "heroImage": "/assets/images/scenarios/scenario-09-jewelry-boutique.png",
+    "heroImage": "/assets/images/scenarios/scenario-09-jewelry-boutique.webp",
     "badge": "High Jewelry Precision Grade",
     "specs": {
       "moq": "300 PCS",

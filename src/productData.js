@@ -12,13 +12,13 @@ export const PRODUCT_CATALOG = [
     reviewCount: 1840,
     bestSellerBadge: '#1 Best Seller in Retail Merchandise Bags',
     badges: ['FSC® Certified 100%', 'Food Contact Safe', 'Up to 12 lbs Load Bearing', 'Zero Odor Plant Glue'],
-    mainImage: './assets/images/products/product-01-bakery-takeaway.png',
+    mainImage: './assets/images/products/product-01-bakery-takeaway.webp',
     galleryImages: [
-      './assets/images/products/product-01-bakery-takeaway.png',
-      './assets/images/scenarios/scenario-01-artisan-bakery.png',
-      './assets/images/custom-options/size-guide-120g-kraft-bags.png',
-      './assets/images/finishes/cotton-ribbon-handles.jpg',
-      './assets/images/custom-manufacturing-process.png'
+      './assets/images/products/product-01-bakery-takeaway.webp',
+      './assets/images/scenarios/scenario-01-artisan-bakery.webp',
+      './assets/images/custom-options/size-guide-120g-kraft-bags.webp',
+      './assets/images/finishes/cotton-ribbon-handles.webp',
+      './assets/images/custom-manufacturing-process.webp'
     ],
     pricingTiers: [
       { range: '100 – 499 pcs', price: '$0.38', unit: 'per bag', tag: 'Standard MOQ' },
@@ -105,12 +105,12 @@ export const PRODUCT_CATALOG = [
     reviewCount: 920,
     bestSellerBadge: '#1 Best Seller in Organic Boutique Bags',
     badges: ['180–230 GSM Heavy Kraft', 'Cotton Twill Ribbon Handles', 'Zero Plastic', 'Botanical Eco Look'],
-    mainImage: './assets/images/products/product-02-earthside-kraft-tote.png',
+    mainImage: './assets/images/products/product-02-earthside-kraft-tote.webp',
     galleryImages: [
-      './assets/images/products/product-02-earthside-kraft-tote.png',
-      './assets/images/scenarios/scenario-03-wellness-organic.png',
-      './assets/images/finishes/cotton-ribbon-handles.jpg',
-      './assets/images/custom-options/handles-ribbons-6grid.png'
+      './assets/images/products/product-02-earthside-kraft-tote.webp',
+      './assets/images/scenarios/scenario-03-wellness-organic.webp',
+      './assets/images/finishes/cotton-ribbon-handles.webp',
+      './assets/images/custom-options/handles-ribbons-6grid.webp'
     ],
     pricingTiers: [
       { range: '100 – 499 pcs', price: '$0.52', unit: 'per bag', tag: 'MOQ' },
@@ -168,11 +168,11 @@ export const PRODUCT_CATALOG = [
     reviewCount: 640,
     bestSellerBadge: 'Amazon Choice in Flat Pack Retail Bags',
     badges: ['Space Saving Flat Pack', 'Reinforced Die-Cut Punch', '150 GSM Tough Kraft', '100% Recyclable'],
-    mainImage: './assets/images/products/product-03-die-cut-kraft-bag.png',
+    mainImage: './assets/images/products/product-03-die-cut-kraft-bag.webp',
     galleryImages: [
-      './assets/images/products/product-03-die-cut-kraft-bag.png',
-      './assets/images/scenarios/scenario-04-ecommerce-retail.png',
-      './assets/images/custom-options/bag-structures-dielines.png'
+      './assets/images/products/product-03-die-cut-kraft-bag.webp',
+      './assets/images/scenarios/scenario-04-ecommerce-retail.webp',
+      './assets/images/custom-options/bag-structures-dielines.webp'
     ],
     pricingTiers: [
       { range: '200 – 499 pcs', price: '$0.32', unit: 'per bag', tag: 'MOQ' },
@@ -210,11 +210,11 @@ export const PRODUCT_CATALOG = [
     reviewCount: 480,
     bestSellerBadge: 'Top Rated in Luxury Fashion Packaging',
     badges: ['250–300 GSM Art Card', 'Wide Grosgrain Webbing', 'Anti-Scratch Matte', 'Reinforced Bottom'],
-    mainImage: './assets/images/products/product-04-blvck-streetwear-tote.png',
+    mainImage: './assets/images/products/product-04-blvck-streetwear-tote.webp',
     galleryImages: [
-      './assets/images/products/product-04-blvck-streetwear-tote.png',
-      './assets/images/scenarios/scenario-06-fashion-apparel.png',
-      './assets/images/custom-options/paper-stocks-4grid.png'
+      './assets/images/products/product-04-blvck-streetwear-tote.webp',
+      './assets/images/scenarios/scenario-06-fashion-apparel.webp',
+      './assets/images/custom-options/paper-stocks-4grid.webp'
     ],
     pricingTiers: [
       { range: '200 – 499 pcs', price: '$0.78', unit: 'per bag', tag: 'MOQ' },
@@ -252,11 +252,11 @@ export const PRODUCT_CATALOG = [
     reviewCount: 310,
     bestSellerBadge: 'Haute Couture Choice',
     badges: ['300 GSM Heavyweight Card', 'Architectural Multi-Level Emboss', 'Double-Faced Satin Handles'],
-    mainImage: './assets/images/products/product-05-maison-embossed-luxury.png',
+    mainImage: './assets/images/products/product-05-maison-embossed-luxury.webp',
     galleryImages: [
-      './assets/images/products/product-05-maison-embossed-luxury.png',
-      './assets/images/scenarios/scenario-05-luxury-gift.png',
-      './assets/images/finishes/tactile-embossing.jpg'
+      './assets/images/products/product-05-maison-embossed-luxury.webp',
+      './assets/images/products/product-07-lamour-ribbon-bow-gift.webp',
+      './assets/images/finishes/tactile-embossing.webp'
     ],
     pricingTiers: [
       { range: '200 – 499 pcs', price: '$0.95', unit: 'per bag', tag: 'MOQ' },
@@ -292,11 +292,11 @@ export const PRODUCT_CATALOG = [
     reviewCount: 520,
     bestSellerBadge: 'Best Seller in Beauty Packaging',
     badges: ['Rose Gold German Foil', 'Velvet Soft-Touch Film', 'Concealed Ribbon Handles', '250 GSM Card'],
-    mainImage: './assets/images/products/product-06-lumiere-blush-cosmetic.png',
+    mainImage: './assets/images/products/product-06-lumiere-blush-cosmetic.webp',
     galleryImages: [
-      './assets/images/products/product-06-lumiere-blush-cosmetic.png',
-      './assets/images/scenarios/scenario-08-cosmetics-beauty.png',
-      './assets/images/finishes/foil-stamping.jpg'
+      './assets/images/products/product-06-lumiere-blush-cosmetic.webp',
+      './assets/images/scenarios/scenario-08-cosmetics-beauty.webp',
+      './assets/images/finishes/foil-stamping.webp'
     ],
     pricingTiers: [
       { range: '200 – 499 pcs', price: '$0.82', unit: 'per bag', tag: 'MOQ' },
@@ -332,10 +332,10 @@ export const PRODUCT_CATALOG = [
     reviewCount: 410,
     bestSellerBadge: 'Top Gift Packaging Choice',
     badges: ['Hand-Tied Satin Bow', 'Fold-Over Privacy Flap', '300 GSM Heavy Board', 'Gold Hot Foil'],
-    mainImage: './assets/images/products/product-07-lamour-ribbon-bow-gift.png',
+    mainImage: './assets/images/products/product-07-lamour-ribbon-bow-gift.webp',
     galleryImages: [
-      './assets/images/products/product-07-lamour-ribbon-bow-gift.png',
-      './assets/images/scenarios/scenario-05-luxury-gift.png'
+      './assets/images/products/product-07-lamour-ribbon-bow-gift.webp',
+      './assets/images/products/product-07-lamour-ribbon-bow-gift.webp'
     ],
     pricingTiers: [
       { range: '200 – 499 pcs', price: '$0.98', unit: 'per bag', tag: 'MOQ' },
@@ -371,11 +371,11 @@ export const PRODUCT_CATALOG = [
     reviewCount: 390,
     bestSellerBadge: 'Holiday Season Bestseller',
     badges: ['Full Botanical Emboss', 'Gold Foil Hang Tag Included', 'Forest Green Dyed Paper', 'Gold Satin Handles'],
-    mainImage: './assets/images/products/product-08-forest-green-embossed-holiday.png',
+    mainImage: './assets/images/products/product-08-forest-green-embossed-holiday.webp',
     galleryImages: [
-      './assets/images/products/product-08-forest-green-embossed-holiday.png',
-      './assets/images/scenarios/scenario-07-corporate-events.png',
-      './assets/images/finishes/tactile-embossing.jpg'
+      './assets/images/products/product-08-forest-green-embossed-holiday.webp',
+      './assets/images/scenarios/scenario-07-corporate-events.webp',
+      './assets/images/finishes/tactile-embossing.webp'
     ],
     pricingTiers: [
       { range: '200 – 499 pcs', price: '$0.88', unit: 'per bag', tag: 'MOQ' },

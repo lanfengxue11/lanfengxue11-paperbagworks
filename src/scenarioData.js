@@ -1,15 +1,15 @@
 // 9 Industry Scenario Product Sub-Pages
 // Strictly using Real Factory Sizes & Random MOQs between 300 and 5000+ (No Prices Displayed)
 
-import img01 from './assets/images/scenarios/scenario-01-artisan-bakery.png';
-import img02 from './assets/images/scenarios/scenario-02-food-cafe.png';
-import img03 from './assets/images/scenarios/scenario-03-wellness-organic.png';
-import img04 from './assets/images/scenarios/scenario-04-ecommerce-retail.png';
-import img05 from './assets/images/scenarios/scenario-05-luxury-gift.png';
-import img06 from './assets/images/scenarios/scenario-06-fashion-apparel.png';
-import img07 from './assets/images/scenarios/scenario-07-corporate-events.png';
-import img08 from './assets/images/scenarios/scenario-08-cosmetics-beauty.png';
-import img09 from './assets/images/scenarios/scenario-09-jewelry-boutique.png';
+import img01 from './assets/images/scenarios/scenario-01-artisan-bakery.webp';
+import img02 from './assets/images/scenarios/scenario-02-food-cafe.webp';
+import img03 from './assets/images/scenarios/scenario-03-wellness-organic.webp';
+import img04 from './assets/images/scenarios/scenario-04-ecommerce-retail.webp';
+import img05 from './assets/images/products/product-07-lamour-ribbon-bow-gift.webp';
+import img06 from './assets/images/scenarios/scenario-06-fashion-apparel.webp';
+import img07 from './assets/images/scenarios/scenario-07-corporate-events.webp';
+import img08 from './assets/images/scenarios/scenario-08-cosmetics-beauty.webp';
+import img09 from './assets/images/scenarios/scenario-09-jewelry-boutique.webp';
 
 export const SCENARIO_PAGES = [
   {

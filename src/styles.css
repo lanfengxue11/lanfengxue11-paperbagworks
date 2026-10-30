@@ -171,7 +171,7 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 
 .hero { position: relative; min-height: max(780px, 94vh); display: flex; align-items: center; overflow: hidden; background: #f7f6f2; }
 .hero-image { position: absolute; inset: 0; overflow: hidden; background: #f7f6f2; pointer-events: none; }
-.hero-photo { position: absolute; inset: 0; background-image: url('./assets/images/hero-tri-color-v2.png'); background-repeat: no-repeat; background-position: right center; background-size: cover; filter: saturate(1.02) contrast(1.01); }
+.hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; filter: saturate(1.02) contrast(1.01); }
 .hero-photo-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(247,246,242,.42) 0%, rgba(247,246,242,.18) 40%, transparent 65%), linear-gradient(0deg, rgba(247,246,242,.15), transparent 40%); }
 .hero-image::after { position: absolute; inset: 0; content: ''; pointer-events: none; background: radial-gradient(circle at 85% 15%, rgba(255,255,255,.25), transparent 50%); }
 .hero-overlay { position: absolute; inset: 0; pointer-events: none; }
@@ -502,7 +502,7 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
   .nav-dropdown-menu { position: static; transform: none; opacity: 1; visibility: visible; pointer-events: auto; box-shadow: none; border: 1px solid #ECEAE3; background: #FAF9F6; margin-bottom: 12px; padding: 6px; border-radius: 10px; min-width: 0; }
   .nav-dropdown-menu::before { display: none; }
   .nav-quote { justify-content: center; margin-top: 13px; }
-  .hero { min-height: 850px; align-items: flex-start; }  .hero-photo { inset: 0; background-position: 72% center; }.hero-photo-overlay { inset: 0; background: linear-gradient(180deg, rgba(247,246,242,.96) 0%, rgba(247,246,242,.75) 45%, rgba(247,246,242,.2) 75%, rgba(247,246,242,.85) 100%), linear-gradient(90deg, rgba(247,246,242,.8), transparent 70%); }.hero-content { padding-top: 145px; }.hero h1 { font-size: clamp(45px, 13vw, 66px); }.hero-copy { max-width: 90%; font-size: 15px; }.hero-pills { grid-template-columns: repeat(2, 1fr); margin-top: 63px; }
+  .hero { min-height: 850px; align-items: flex-start; }  .hero-photo { inset: 0; object-position: 72% center; }.hero-photo-overlay { inset: 0; background: linear-gradient(180deg, rgba(247,246,242,.96) 0%, rgba(247,246,242,.75) 45%, rgba(247,246,242,.2) 75%, rgba(247,246,242,.85) 100%), linear-gradient(90deg, rgba(247,246,242,.8), transparent 70%); }.hero-content { padding-top: 145px; }.hero h1 { font-size: clamp(45px, 13vw, 66px); }.hero-copy { max-width: 90%; font-size: 15px; }.hero-pills { grid-template-columns: repeat(2, 1fr); margin-top: 63px; }
   .trust-strip { grid-template-columns: minmax(0, 1fr); padding-top: 74px; padding-bottom: 74px; max-width: 100%; }.trust-copy { align-self: auto; max-width: 100%; }.stats-grid { padding-top: 22px; }.stats-grid strong { font-size: 30px; }
   .materials-section, .factory-section, .compare-section, .faq-section, .quote-section { padding-top: 76px; padding-bottom: 78px; }.applications-section { padding-top: 76px; padding-bottom: 32px; }#products { padding-top: 40px; padding-bottom: 78px; }.section-heading { margin-bottom: 35px; }.section-heading h2, .faq-intro h2, .factory-copy h2 { font-size: clamp(38px, 11vw, 55px); }.product-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .material-grid { grid-template-columns: repeat(2, 1fr); }.material-card-image { height: 160px; }.material-card-content { padding: 19px 21px 23px; }.case-study { grid-template-columns: 1fr; gap: 0; padding: 0; }.case-study-image, .case-study-image img { min-height: 280px; }.case-study-copy { padding: 25px; }.case-study-labels { flex-wrap: wrap; }.material-callout { align-items: flex-start; flex-direction: column; padding: 25px; }
@@ -808,3 +808,19 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
   .hub-dieline-snippet { font-size: 10.5px; }
 }
 
+
+/* Allow factory grid children to shrink within narrow mobile viewports. */
+.factory-section > * { min-width: 0; }
+.feature-list span { min-width: 0; overflow-wrap: anywhere; }
+
+@media (max-width: 600px) { .factory-copy h2 { font-size: clamp(32px, 9.5vw, 55px); } }
+
+/* Buyer-focused category navigation */
+.sourcing-paths > p { max-width: 780px; color: #586b60; line-height: 1.7; }
+.sourcing-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 22px; margin: 28px 0; }
+.sourcing-grid a { color: inherit; text-decoration: none; border: 1px solid #d1e2d7; border-radius: 16px; padding: 28px; background: #fff; }
+.sourcing-grid a:hover { border-color: #22563a; }
+.sourcing-grid h3 { font-size: 24px; margin: 0 0 14px; }
+.sourcing-grid p { color: #586b60; line-height: 1.6; }
+.sourcing-grid span { display: block; margin-top: 22px; color: #22563a; font-weight: 600; }
+@media (max-width: 760px) { .sourcing-grid { grid-template-columns: 1fr; } }

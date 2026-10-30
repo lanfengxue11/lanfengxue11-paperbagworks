@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client';
 import { ArrowLeft, ArrowUpRight, Check, ChevronDown, CircleCheck, Layers, Menu, MessageCircle, MoveRight, PackageCheck, Phone, ShieldCheck, ShoppingBag, Sparkles, X } from 'lucide-react';
 import ShowcaseSections from './ShowcaseSections';
 import { SCENARIO_PAGES } from './scenarioData';
 import ScenarioPage from './ScenarioPage';
 import ProductsHubPage from './ProductsHubPage';
-import brandIcon from './assets/images/paper-bag-works-icon.svg';
-import appV2 from './assets/images/industry-applications-v2.png';
-import processWorkflow from './assets/images/custom-manufacturing-process.png';
-import craftShowcase from './assets/images/craftsmanship-atelier-showcase.png';
-import matCaseStudy from './assets/images/materials-case-study.png';
-import p01 from './assets/images/products/product-01-bakery-takeaway.png';
-import p02 from './assets/images/products/product-02-earthside-kraft-tote.png';
-import p03 from './assets/images/products/product-03-die-cut-kraft-bag.png';
-import p04 from './assets/images/products/product-04-blvck-streetwear-tote.png';
-import p05 from './assets/images/products/product-05-maison-embossed-luxury.png';
-import p06 from './assets/images/products/product-06-lumiere-blush-cosmetic.png';
-import p07 from './assets/images/products/product-07-lamour-ribbon-bow-gift.png';
-import p08 from './assets/images/products/product-08-forest-green-embossed-holiday.png';
-import finFoil from './assets/images/finishes/foil-stamping.jpg';
-import finEmboss from './assets/images/finishes/tactile-embossing.jpg';
-import finUv from './assets/images/finishes/spot-uv.jpg';
-import finStock from './assets/images/finishes/custom-color-stock.jpg';
-import finHandles from './assets/images/finishes/cotton-ribbon-handles.jpg';
-import finLower from './assets/images/finishes/lower-impact-materials.jpg';
+const brandIcon = '/assets/images/paper-bag-works-icon.svg';
+import appV2 from './assets/images/industry-applications-v2.webp';
+import processWorkflow from './assets/images/custom-manufacturing-process.webp';
+import craftShowcase from './assets/images/craftsmanship-atelier-showcase.webp';
+import matCaseStudy from './assets/images/materials-case-study.webp';
+import p01 from './assets/images/products/product-01-bakery-takeaway.webp';
+import p02 from './assets/images/products/product-02-earthside-kraft-tote.webp';
+import p03 from './assets/images/products/product-03-die-cut-kraft-bag.webp';
+import p04 from './assets/images/products/product-04-blvck-streetwear-tote.webp';
+import p05 from './assets/images/products/product-05-maison-embossed-luxury.webp';
+import p06 from './assets/images/products/product-06-lumiere-blush-cosmetic.webp';
+import p07 from './assets/images/products/product-07-lamour-ribbon-bow-gift.webp';
+import p08 from './assets/images/products/product-08-forest-green-embossed-holiday.webp';
+import finFoil from './assets/images/finishes/foil-stamping.webp';
+import finEmboss from './assets/images/finishes/tactile-embossing.webp';
+import finUv from './assets/images/finishes/spot-uv.webp';
+import finStock from './assets/images/finishes/custom-color-stock.webp';
+import finHandles from './assets/images/finishes/cotton-ribbon-handles.webp';
+import finLower from './assets/images/finishes/lower-impact-materials.webp';
 import './styles.css';
 
 // Configurable Navigation Items
@@ -197,7 +197,7 @@ const faqs = [
   ['Can I request a sample kit before placing a bulk order?', 'Yes. We send curated paper swatch books and finish sample kits so you can feel the exact paper grammage, handle webbing and foil stamping quality before committing.']
 ];
 
-function App() {
+export function App() {
   const [currentView, setCurrentView] = useState('home'); // 'home', 'products-hub', or scenario id
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState(0);
@@ -314,10 +314,6 @@ function App() {
           <a 
             href="/products.html" 
             className={currentView === 'products-hub' ? 'is-active' : ''}
-            onClick={(e) => {
-              e.preventDefault();
-              handleOpenProductsHub();
-            }}
           >
             Products
           </a>
@@ -421,12 +417,12 @@ function App() {
         <main id="main">
           {/* Hero Section */}
           <section className="hero" id="top">
-            <div className="hero-image" aria-hidden="true"><div className="hero-photo" /><div className="hero-photo-overlay" /></div>
+            <div className="hero-image" aria-hidden="true"><img className="hero-photo" src="/assets/images/hero-tri-color-v2.webp" alt="" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async" /><div className="hero-photo-overlay" /></div>
             <div className="hero-overlay" aria-hidden="true" />
             <div className="hero-content section-pad">
               <div className="eyebrow"><Sparkles size={14} /> Custom paper bag manufacturing · Paper Bag Works</div>
-              <h1>Put your brand's<br /><span>light</span> on paper.</h1>
-              <p className="hero-copy">Starting with a single sheet, we create tactile, memorable custom paper bags for retail, food, gifting and lifestyle brands.</p>
+              <h1>Custom paper bags.<br /><span>Made for your brand.</span></h1>
+              <p className="hero-copy">Custom printed paper bags for retail, bakery and gifting. Choose paper, handles and finishes for branded paper bags with your logo, then request samples and a wholesale quote.</p>
               <ul className="hero-points">
                 <li><CircleCheck size={17} /> Free structural advice and digital mockups</li>
                 <li><CircleCheck size={17} /> Paper, handles and finishes in one place</li>
@@ -514,10 +510,6 @@ function App() {
                     key={sc.id}
                     href={`/products/${sc.slug}.html`}
                     className="banner-hotspot-cell"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleOpenScenario(sc.id);
-                    }}
                     title={`Click to explore ${sc.heroHeading}`}
                     aria-label={`View ${sc.heroHeading} details`}
                   >
@@ -754,6 +746,17 @@ function App() {
           <ShowcaseSections />
 
           {/* FAQ Section */}
+
+          <section className="sourcing-paths section" aria-labelledby="sourcing-title">
+            <div className="section-heading"><span className="eyebrow">WHOLESALE &amp; CUSTOM PRINTING</span><h2 id="sourcing-title">Find paper bags<br /><i>for your next order.</i></h2></div>
+            <p>Looking for a paper bag manufacturer? Start with the bag style and intended use. We help you specify custom paper bags with logo printing, handles and finishes for bulk orders.</p>
+            <div className="sourcing-grid">
+              <a href="/kraft-paper-bags.html"><h3>Kraft paper bags</h3><p>Compare brown and white paper bags, handle styles and custom printing for everyday retail.</p><span>Explore kraft bags →</span></a>
+              <a href="/paper-gift-bags.html"><h3>Paper gift bags</h3><p>Plan branded gifts, event packaging and boutique presentation with a suitable paper and finish.</p><span>Explore gift bags →</span></a>
+              <a href="/products/sourdough-bread-bags.html"><h3>Paper bags for bread</h3><p>Match loaf dimensions, carrying needs and material requirements to your bakery packaging.</p><span>Explore bakery bags →</span></a>
+            </div>
+            <p className="sourcing-note">For paper bags wholesale, share your quantity, finished dimensions, artwork, delivery country and required date. A clear brief helps us quote the right construction and shipping scope.</p>
+          </section>
           <section className="faq-section section-pad" id="faq">
             <div className="faq-intro"><span className="eyebrow">FREQUENTLY ASKED QUESTIONS</span><h2>A few questions<br /><i>about paper bags.</i></h2><p>If you do not see your question here, send us your brief and we will answer directly.</p><a className="text-link" href="#quote">Ask us directly <MoveRight size={18} /></a></div>
             <div className="faq-list">
@@ -868,7 +871,7 @@ function App() {
           <div>
             <h4>Product Collections</h4>
             <div className="footer-links">
-              <a href="/products.html" onClick={(e) => { e.preventDefault(); handleOpenProductsHub(); }}>All 9 Product Scenarios</a>
+              <a href="/products.html">All 9 Product Scenarios</a>
               <a href="#products" onClick={(e) => { e.preventDefault(); navigateToHomeSection('#products'); }}>8 Signature Retail Bags</a>
               <a href="/size-options.html">38 Ready Die Sizes Catalog</a>
               <a href="#materials" onClick={(e) => { e.preventDefault(); navigateToHomeSection('#materials'); }}>Paper &amp; Finish Options</a>
@@ -983,7 +986,8 @@ function App() {
   );
 }
 
-const rootElement = document.getElementById('root');
+const rootElement = typeof document !== 'undefined' ? document.getElementById('root') : null;
 if (rootElement) {
-  createRoot(rootElement).render(<App />);
+  if (rootElement.hasChildNodes()) hydrateRoot(rootElement, <App />);
+  else createRoot(rootElement).render(<App />);
 }
