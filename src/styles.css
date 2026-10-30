@@ -824,3 +824,31 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 .sourcing-grid p { color: #586b60; line-height: 1.6; }
 .sourcing-grid span { display: block; margin-top: 22px; color: #22563a; font-weight: 600; }
 @media (max-width: 760px) { .sourcing-grid { grid-template-columns: 1fr; } }
+
+/* Refined typography and image-led category navigation */
+.hero { min-height: 760px; }
+.hero-content { width: min(610px, 52%); padding-top: 80px; padding-bottom: 46px; }
+.hero h1 { font-size: clamp(44px, 4.6vw, 66px); line-height: 1.12; letter-spacing: -.055em; font-weight: 700; max-width: 560px; }
+.hero-copy { max-width: 440px; font-size: 15px; line-height: 1.8; }
+.hero-pills { margin-top: 40px; gap: 8px; }
+.hero-pills div { box-shadow: none; background: rgba(255,255,255,.72); padding: 12px; }
+.sourcing-paths { background: #f4f2ec; }
+.sourcing-grid { gap: 28px; margin: 36px 0; }
+.sourcing-grid a { padding: 0 0 28px; overflow: hidden; border: 0; border-radius: 8px; background: #fff; transition: transform .2s; }
+.sourcing-grid a:hover { transform: translateY(-4px); }
+.sourcing-grid img { width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.sourcing-grid h3 { margin: 24px 26px 12px; font-size: 25px; font-weight: 600; letter-spacing: -.025em; }
+.sourcing-grid p { margin: 0 26px; font-size: 14px; }
+.sourcing-grid span { margin: 22px 26px 0; font-size: 13px; }
+.sourcing-note { font-size: 13px; }
+@media(max-width:760px) {
+ .hero { min-height: 0; padding-bottom: 250px; }
+ .hero-content { width: 100%; padding-top: 112px; padding-bottom: 32px; }
+ .hero h1 { font-size: clamp(38px,10vw,48px); max-width: 360px; line-height: 1.1; }
+ .hero-copy { font-size: 14px; max-width: 340px; }
+ .hero-photo { object-position: 66% bottom; }
+ .hero-photo-overlay { background: linear-gradient(180deg,#f7f6f2 0%,rgba(247,246,242,.96) 45%,rgba(247,246,242,.1) 77%); }
+ .hero-pills { margin-top: 28px; max-width: 360px; }
+ .hero-points { font-size: 12px; gap: 10px; }
+ .sourcing-grid { gap: 22px; }
+}

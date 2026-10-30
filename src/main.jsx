@@ -747,13 +747,13 @@ export function App() {
 
           {/* FAQ Section */}
 
-          <section className="sourcing-paths section" aria-labelledby="sourcing-title">
+          <section className="sourcing-paths section-pad" aria-labelledby="sourcing-title">
             <div className="section-heading"><span className="eyebrow">WHOLESALE &amp; CUSTOM PRINTING</span><h2 id="sourcing-title">Find paper bags<br /><i>for your next order.</i></h2></div>
             <p>Looking for a paper bag manufacturer? Start with the bag style and intended use. We help you specify custom paper bags with logo printing, handles and finishes for bulk orders.</p>
             <div className="sourcing-grid">
-              <a href="/kraft-paper-bags.html"><h3>Kraft paper bags</h3><p>Compare brown and white paper bags, handle styles and custom printing for everyday retail.</p><span>Explore kraft bags →</span></a>
-              <a href="/paper-gift-bags.html"><h3>Paper gift bags</h3><p>Plan branded gifts, event packaging and boutique presentation with a suitable paper and finish.</p><span>Explore gift bags →</span></a>
-              <a href="/products/sourdough-bread-bags.html"><h3>Paper bags for bread</h3><p>Match loaf dimensions, carrying needs and material requirements to your bakery packaging.</p><span>Explore bakery bags →</span></a>
+              <a href="/kraft-paper-bags.html"><img src="/assets/images/products/product-02-earthside-kraft-tote.webp" alt="Brown kraft paper bag" width="1024" height="1024" loading="lazy" /><h3>Kraft paper bags</h3><p>Compare brown and white paper bags, handle styles and custom printing for everyday retail.</p><span>Explore kraft bags →</span></a>
+              <a href="/paper-gift-bags.html"><img src="/assets/images/products/product-07-lamour-ribbon-bow-gift.webp" alt="Ribbon gift bag" width="1024" height="1024" loading="lazy" /><h3>Paper gift bags</h3><p>Plan branded gifts, event packaging and boutique presentation with a suitable paper and finish.</p><span>Explore gift bags →</span></a>
+              <a href="/products/sourdough-bread-bags.html"><img src="/assets/images/products/product-01-bakery-takeaway.webp" alt="Bakery takeaway bag" width="1024" height="1024" loading="lazy" /><h3>Paper bags for bread</h3><p>Match loaf dimensions, carrying needs and material requirements to your bakery packaging.</p><span>Explore bakery bags →</span></a>
             </div>
             <p className="sourcing-note">For paper bags wholesale, share your quantity, finished dimensions, artwork, delivery country and required date. A clear brief helps us quote the right construction and shipping scope.</p>
           </section>
