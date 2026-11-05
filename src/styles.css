@@ -852,3 +852,11 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
  .hero-points { font-size: 12px; gap: 10px; }
  .sourcing-grid { gap: 22px; }
 }
+.sourcing-paths { display:grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap:8%; row-gap:32px; align-items:end; padding-block:clamp(56px,6vw,96px); }
+.sourcing-paths .section-heading, .sourcing-paths .section-heading h2, .sourcing-paths > p { margin:0; }
+.sourcing-paths > p { max-width:52ch; }
+.sourcing-paths .sourcing-grid { grid-column:1/-1; margin:0; gap:clamp(16px,2vw,32px); }
+.sourcing-grid a { display:flex; flex-direction:column; height:100%; }
+.sourcing-grid span { margin-top:auto; padding-top:20px; }
+.sourcing-paths .sourcing-note { grid-column:1/-1; max-width:100%; padding-top:20px; border-top:1px solid var(--eco-line); }
+@media(max-width:760px){ .sourcing-paths { grid-template-columns:minmax(0,1fr); row-gap:20px; } }
