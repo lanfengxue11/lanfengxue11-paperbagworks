@@ -110,7 +110,7 @@ export const SCENARIO_PAGES = [
     heroImage: img03,
     badge: '100% Biodegradable & Plastic-Free',
     specs: {
-      moq: '200 PCS',
+      moq: '100 PCS',
       gsmRange: '120 – 250 GSM Unbleached Kraft / White Card',
       handles: 'Natural Cotton Twill Ribbon / Twisted Kraft Rope',
       printing: 'Soy-Based Eco Pantone Printing (Earthy Herbal Tones)',
@@ -230,7 +230,7 @@ export const SCENARIO_PAGES = [
     heroImage: img06,
     badge: 'Architectural Turn-Top Hem',
     specs: {
-      moq: '200 PCS',
+      moq: '100 PCS',
       gsmRange: '250 GSM Solid Bleached White Cardboard',
       handles: 'Wide Satin Ribbon / Grosgrain Webbing Shoulder Drop',
       printing: 'High-Density Offset / Spot Pantone / Debossed',
@@ -270,7 +270,7 @@ export const SCENARIO_PAGES = [
     heroImage: img07,
     badge: 'Executive VIP Presentation',
     specs: {
-      moq: '200 PCS',
+      moq: '100 PCS',
       gsmRange: '250 GSM Solid Cardboard / Dyed Stock',
       handles: 'Braided PP Rope / Twisted Cotton Cord with Metal Aglets',
       printing: 'Metallic Gold/Silver Foil / Multi-Color Corporate Pantone',
@@ -309,7 +309,7 @@ export const SCENARIO_PAGES = [
     heroImage: img08,
     badge: 'Soft-Touch Velvet Tactile Feel',
     specs: {
-      moq: '200 PCS',
+      moq: '100 PCS',
       gsmRange: '250 GSM Solid White Cardboard',
       handles: 'Concealed Silk Ribbon / Grosgrain Loop',
       printing: 'Rose Gold & Champagne Foil Stamping / Micro Embossing',

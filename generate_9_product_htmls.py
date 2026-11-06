@@ -118,7 +118,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-03-wellness-organic.webp",
     "badge": "100% Biodegradable & Plastic-Free",
     "specs": {
-      "moq": "200 PCS",
+      "moq": "100 PCS",
       "gsmRange": "120 – 250 GSM Unbleached Kraft / White Card",
       "handles": "Natural Cotton Twill Ribbon / Twisted Kraft Rope",
       "printing": "Soy-Based Eco Pantone Printing (Earthy Herbal Tones)",
@@ -241,7 +241,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-06-fashion-apparel.webp",
     "badge": "Architectural Turn-Top Hem",
     "specs": {
-      "moq": "200 PCS",
+      "moq": "100 PCS",
       "gsmRange": "250 GSM Solid Bleached White Cardboard",
       "handles": "Wide Satin Ribbon / Grosgrain Webbing Shoulder Drop",
       "printing": "High-Density Offset / Spot Pantone / Debossed",
@@ -282,7 +282,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-07-corporate-events.webp",
     "badge": "Executive VIP Presentation",
     "specs": {
-      "moq": "200 PCS",
+      "moq": "100 PCS",
       "gsmRange": "250 GSM Solid Cardboard / Dyed Stock",
       "handles": "Braided PP Rope / Twisted Cotton Cord with Metal Aglets",
       "printing": "Metallic Gold/Silver Foil / Multi-Color Corporate Pantone",
@@ -322,7 +322,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-08-cosmetics-beauty.webp",
     "badge": "Soft-Touch Velvet Tactile Feel",
     "specs": {
-      "moq": "200 PCS",
+      "moq": "100 PCS",
       "gsmRange": "250 GSM Solid White Cardboard",
       "handles": "Concealed Silk Ribbon / Grosgrain Loop",
       "printing": "Rose Gold & Champagne Foil Stamping / Micro Embossing",
