@@ -26,7 +26,7 @@ const SIGNATURE_PRODUCTS = [
     image: p01,
     description: 'Food-grade virgin brown kraft paper engineered for hot artisan sourdough loaves, pastry boxes and beverage takeaway.',
     primaryKeywords: ['bakery paper bags', 'takeaway bags', 'kraft paper bags'],
-    specs: { moq: '300 PCS', gsm: '120–150 GSM', handle: 'Twisted Rope', lead: '5–8 Days' },
+    specs: { moq: '100 PCS', gsm: '120–150 GSM', handle: 'Twisted Rope', lead: '5–8 Days' },
     dieline: { size: '205 × 110 × 270 mm', label: 'Medium Bakery Standard' }
   },
   {
@@ -41,7 +41,7 @@ const SIGNATURE_PRODUCTS = [
     image: p02,
     description: 'Heavyweight unbleached biodegradable kraft paper with herringbone cotton twill ribbon handles for organic skincare & lifestyle.',
     primaryKeywords: ['kraft shopping bags', 'cotton twill bags', 'organic packaging'],
-    specs: { moq: '300 PCS', gsm: '180–230 GSM', handle: 'Cotton Twill', lead: '6–9 Days' },
+    specs: { moq: '200 PCS', gsm: '180–230 GSM', handle: 'Cotton Twill', lead: '6–9 Days' },
     dieline: { size: '250 × 115 × 300 mm', label: 'Standard Lifestyle' }
   },
   {
@@ -56,7 +56,7 @@ const SIGNATURE_PRODUCTS = [
     image: p03,
     description: 'Precision die-cut punch-out handle carrier in natural kraft stock. Space-saving flat-fold design for concept retail.',
     primaryKeywords: ['die cut paper bags', 'punch hole bags', 'flat fold bags'],
-    specs: { moq: '500 PCS', gsm: '140–180 GSM', handle: 'Die-Cut Notch', lead: '5–7 Days' },
+    specs: { moq: '100 PCS', gsm: '140–180 GSM', handle: 'Die-Cut Notch', lead: '5–7 Days' },
     dieline: { size: '250 × 90 × 300 mm', label: 'Retail Flat Pack' }
   },
   {
@@ -71,7 +71,7 @@ const SIGNATURE_PRODUCTS = [
     image: p04,
     description: 'Extra-large high-density white art card shopping bag with contrast typography and heavy-duty wide grosgrain webbing handles.',
     primaryKeywords: ['luxury fashion bags', 'apparel paper bags', 'streetwear packaging'],
-    specs: { moq: '300 PCS', gsm: '250–300 GSM', handle: 'Wide Webbing', lead: '7–10 Days' },
+    specs: { moq: '200 PCS', gsm: '250–300 GSM', handle: 'Wide Webbing', lead: '7–10 Days' },
     dieline: { size: '400 × 140 × 330 mm', label: 'Apparel Shoebox Fit' }
   },
   {
@@ -86,7 +86,7 @@ const SIGNATURE_PRODUCTS = [
     image: p05,
     description: 'Museum-grade ivory uncoated art card featuring multi-level architectural blind debossing and luxury satin ribbon handles.',
     primaryKeywords: ['embossed boutique bags', 'luxury gift bags', 'couture packaging'],
-    specs: { moq: '200 PCS', gsm: '300–350 GSM', handle: 'Satin Ribbon', lead: '8–12 Days' },
+    specs: { moq: '300 PCS', gsm: '300–350 GSM', handle: 'Satin Ribbon', lead: '8–12 Days' },
     dieline: { size: '320 × 120 × 280 mm', label: 'Boutique Couture' }
   },
   {
@@ -101,7 +101,7 @@ const SIGNATURE_PRODUCTS = [
     image: p06,
     description: 'Velvet soft-touch blush pink card adorned with brilliant rose gold metallic hot foil stamping and concealed silk ribbon.',
     primaryKeywords: ['cosmetic paper bags', 'rose gold foil bags', 'beauty packaging'],
-    specs: { moq: '200 PCS', gsm: '250 GSM Card', handle: 'Concealed Silk', lead: '7–10 Days' },
+    specs: { moq: '300 PCS', gsm: '250 GSM Card', handle: 'Concealed Silk', lead: '7–10 Days' },
     dieline: { size: '220 × 100 × 180 mm', label: 'Cosmetics Petite' }
   },
   {
@@ -116,7 +116,7 @@ const SIGNATURE_PRODUCTS = [
     image: p07,
     description: 'Rigid envelope fold-over flap secured with a hand-tied luxury satin bow knot. Ideal for haute jewelry and VIP favors.',
     primaryKeywords: ['envelope gift bags', 'ribbon bow bags', 'vip gift packaging'],
-    specs: { moq: '200 PCS', gsm: '300 GSM Board', handle: 'Satin Bow Knot', lead: '8–11 Days' },
+    specs: { moq: '300 PCS', gsm: '300 GSM Board', handle: 'Satin Bow Knot', lead: '8–11 Days' },
     dieline: { size: '260 × 100 × 200 mm', label: 'Envelope Bow Fit' }
   },
   {
@@ -131,7 +131,7 @@ const SIGNATURE_PRODUCTS = [
     image: p08,
     description: 'Deep forest green dyed kraft with precision metallic gold foil crest stamping and gold twisted cord rope handles.',
     primaryKeywords: ['forest green paper bags', 'holiday gift bags', 'gold crest packaging'],
-    specs: { moq: '200 PCS', gsm: '280 GSM Stock', handle: 'Gold Rope', lead: '7–10 Days' },
+    specs: { moq: '300 PCS', gsm: '280 GSM Stock', handle: 'Gold Rope', lead: '7–10 Days' },
     dieline: { size: '300 × 120 × 350 mm', label: 'Holiday Gifting' }
   }
 ];
@@ -252,7 +252,7 @@ export default function ProductsHubPage({ onBackToHome, onSelectScenario, onOpen
             <div className="hub-trust-grid">
               <div className="hub-trust-item">
                 <Check size={16} className="hub-trust-icon" />
-                <span><strong>Flexible Low MOQs:</strong> 200 to 5,000+ PCS</span>
+                <span><strong>Flexible Low MOQs:</strong> 100 to 300 PCS</span>
               </div>
               <div className="hub-trust-item">
                 <Check size={16} className="hub-trust-icon" />

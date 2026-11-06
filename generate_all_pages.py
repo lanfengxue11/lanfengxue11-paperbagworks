@@ -31,7 +31,7 @@ SIGNATURE_PRODUCTS = [
     "ranking": "#1 Best Seller in Food Takeaway Packaging",
     "description": "Food-grade virgin brown kraft paper engineered for hot artisan sourdough loaves, pastry boxes and beverage takeaway with reinforced twisted handles.",
     "specs": {
-      "moq": "300 PCS",
+      "moq": "100 PCS",
       "gsmRange": "120 – 150 GSM Virgin Kraft",
       "handles": "Heavy-Duty Twisted Paper Rope / Reinforced SOS Flat Base",
       "printing": "Food-Safe Water-Based Soy Inks (1-4 Colors / Full Bleed)",
@@ -53,7 +53,7 @@ SIGNATURE_PRODUCTS = [
     "colors": ["Natural Brown Kraft (120g/150g)", "Bleached Pure White (120g/150g)", "Midnight Matte Black (250g)", "Forest Green Luxury (280g)"],
     "handlesList": ["Reinforced Twisted Kraft Rope", "Flat Folded Paper Handle", "100% Cotton Twill Ribbon", "Die-Cut Punch-Out Notch"],
     "faqs": [
-      { "q": "Can we print our bakery logo and social media handles?", "a": "Yes! We specialize in custom logo printing starting from our 300 pcs low MOQ. Printing is available on front, back, side gussets, bottom, and inner turn-top." },
+      { "q": "Can we print our bakery logo and social media handles?", "a": "Yes! We specialize in custom logo printing starting from our 100 pcs low MOQ. Printing is available on front, back, side gussets, bottom, and inner turn-top." },
       { "q": "Are these bags safe for direct warm bread contact?", "a": "Yes. Our bakery bags utilize 100% virgin wood pulp paper certified to FDA and EU food contact safety regulations with zero heavy metals or chemical odor." },
       { "q": "What is the turnaround time for sample proofs and bulk production?", "a": "Digital 3D proofs are delivered in 24 hours. Physical sample kits ship in 3-5 days, and bulk orders complete in 5-8 business days." }
     ]
@@ -77,7 +77,7 @@ SIGNATURE_PRODUCTS = [
     "ranking": "#1 Best Seller in Organic Boutique Bags",
     "description": "Heavyweight unbleached biodegradable kraft paper with premium herringbone cotton twill ribbon handles for organic skincare and sustainable lifestyle brands.",
     "specs": {
-      "moq": "300 PCS",
+      "moq": "200 PCS",
       "gsmRange": "180 – 230 GSM Heavy Kraft",
       "handles": "Herringbone 100% Cotton Twill Ribbon / Concealed Base Plate",
       "printing": "Soy Inks / Metallic Gold Stamping / Blind Deboss",
@@ -121,7 +121,7 @@ SIGNATURE_PRODUCTS = [
     "ranking": "Amazon Choice in Flat Pack Retail Bags",
     "description": "Precision die-cut punch-out handle carrier in natural kraft stock. Space-saving flat-fold design perfect for bookstores, pop-ups, events and retail campaigns.",
     "specs": {
-      "moq": "500 PCS",
+      "moq": "100 PCS",
       "gsmRange": "140 – 180 GSM Tough Kraft",
       "handles": "Precision Laser Die-Cut Oval Notch with Inner Reinforcement Patch",
       "printing": "Full Surface Flexo / Screen Printing / Foil Stamping",
@@ -165,7 +165,7 @@ SIGNATURE_PRODUCTS = [
     "ranking": "Top Rated in Luxury Fashion Packaging",
     "description": "Extra-large high-density white art card shopping bag with contrast typography, side gusset imprint, and heavy-duty wide grosgrain webbing handles for fashion apparel.",
     "specs": {
-      "moq": "300 PCS",
+      "moq": "200 PCS",
       "gsmRange": "250 – 300 GSM White Art Board",
       "handles": "30mm Wide Heavy Grosgrain Webbing (Shoulder Drop 65cm)",
       "printing": "High-Contrast Offset Typography / Velvet Matte Film",
@@ -209,7 +209,7 @@ SIGNATURE_PRODUCTS = [
     "ranking": "Haute Couture Choice",
     "description": "Museum-grade ivory uncoated art card featuring multi-level architectural blind debossing, crisp turn-top hems, and luxury black satin ribbon shoulder handles.",
     "specs": {
-      "moq": "200 PCS",
+      "moq": "300 PCS",
       "gsmRange": "300 – 350 GSM Specialty Ivory Board",
       "handles": "Double-Faced Satin Ribbon with Concealed Internal Anchor",
       "printing": "Multi-Level CNC Brass Die Blind Embossing + Micro-Pattern",
@@ -251,7 +251,7 @@ SIGNATURE_PRODUCTS = [
     "ranking": "Best Seller in Beauty Packaging",
     "description": "Velvet soft-touch blush pink card adorned with brilliant rose gold metallic hot foil stamping and concealed silk ribbon handles for high-end skincare & perfumes.",
     "specs": {
-      "moq": "200 PCS",
+      "moq": "300 PCS",
       "gsmRange": "250 GSM Soft-Touch Card",
       "handles": "Concealed Silk Ribbon / Rose Gold Lurex Cord",
       "printing": "German Kurz Rose Gold Foil + Velvet Soft-Touch Matte",
@@ -293,7 +293,7 @@ SIGNATURE_PRODUCTS = [
     "ranking": "Top Gift Packaging Choice",
     "description": "Rigid envelope fold-over flap secured with a hand-tied luxury satin bow knot. Ideal for haute jewelry gifting, designer fragrances, VIP launches and wedding favors.",
     "specs": {
-      "moq": "200 PCS",
+      "moq": "300 PCS",
       "gsmRange": "300 GSM Heavy Board",
       "handles": "Pre-Threaded Wide Satin Ribbon Bow + Shoulder Ribbon",
       "printing": "Gold Metallic Hot Stamping + Velvet Matte Film",
@@ -335,7 +335,7 @@ SIGNATURE_PRODUCTS = [
     "ranking": "Holiday Season Bestseller",
     "description": "Deep forest green dyed kraft with precision metallic gold foil crest stamping and gold twisted cord rope handles for gala gifting and holiday luxury campaigns.",
     "specs": {
-      "moq": "200 PCS",
+      "moq": "300 PCS",
       "gsmRange": "280 GSM Forest Green Dyed Paper",
       "handles": "Gold Satin Ribbon / Cord with Metal Eyelets & Matching Gift Tag",
       "printing": "Full-Surface Botanical Embossing + Gold Hot Foil Crest",
@@ -380,7 +380,7 @@ SCENARIOS = [
     "heroImage": "assets/images/scenarios/scenario-01-artisan-bakery.webp",
     "badge": "100% Food Contact Safe",
     "specs": {
-      "moq": "500 PCS",
+      "moq": "100 PCS",
       "gsmRange": "120 – 150 GSM Virgin Kraft",
       "handles": "Folded Top Hem / Twisted Kraft Rope Handle / Pinch Block Base",
       "printing": "Food-Safe Water-Based Soy Inks (Pantone & CMYK)",
@@ -406,7 +406,7 @@ SCENARIOS = [
     "finishes": ["Clear Micro-Perforated Bread Window", "Custom Self-Adhesive Seal Tab", "Full-Bleed Flexo Print", "Reinforced Flat Paper Handles"],
     "faqs": [
       { "q": "Are these bread bags certified for direct warm food contact?", "a": "Yes. All our bakery bags utilize 100% virgin wood pulp paper certified to FDA and EU food contact safety regulations with zero heavy metals." },
-      { "q": "Can we add our custom bakery logo and social media handles?", "a": "Yes. We offer custom full-surface printing on the front, back, side gussets, and bottom panel starting from our 500 pcs MOQ." },
+      { "q": "Can we add our custom bakery logo and social media handles?", "a": "Yes. We offer custom full-surface printing on the front, back, side gussets, and bottom panel starting from our 100 pcs MOQ." },
       { "q": "What is the standard production turnaround time?", "a": "Digital mockups are prepared within 24 hours. Mass manufacturing is completed within 5–8 business days after artwork confirmation." }
     ]
   },
@@ -426,7 +426,7 @@ SCENARIOS = [
     "heroImage": "assets/images/scenarios/scenario-02-food-cafe.webp",
     "badge": "Heavy Load Tested (Up to 8kg)",
     "specs": {
-      "moq": "1,000 PCS",
+      "moq": "100 PCS",
       "gsmRange": "120 – 150 GSM Heavy Kraft",
       "handles": "Reinforced Twisted Kraft Handle / Folded Flat Handle",
       "printing": "Eco Water-Based Flexo / High-Def Offset",
@@ -470,7 +470,7 @@ SCENARIOS = [
     "heroImage": "assets/images/scenarios/scenario-03-wellness-organic.webp",
     "badge": "100% Biodegradable & Plastic-Free",
     "specs": {
-      "moq": "500 PCS",
+      "moq": "200 PCS",
       "gsmRange": "120 – 250 GSM Unbleached Kraft / White Card",
       "handles": "Natural Cotton Twill Ribbon / Twisted Kraft Rope",
       "printing": "Soy-Based Eco Pantone Printing (Earthy Herbal Tones)",
@@ -514,7 +514,7 @@ SCENARIOS = [
     "heroImage": "assets/images/scenarios/scenario-04-ecommerce-retail.webp",
     "badge": "High Tensile Tear Resistance",
     "specs": {
-      "moq": "2,000 PCS",
+      "moq": "100 PCS",
       "gsmRange": "120 – 150 GSM High-Tensile Kraft",
       "handles": "Reinforced Folded Flat Handle / Twisted Kraft Rope",
       "printing": "Full Surface CMYK + Pantone Brand Color Matching",
@@ -599,7 +599,7 @@ SCENARIOS = [
     "heroImage": "assets/images/scenarios/scenario-06-fashion-apparel.webp",
     "badge": "250g High-Density Art Card",
     "specs": {
-      "moq": "500 PCS",
+      "moq": "200 PCS",
       "gsmRange": "250 GSM Solid Bleached Cardboard",
       "handles": "Wide Grosgrain Webbing / Satin Shoulder-Length Ribbons",
       "printing": "Deep Monochromatic Inks / Precision Spot UV Coating",
@@ -641,7 +641,7 @@ SCENARIOS = [
     "heroImage": "assets/images/scenarios/scenario-07-corporate-events.webp",
     "badge": "Executive VIP Presentation",
     "specs": {
-      "moq": "3,000 PCS",
+      "moq": "200 PCS",
       "gsmRange": "250 GSM Solid Cardboard / Dyed Stock",
       "handles": "Braided PP Rope / Twisted Cotton Cord with Metal Aglets",
       "printing": "Metallic Gold/Silver Foil / Multi-Color Corporate Pantone",
@@ -683,7 +683,7 @@ SCENARIOS = [
     "heroImage": "assets/images/scenarios/scenario-08-cosmetics-beauty.webp",
     "badge": "Soft-Touch Velvet Tactile Feel",
     "specs": {
-      "moq": "500 PCS",
+      "moq": "200 PCS",
       "gsmRange": "250 GSM Solid White Cardboard",
       "handles": "Concealed Silk Ribbon / Grosgrain Loop",
       "printing": "Rose Gold & Champagne Foil Stamping / Micro Embossing",
@@ -1960,7 +1960,7 @@ def generate_products_hub_html():
           <p class="hub-hero-sub">Explore our comprehensive catalog of 8 signature featured products and 9 specialized commercial packaging scenarios. Click into any product subpage for detailed dimensions, material specifications, and direct factory wholesale ordering.</p>
           
           <div class="hub-trust-grid">
-            <div class="hub-trust-item">&#10003; Flexible Low MOQs: 200–500 PCS</div>
+            <div class="hub-trust-item">&#10003; Flexible Low MOQs: 100–300 PCS</div>
             <div class="hub-trust-item">&#10003; FSC&reg; &amp; Food-Safe Certified</div>
             <div class="hub-trust-item">&#10003; 38+ Ready Dielines: Zero Tooling</div>
             <div class="hub-trust-item">&#10003; Fast Turnaround: 5–10 Days</div>

@@ -61,7 +61,7 @@ const products = [
     image: p01,
     alt: 'Custom Food Grade Brown Kraft Bakery and Coffee Takeaway Paper Bag with Twisted Paper Handle',
     description: 'Food-grade virgin brown kraft paper engineered for hot artisan sourdough loaves, pastry boxes and beverage takeaway with reinforced twisted handles.',
-    specs: ['MOQ 300 PCS', '120–150 GSM', 'TWISTED KRAFT'],
+    specs: ['MOQ 100 PCS', '120–150 GSM', 'TWISTED KRAFT'],
     keywords: 'Food-grade kraft bags, bakery takeaway packaging'
   },
   {
@@ -72,7 +72,7 @@ const products = [
     image: p02,
     alt: 'Earthside Natural Living Custom Unbleached Brown Kraft Shopping Bag with Cotton Twill Handles',
     description: 'Heavyweight unbleached biodegradable kraft paper with premium herringbone cotton twill ribbon handles for organic skincare and sustainable lifestyle brands.',
-    specs: ['MOQ 300 PCS', '180–230 GSM', 'COTTON TWILL'],
+    specs: ['MOQ 200 PCS', '180–230 GSM', 'COTTON TWILL'],
     keywords: 'Custom kraft shopping bags, cotton ribbon handle bags'
   },
   {
@@ -83,7 +83,7 @@ const products = [
     image: p03,
     alt: 'Kinfolk Bookstore Minimalist Die-Cut Handle Brown Kraft Paper Bag Flat Pack Wholesale',
     description: 'Precision die-cut punch-out handle carrier in natural kraft stock. Space-saving flat-fold design perfect for bookstores, pop-ups, events and retail campaigns.',
-    specs: ['MOQ 500 PCS', '140–180 GSM', 'DIE-CUT PUNCH'],
+    specs: ['MOQ 100 PCS', '140–180 GSM', 'DIE-CUT PUNCH'],
     keywords: 'Die-cut handle paper bags, flat fold retail bags'
   },
   {
@@ -94,7 +94,7 @@ const products = [
     image: p04,
     alt: 'BLVCK Paris Custom Oversized Monochromatic White Art Card Fashion Shopping Bag with Wide Webbing Handles',
     description: 'Extra-large high-density white art card shopping bag with contrast typography, side gusset imprint, and heavy-duty wide grosgrain webbing handles for fashion apparel.',
-    specs: ['MOQ 300 PCS', '250–300 GSM', 'WIDE WEBBING'],
+    specs: ['MOQ 200 PCS', '250–300 GSM', 'WIDE WEBBING'],
     keywords: 'Luxury fashion shopping bags, streetwear apparel packaging'
   },
   {
@@ -105,7 +105,7 @@ const products = [
     image: p05,
     alt: 'Maison Lumiere Paris Luxury Embossed Ivory Boutique Paper Bag with Wide Satin Handles',
     description: 'Museum-grade ivory uncoated art card featuring multi-level architectural blind debossing, crisp turn-top hems, and luxury black satin ribbon shoulder handles.',
-    specs: ['MOQ 200 PCS', '300–350 GSM', 'SATIN RIBBON'],
+    specs: ['MOQ 300 PCS', '300–350 GSM', 'SATIN RIBBON'],
     keywords: 'Embossed boutique bags, luxury brand shopping bags'
   },
   {
@@ -138,7 +138,7 @@ const products = [
     image: p08,
     alt: 'Harrods London Forest Green Luxury Holiday Shopping Paper Bag with Gold Foil Crest and Twisted Rope Handles',
     description: 'Deep forest green dyed kraft with precision metallic gold foil crest stamping and gold twisted cord rope handles for gala gifting and holiday luxury campaigns.',
-    specs: ['MOQ 500 PCS', '250 GSM STOCK', 'GOLD FOIL CREST'],
+    specs: ['MOQ 300 PCS', '250 GSM STOCK', 'GOLD FOIL CREST'],
     keywords: 'Gold foil paper bags, holiday event gift bags'
   }
 ];
@@ -189,7 +189,7 @@ const materials = [
 ];
 
 const faqs = [
-  ['What is the minimum order quantity (MOQ)?', 'Our standard production MOQ starts from 300–500 pieces depending on bag structure, handle type and finish complexity. For fully custom dielines and bespoke sizes, 500–1,000 pieces offer the best per-unit value.'],
+  ['What is the minimum order quantity (MOQ)?', 'Our standard production MOQ starts from 100–300 pieces depending on bag structure, handle type and finish complexity. For fully custom dielines and bespoke sizes, 500–1,000 pieces offer the best per-unit value.'],
   ['Can you match our exact brand Pantone color?', 'Yes. We utilize Heidelberg Speedmaster offset presses with spectral color management to achieve precise Pantone solid coated and uncoated matches across all virgin kraft and art card stocks.'],
   ['How long does sample making and mass production take?', 'Digital dieline proofs are prepared in 24 hours. Physical structural pre-production samples take 3–5 business days. Mass production is completed within 7–12 business days depending on order volume.'],
   ['Do you ship internationally and handle door-to-door logistics?', 'Yes. We provide global export shipping via Sea Freight (DDP/FOB), Air Express (DHL/FedEx/UPS), and rail freight directly to fulfillment centers, retail stores and warehouses worldwide.'],
@@ -432,7 +432,7 @@ export function App() {
 
               </div>
               <div className="hero-pills" aria-label="Service highlights">
-                <div><strong>300+</strong><span>Low MOQ options</span></div>
+                <div><strong>100+</strong><span>Low MOQ options</span></div>
                 <div><strong>HD PRINT</strong><span>Full color HD printing</span></div>
                 <div><strong>5 DAYS</strong><span>Fast production lead time</span></div>
                 <div><strong>PREMIUM</strong><span>Superior quality grade</span></div>
@@ -817,7 +817,7 @@ export function App() {
                   <label>Estimated quantity
                     <select name="quantity" defaultValue="300-1000">
                       <option value="" disabled>Select a quantity</option>
-                      <option value="300-500">300–500 pieces (Low MOQ)</option>
+                      <option value="100-300">100–300 pieces (Low MOQ)</option>
                       <option value="500-1000">500–1,000 pieces (Popular Run)</option>
                       <option value="1000-3000">1,000–3,000 pieces (Wholesale)</option>
                       <option value="3000-5000">3,000–5,000 pieces (Bulk Export)</option>

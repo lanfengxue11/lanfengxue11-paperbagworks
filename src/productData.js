@@ -113,7 +113,7 @@ export const PRODUCT_CATALOG = [
       './assets/images/custom-options/handles-ribbons-6grid.webp'
     ],
     pricingTiers: [
-      { range: '100 – 499 pcs', price: '$0.52', unit: 'per bag', tag: 'MOQ' },
+      { range: '200 – 499 pcs', price: '$0.52', unit: 'per bag', tag: 'MOQ' },
       { range: '500 – 999 pcs', price: '$0.39', unit: 'per bag', tag: 'Popular' },
       { range: '1,000 – 4,999 pcs', price: '$0.28', unit: 'per bag', tag: 'Wholesale' },
       { range: '5,000+ pcs', price: '$0.19', unit: 'per bag', tag: 'Factory Bulk' }
@@ -175,7 +175,7 @@ export const PRODUCT_CATALOG = [
       './assets/images/custom-options/bag-structures-dielines.webp'
     ],
     pricingTiers: [
-      { range: '200 – 499 pcs', price: '$0.32', unit: 'per bag', tag: 'MOQ' },
+      { range: '100 – 499 pcs', price: '$0.32', unit: 'per bag', tag: 'MOQ' },
       { range: '500 – 999 pcs', price: '$0.24', unit: 'per bag', tag: 'Popular' },
       { range: '1,000 – 4,999 pcs', price: '$0.16', unit: 'per bag', tag: 'Wholesale' },
       { range: '5,000+ pcs', price: '$0.09', unit: 'per bag', tag: 'Factory Bulk' }
@@ -259,7 +259,7 @@ export const PRODUCT_CATALOG = [
       './assets/images/finishes/tactile-embossing.webp'
     ],
     pricingTiers: [
-      { range: '200 – 499 pcs', price: '$0.95', unit: 'per bag', tag: 'MOQ' },
+      { range: '300 – 499 pcs', price: '$0.95', unit: 'per bag', tag: 'MOQ' },
       { range: '500 – 999 pcs', price: '$0.72', unit: 'per bag', tag: 'Popular' },
       { range: '1,000+ pcs', price: '$0.52', unit: 'per bag', tag: 'Wholesale' }
     ],
@@ -299,7 +299,7 @@ export const PRODUCT_CATALOG = [
       './assets/images/finishes/foil-stamping.webp'
     ],
     pricingTiers: [
-      { range: '200 – 499 pcs', price: '$0.82', unit: 'per bag', tag: 'MOQ' },
+      { range: '300 – 499 pcs', price: '$0.82', unit: 'per bag', tag: 'MOQ' },
       { range: '500 – 999 pcs', price: '$0.62', unit: 'per bag', tag: 'Popular' },
       { range: '1,000+ pcs', price: '$0.44', unit: 'per bag', tag: 'Wholesale' }
     ],
@@ -338,7 +338,7 @@ export const PRODUCT_CATALOG = [
       './assets/images/products/product-07-lamour-ribbon-bow-gift.webp'
     ],
     pricingTiers: [
-      { range: '200 – 499 pcs', price: '$0.98', unit: 'per bag', tag: 'MOQ' },
+      { range: '300 – 499 pcs', price: '$0.98', unit: 'per bag', tag: 'MOQ' },
       { range: '500 – 999 pcs', price: '$0.75', unit: 'per bag', tag: 'Popular' },
       { range: '1,000+ pcs', price: '$0.55', unit: 'per bag', tag: 'Wholesale' }
     ],
@@ -378,7 +378,7 @@ export const PRODUCT_CATALOG = [
       './assets/images/finishes/tactile-embossing.webp'
     ],
     pricingTiers: [
-      { range: '200 – 499 pcs', price: '$0.88', unit: 'per bag', tag: 'MOQ' },
+      { range: '300 – 499 pcs', price: '$0.88', unit: 'per bag', tag: 'MOQ' },
       { range: '500 – 999 pcs', price: '$0.68', unit: 'per bag', tag: 'Popular' },
       { range: '1,000+ pcs', price: '$0.48', unit: 'per bag', tag: 'Wholesale' }
     ],

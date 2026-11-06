@@ -32,7 +32,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-01-artisan-bakery.webp",
     "badge": "100% Food Contact Safe",
     "specs": {
-      "moq": "500 PCS",
+      "moq": "100 PCS",
       "gsmRange": "120 – 150 GSM Virgin Kraft",
       "handles": "Folded Top Hem / Twisted Kraft Rope Handle / Pinch Block Base",
       "printing": "Food-Safe Water-Based Soy Inks (Pantone & CMYK)",
@@ -58,7 +58,7 @@ SCENARIOS = [
     "finishes": ["Clear Micro-Perforated Bread Window", "Custom Self-Adhesive Seal Tab", "Full-Bleed Flexo Print", "Reinforced Flat Paper Handles"],
     "faqs": [
       { "q": "Are these bread bags certified for direct warm food contact?", "a": "Yes. All our bakery bags utilize 100% virgin wood pulp paper certified to FDA and EU food contact safety regulations with zero heavy metals." },
-      { "q": "Can we add our custom bakery logo and social media handles?", "a": "Yes. We offer custom full-surface printing on the front, back, side gussets, and bottom panel starting from our 500 pcs MOQ." },
+      { "q": "Can we add our custom bakery logo and social media handles?", "a": "Yes. We offer custom full-surface printing on the front, back, side gussets, and bottom panel starting from our 100 pcs MOQ." },
       { "q": "What is the standard production turnaround time?", "a": "Digital mockups are prepared within 24 hours. Mass manufacturing is completed within 5–8 business days after artwork confirmation." }
     ]
   },
@@ -76,7 +76,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-02-food-cafe.webp",
     "badge": "Heavy Load Tested (Up to 8kg)",
     "specs": {
-      "moq": "1,000 PCS",
+      "moq": "100 PCS",
       "gsmRange": "120 – 150 GSM Heavy Kraft",
       "handles": "Reinforced Twisted Kraft Handle / Folded Flat Handle",
       "printing": "Eco Water-Based Flexo / High-Def Offset",
@@ -118,7 +118,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-03-wellness-organic.webp",
     "badge": "100% Biodegradable & Plastic-Free",
     "specs": {
-      "moq": "500 PCS",
+      "moq": "200 PCS",
       "gsmRange": "120 – 250 GSM Unbleached Kraft / White Card",
       "handles": "Natural Cotton Twill Ribbon / Twisted Kraft Rope",
       "printing": "Soy-Based Eco Pantone Printing (Earthy Herbal Tones)",
@@ -160,7 +160,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-04-ecommerce-retail.webp",
     "badge": "High Tensile Tear Resistance",
     "specs": {
-      "moq": "2,000 PCS",
+      "moq": "100 PCS",
       "gsmRange": "120 – 150 GSM High-Tensile Kraft",
       "handles": "Reinforced Folded Flat Handle / Twisted Kraft Rope",
       "printing": "Full Surface CMYK + Pantone Brand Color Matching",
@@ -241,7 +241,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-06-fashion-apparel.webp",
     "badge": "Architectural Turn-Top Hem",
     "specs": {
-      "moq": "500 PCS",
+      "moq": "200 PCS",
       "gsmRange": "250 GSM Solid Bleached White Cardboard",
       "handles": "Wide Satin Ribbon / Grosgrain Webbing Shoulder Drop",
       "printing": "High-Density Offset / Spot Pantone / Debossed",
@@ -282,7 +282,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-07-corporate-events.webp",
     "badge": "Executive VIP Presentation",
     "specs": {
-      "moq": "3,000 PCS",
+      "moq": "200 PCS",
       "gsmRange": "250 GSM Solid Cardboard / Dyed Stock",
       "handles": "Braided PP Rope / Twisted Cotton Cord with Metal Aglets",
       "printing": "Metallic Gold/Silver Foil / Multi-Color Corporate Pantone",
@@ -322,7 +322,7 @@ SCENARIOS = [
     "heroImage": "/assets/images/scenarios/scenario-08-cosmetics-beauty.webp",
     "badge": "Soft-Touch Velvet Tactile Feel",
     "specs": {
-      "moq": "500 PCS",
+      "moq": "200 PCS",
       "gsmRange": "250 GSM Solid White Cardboard",
       "handles": "Concealed Silk Ribbon / Grosgrain Loop",
       "printing": "Rose Gold & Champagne Foil Stamping / Micro Embossing",
