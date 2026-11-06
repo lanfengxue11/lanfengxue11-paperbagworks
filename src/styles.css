@@ -860,3 +860,10 @@ h2 i, .quote-intro h2 i, .faq-intro h2 i, .factory-copy h2 i { color: var(--eco)
 .sourcing-grid span { margin-top:auto; padding-top:20px; }
 .sourcing-paths .sourcing-note { grid-column:1/-1; max-width:100%; padding-top:20px; border-top:1px solid var(--eco-line); }
 @media(max-width:760px){ .sourcing-paths { grid-template-columns:minmax(0,1fr); row-gap:20px; } }
+/* Keep service labels readable across desktop and tablet widths. */
+.hero-pills { grid-template-columns:repeat(2,minmax(0,1fr)); max-width:440px; gap:12px; margin-top:32px; }
+.hero-pills div { min-width:0; padding:16px; gap:8px; }
+.hero-pills strong { font-size:16px; line-height:1.2; white-space:normal; overflow-wrap:break-word; }
+.hero-pills span { font-size:12px; line-height:1.5; }
+.hero-points li { align-items:flex-start; }
+.hero-points svg { flex-shrink:0; margin-top:2px; }

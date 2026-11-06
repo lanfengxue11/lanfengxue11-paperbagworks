@@ -429,7 +429,7 @@ export function App() {
               </ul>
               <div className="hero-actions">
                 <a className="button primary" href="#quote">Start a project <ArrowUpRight size={18} /></a>
-                <a className="text-link" href="#products">Explore our collections <MoveRight size={18} /></a>
+
               </div>
               <div className="hero-pills" aria-label="Service highlights">
                 <div><strong>300+</strong><span>Low MOQ options</span></div>
