@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/assets/category-pages.css">
   <style>
     main { max-width: 850px; }
-    form { background: white; border: 1px solid #dce3dc; border-radius: 12px; padding: clamp(20px,4vw,44px); }
+    .quote-form { background: white; border: 1px solid #dce3dc; border-radius: 12px; padding: clamp(20px,4vw,44px); }
     .fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
     label { display:grid; gap:6px; font-size:14px; font-weight:600; }
     input,textarea { width:100%; border:1px solid #aab9af; border-radius:5px; padding:12px; font:inherit; font-weight:400; }
@@ -22,18 +22,8 @@
   <main>
     <h1>Request a custom paper bag quote</h1>
     <p>Tell us what you are packaging and where the bags will ship. We will reply by email.</p>
-    <form action="https://formspree.io/f/xbglpvyr" method="post">
-      <div class="fields">
-        <label>Your name (required)<input name="name" autocomplete="name" required></label>
-        <label>Email address (required)<input name="email" type="email" autocomplete="email" required></label>
-        <label>Company<input name="company" autocomplete="organization"></label>
-        <label>Estimated quantity<input name="quantity" type="number" min="1" step="1"></label>
-        <label>Delivery country<input name="destination" autocomplete="country-name"></label>
-        <label>Required arrival date<input name="arrival_date" type="date"></label>
-      </div>
-      <label class="brief">Packaging requirements (required)<textarea name="message" required rows="5" placeholder="Bag style, dimensions, handles and printing details"></textarea></label>
-      <button class="button" type="submit">Send quote request</button>
-    </form>
+    <div id="quote-root"></div>
+    <script type="module" src="/src/quote-page.jsx"></script>
   </main>
 </body>
 </html>

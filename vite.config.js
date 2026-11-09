@@ -13,6 +13,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        quote: resolve(__dirname, 'request-a-quote.html'),
         sizeOptions: resolve(__dirname, 'size-options.html')
       }
     }
