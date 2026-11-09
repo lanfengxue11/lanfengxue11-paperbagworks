@@ -13,7 +13,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        sizeOptions: resolve(__dirname, 'size-options.html')
+        sizeOptions: resolve(__dirname, 'size-options.html'),
+        paperBagSelection: resolve(__dirname, 'paper-bag-selection.html')
       }
     }
   }
