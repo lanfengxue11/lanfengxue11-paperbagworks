@@ -37,9 +37,9 @@ export const NAV_ITEMS = [
     children: [
       {
         title: 'Paper Bag Selection',
-        subtitle: 'Curated Bag Styles, Handles & Finishes',
-        href: '#materials',
-        tag: 'Overview'
+        subtitle: 'Styles, Materials, Handles & Printing Finishes',
+        href: '/paper-bag-selection.html',
+        tag: 'Selection Guide'
       },
       {
         title: 'Size Options',
