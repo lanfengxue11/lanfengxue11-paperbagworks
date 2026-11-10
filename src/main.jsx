@@ -33,13 +33,13 @@ export const NAV_ITEMS = [
   { label: 'Products', href: '/products.html' },
   { 
     label: 'Custom Options', 
-    href: '#materials',
+    href: '/paper-bag-selection.html',
     children: [
       {
         title: 'Paper Bag Selection',
-        subtitle: 'Styles, Materials, Handles & Printing Finishes',
+        subtitle: 'Curated Bag Styles, Handles & Finishes',
         href: '/paper-bag-selection.html',
-        tag: 'Selection Guide'
+        tag: 'Overview'
       },
       {
         title: 'Size Options',
@@ -286,23 +286,14 @@ export function App() {
           {/* Custom Options Dropdown */}
           <div className="nav-dropdown-wrapper">
             <a 
-              href="#materials" 
+              href="/paper-bag-selection.html" 
               className="nav-dropdown-trigger"
-              onClick={(e) => {
-                if (currentView !== 'home') {
-                  e.preventDefault();
-                  navigateToHomeSection('#materials');
-                }
-              }}
             >
               <span>Custom Options</span>
               <ChevronDown size={13} className="dropdown-caret" />
             </a>
             <div className="nav-dropdown-menu">
-              <a href="#materials" className="nav-dropdown-item" onClick={(e) => {
-                closeMenu();
-                if (currentView !== 'home') navigateToHomeSection('#materials');
-              }}>
+              <a href="/paper-bag-selection.html" className="nav-dropdown-item" onClick={closeMenu}>
                 <div className="nav-dropdown-item-header">
                   <span className="nav-dropdown-item-title">Paper Bag Selection</span>
                   <span className="nav-dropdown-item-tag">Overview</span>

@@ -1106,13 +1106,13 @@ def generate_signature_pdp_html(prod):
       
       <!-- Custom Options Dropdown -->
       <div class="nav-dropdown">
-        <a href="/#materials" class="nav-dropdown-trigger">
+        <a href="/paper-bag-selection.html" class="nav-dropdown-trigger">
           <span>Custom Options</span>
           <span style="font-size: 10px;">&#9662;</span>
         </a>
         <div class="dropdown-menu">
           <span class="dropdown-header-label">Selection &amp; Specifications</span>
-          <a href="/#materials" class="dropdown-item">
+          <a href="/paper-bag-selection.html" class="dropdown-item">
             <span>Paper Bag Selection</span>
             <span class="badge-pill">Overview</span>
           </a>
@@ -1336,7 +1336,7 @@ def generate_signature_pdp_html(prod):
             <li><a href="../index.html">Home</a></li>
             <li><a href="../products.html">Products Hub</a></li>
             <li><a href="../size-options.html">Size Options &amp; Dielines</a></li>
-            <li><a href="../index.html#materials">Custom Finishes</a></li>
+            <li><a href="../paper-bag-selection.html">Paper Bag Selection</a></li>
             <li><a href="../index.html#quote">Request a Quote</a></li>
           </ul>
         </div>
@@ -1447,13 +1447,13 @@ def generate_scenario_pdp_html(sc):
       
       <!-- Custom Options Dropdown -->
       <div class="nav-dropdown">
-        <a href="/#materials" class="nav-dropdown-trigger">
+        <a href="/paper-bag-selection.html" class="nav-dropdown-trigger">
           <span>Custom Options</span>
           <span style="font-size: 10px;">&#9662;</span>
         </a>
         <div class="dropdown-menu">
           <span class="dropdown-header-label">Selection &amp; Specifications</span>
-          <a href="/#materials" class="dropdown-item">
+          <a href="/paper-bag-selection.html" class="dropdown-item">
             <span>Paper Bag Selection</span>
             <span class="badge-pill">Overview</span>
           </a>
@@ -1638,7 +1638,7 @@ def generate_scenario_pdp_html(sc):
             <li><a href="../index.html">Home</a></li>
             <li><a href="../products.html">Products Hub</a></li>
             <li><a href="../size-options.html">Size Options &amp; Dielines</a></li>
-            <li><a href="../index.html#materials">Custom Finishes</a></li>
+            <li><a href="../paper-bag-selection.html">Paper Bag Selection</a></li>
             <li><a href="../index.html#quote">Request a Quote</a></li>
           </ul>
         </div>
@@ -1915,13 +1915,13 @@ def generate_products_hub_html():
       
       <!-- Custom Options Dropdown -->
       <div class="nav-dropdown">
-        <a href="./index.html#materials" class="nav-dropdown-trigger">
+        <a href="./paper-bag-selection.html" class="nav-dropdown-trigger">
           <span>Custom Options</span>
           <span style="font-size: 10px;">&#9662;</span>
         </a>
         <div class="dropdown-menu">
           <span class="dropdown-header-label">Selection &amp; Specifications</span>
-          <a href="./index.html#materials" class="dropdown-item">
+          <a href="./paper-bag-selection.html" class="dropdown-item">
             <span>Paper Bag Selection</span>
             <span class="badge-pill">Overview</span>
           </a>
@@ -2037,7 +2037,7 @@ def generate_products_hub_html():
             <li><a href="./index.html">Home</a></li>
             <li><a href="./products.html">Products Hub</a></li>
             <li><a href="./size-options.html">Size Options &amp; Dielines</a></li>
-            <li><a href="./index.html#materials">Custom Finishes</a></li>
+            <li><a href="./paper-bag-selection.html">Paper Bag Selection</a></li>
             <li><a href="./index.html#quote">Request a Quote</a></li>
           </ul>
         </div>
