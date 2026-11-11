@@ -334,13 +334,12 @@ export function App() {
 
           <a 
             className="nav-quote" 
-            href="#quote" 
-            onClick={(e) => {
-              e.preventDefault();
-              navigateToHomeSection('#quote');
-            }}
+            href="https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20would%20like%20to%20inquire%20about%20custom%20paper%20bag%20production." 
+            target="_blank" 
+            rel="noreferrer"
+            aria-label="Contact via WhatsApp"
           >
-            Get a Quote <ArrowUpRight size={14} />
+            <MessageCircle size={14} /> WhatsApp <ArrowUpRight size={13} />
           </a>
         </nav>
 
@@ -384,8 +383,16 @@ export function App() {
                 <li><CircleCheck size={17} /> Paper, handles and finishes in one place</li>
               </ul>
               <div className="hero-actions">
-                <a className="button primary" href="#quote">Start a project <ArrowUpRight size={18} /></a>
-
+                <a className="button primary" href="#quote" onClick={(e) => { e.preventDefault(); navigateToHomeSection('#quote'); }}>Start a project <ArrowUpRight size={18} /></a>
+                <a 
+                  className="button button-whatsapp" 
+                  href="https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20would%20like%20to%20inquire%20about%20custom%20paper%20bag%20production." 
+                  target="_blank" 
+                  rel="noreferrer"
+                  aria-label="Chat on WhatsApp"
+                >
+                  <MessageCircle size={18} /> WhatsApp <ArrowUpRight size={16} />
+                </a>
               </div>
               <div className="hero-pills" aria-label="Service highlights">
                 <div><strong>100+</strong><span>Low MOQ options</span></div>
