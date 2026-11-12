@@ -49,7 +49,7 @@ export const NAV_ITEMS = [
       }
     ]
   },
-  { label: 'Blog', href: '#process' },
+  { label: 'Blog', href: '/blog.html' },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -312,11 +312,7 @@ export function App() {
 
           {/* Blog */}
           <a 
-            href="#process" 
-            onClick={(e) => {
-              e.preventDefault();
-              navigateToHomeSection('#process');
-            }}
+            href="/blog.html"
           >
             Blog
           </a>

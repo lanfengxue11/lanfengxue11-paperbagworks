@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/svg+xml" sizes="any" href="/pbw-site-icon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Bag Works · Packaging Intelligence | Custom Paper Bag Sourcing, Dielines & Manufacturing Blog</title>
+  
+  <!-- Primary SEO Meta Tags -->
+  <meta name="title" content="Paper Bag Works · Packaging Intelligence | Custom Paper Bag Sourcing, Dielines & Manufacturing Blog">
+  <meta name="description" content="Expert B2B guides on custom paper shopping bag manufacturing, kraft vs. art paper substrates, handle tensile ratings, flexo & offset printing, dieline preparation, MOQ and factory pricing — written by packaging specialists.">
+  <meta name="keywords" content="custom paper bags blog, paper bag manufacturing guide, kraft paper vs white cardboard, paper bag handles load test, flexographic printing vs offset, dieline template paper bag, wholesale paper bag pricing 2026, B2B packaging intelligence, FSC certified paper bags, paper bag AQL quality inspection">
+  <meta name="author" content="Paper Bag Works">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.paperbagworks.com/blog.html" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.paperbagworks.com/blog.html" />
+  <meta property="og:title" content="Paper Bag Works · Packaging Intelligence Blog" />
+  <meta property="og:description" content="Expert B2B guides on custom paper bag sourcing, structural dielines, substrates, printing finishes & factory pricing." />
+  <meta property="og:image" content="/assets/images/selection/crops/finish-gold-foil.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#1A3826',
+              deep: '#112619',
+              light: '#244F36',
+              accent: '#2D6A47',
+              surface: '#F4F7F4'
+            },
+            sage: {
+              DEFAULT: '#8FA998',
+              light: '#E2EBE5',
+              soft: '#EEF4F0'
+            },
+            canvas: '#FCFAF7',
+            warmgray: '#F5F2EB',
+            kraft: '#8A6538',
+            amberaccent: '#D97724'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif']
+          },
+          boxShadow: {
+            'card': '0 4px 20px -2px rgba(26, 56, 38, 0.06), 0 2px 6px -1px rgba(26, 56, 38, 0.04)',
+            'card-hover': '0 16px 32px -4px rgba(26, 56, 38, 0.12), 0 6px 12px -2px rgba(26, 56, 38, 0.06)',
+            'glow': '0 0 25px -5px rgba(45, 106, 71, 0.25)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FCFAF7;
+      color: #1A3826;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .badge-forest {
+      background-color: #EEF4F0;
+      color: #1A3826;
+      border: 1px solid #D6E4DB;
+    }
+
+    .badge-amber {
+      background-color: #FFF3EB;
+      color: #D97724;
+      border: 1px solid #FCD8B8;
+    }
+
+    .badge-kraft {
+      background-color: #F8F4EE;
+      color: #8A6538;
+      border: 1px solid #E8DCB8;
+    }
+
+    .grain-overlay {
+      background-image: radial-gradient(rgba(26, 56, 38, 0.04) 1px, transparent 0);
+      background-size: 16px 16px;
+    }
+
+    /* Filter Active States */
+    .filter-btn {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .filter-btn.active {
+      background-color: #1A3826;
+      color: #FFFFFF;
+      border-color: #1A3826;
+      box-shadow: 0 4px 12px -2px rgba(26, 56, 38, 0.25);
+    }
+
+    /* Floating Widget Styles */
+    .floating-bag-widget { position: fixed; right: 24px; bottom: 24px; z-index: 1000; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+    .bag-trigger-btn { position: relative; width: 94px; height: 110px; background: transparent; border: none; padding: 0; cursor: pointer; outline: none; transition: transform .25s cubic-bezier(.34,1.56,.64,1); display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+    .bag-trigger-btn:hover { transform: translateY(-4px) scale(1.03); }
+    .bag-shape-container { position: relative; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+    .bag-rope-handle { width: 46px; height: 32px; border: 4.5px solid #244F36; border-bottom: none; border-radius: 23px 23px 0 0; margin-bottom: -5px; z-index: 1; transition: border-color .2s ease; }
+    .bag-shape-body { position: relative; width: 90px; height: 84px; background: linear-gradient(145deg, #1A3826 0%, #112619 100%); border-radius: 6px 6px 14px 14px; box-shadow: 0 10px 28px rgba(17,38,25,.38), inset 0 1px 1px rgba(255,255,255,.2); display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 8px 6px 9px; z-index: 2; border: 1px solid rgba(255,255,255,.12); }
+    .bag-monogram { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 800; font-size: 13.5px; letter-spacing: -.02em; color: #f2f7f3; }
+    .bag-icons-row { display: flex; align-items: center; gap: 8px; margin: 2px 0; }
+    .wa-icon-badge, .phone-icon-badge { display: grid; place-items: center; width: 29px; height: 29px; border-radius: 7px; color: #ffffff; transition: transform .15s ease; }
+    .wa-icon-badge { background: #25d366; box-shadow: 0 2px 8px rgba(37,211,102,.45); }
+    .phone-icon-badge { background: #E2EBE5; color: #1A3826; }
+    .bag-label-text { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 800; font-size: 12px; letter-spacing: .16em; color: #edf5ef; opacity: .95; }
+    .bag-status-dot { position: absolute; top: 20px; right: 4px; width: 14px; height: 14px; border-radius: 50%; background: #25d366; border: 2.5px solid #ffffff; box-shadow: 0 0 0 3px rgba(37,211,102,.35); animation: pulseDot 2s infinite; }
+    @keyframes pulseDot { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.2); opacity: .75; } }
+
+    .bag-popover { position: absolute; right: 0; bottom: 144px; width: 310px; background: rgba(255,255,255,.98); backdrop-filter: blur(12px); border: 1px solid #D6E4DB; border-radius: 14px; box-shadow: 0 20px 48px rgba(20,32,24,.18); padding: 18px; opacity: 0; visibility: hidden; transform: translateY(12px) scale(.96); transition: opacity .2s ease, transform .2s ease, visibility .2s ease; pointer-events: none; z-index: 1000; }
+    .floating-bag-widget.is-active .bag-popover, .floating-bag-widget:hover .bag-popover { opacity: 1; visibility: visible; transform: translateY(0) scale(1); pointer-events: auto; }
+    .bag-popover-header { margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid #ECE6DC; }
+    .popover-badge { display: inline-block; padding: 3px 7px; border-radius: 4px; background: #EEF4F0; color: #1A3826; font-size: 8.5px; font-weight: 800; letter-spacing: .08em; margin-bottom: 5px; }
+    .bag-popover-actions { display: flex; flex-direction: column; gap: 8px; }
+    .popover-action { display: flex; align-items: center; gap: 11px; padding: 10px 12px; border-radius: 8px; border: 1px solid #ECE6DC; background: #faf9f6; color: #1A3826; text-decoration: none; transition: transform .2s ease, background .2s ease, border-color .2s ease; font-size: 12px; }
+    .popover-action:hover { transform: translateX(3px); background: #ffffff; border-color: #1A3826; }
+    .action-icon { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 8px; flex-shrink: 0; }
+    .action-icon.wa-bg { background: #25d366; color: #ffffff; }
+    .action-icon.phone-bg { background: #EEF4F0; color: #1A3826; }
+    .action-info { display: flex; flex-direction: column; gap: 2px; flex: 1; text-align: left; }
+    .action-info strong { font-size: 12.5px; font-weight: 700; color: #1A3826; }
+    .action-info span { font-size: 10.5px; color: #586b60; }
+    .quote-action { justify-content: space-between; background: #EEF4F0; border-color: rgba(26,56,38,.2); color: #1A3826; }
+    .quote-action strong { color: #1A3826; }
+    .quote-action:hover { background: #1A3826; color: #ffffff; }
+    .quote-action:hover strong, .quote-action:hover span { color: #ffffff; }
+
+    @media (max-width: 768px) {
+      .floating-bag-widget { right: 12px !important; bottom: 16px !important; z-index: 999 !important; }
+      .bag-trigger-btn { width: 82px !important; height: 96px !important; }
+      .bag-rope-handle { width: 40px !important; height: 26px !important; border-width: 4px !important; }
+      .bag-shape-body { width: 78px !important; height: 74px !important; padding: 6px 5px 7px !important; }
+      .bag-monogram { font-size: 11.5px !important; }
+      .wa-icon-badge, .phone-icon-badge { width: 25px !important; height: 25px !important; }
+      .wa-icon-badge svg, .phone-icon-badge svg { width: 14px !important; height: 14px !important; }
+      .bag-label-text { font-size: 9px !important; }
+      .bag-status-dot { top: 12px !important; right: 2px !important; width: 11px !important; height: 11px !important; border-width: 2px !important; }
+      .bag-popover { right: 0 !important; bottom: 108px !important; width: 285px !important; max-width: calc(100vw - 24px) !important; padding: 14px !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen grain-overlay flex flex-col justify-between">
+
+  <!-- ========================================== -->
+  <!-- TOP NAVIGATION BAR                         -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-50 bg-[#FCFAF7]/95 backdrop-blur-md border-b border-[#EBE6DE]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-forest flex items-center justify-center text-white shadow-md group-hover:bg-forest-light transition-all flex-shrink-0">
+          <svg class="w-8 h-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Top Handle -->
+            <path d="M18 17V12C18 8.68629 20.6863 6 24 6C27.3137 6 30 8.68629 30 12V17" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+            <!-- White Bag Body -->
+            <path d="M11 16H37L34.5 40C34.5 41.1046 33.6046 42 32.5 42H15.5C14.3954 42 13.5 41.1046 13.5 40L11 16Z" fill="white"/>
+            <!-- Top Fold / Shadow Line -->
+            <path d="M12 19H36" stroke="#1A3826" stroke-width="1.2" stroke-opacity="0.2"/>
+            <!-- "PB" Monogram Text -->
+            <text x="24" y="32.5" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-weight="800" font-size="11" fill="#1A3826" text-anchor="middle" letter-spacing="-0.5px">PB</text>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-[15px] tracking-wider text-forest uppercase leading-tight font-sans">PAPER</span>
+          <span class="font-extrabold text-[15px] tracking-wider text-[#244F36] uppercase leading-tight font-sans">BAG WORKS</span>
+          <span class="text-[10px] tracking-wide text-forest/60 font-semibold mt-0.5 leading-none">Custom Paper Packaging</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-forest/80">
+        <a href="/" class="hover:text-forest transition-colors">Home</a>
+        <a href="/products.html" class="hover:text-forest transition-colors">Products</a>
+        
+        <!-- Custom Options Dropdown -->
+        <div class="relative group py-2">
+          <a href="/paper-bag-selection.html" class="hover:text-forest transition-colors inline-flex items-center gap-1.5 font-bold text-forest">
+            <span>Custom Options</span>
+            <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180 text-forest/70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <div class="absolute top-full left-0 w-72 p-2 bg-white rounded-2xl shadow-xl border border-[#E8E2D8] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <a href="/paper-bag-selection.html" class="flex flex-col p-3 rounded-xl hover:bg-[#F4F8F5] transition-colors">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-forest">Paper Bag Selection</span>
+                <span class="text-[9.5px] font-bold px-2 py-0.5 rounded-full bg-forest/10 text-forest">Overview</span>
+              </div>
+              <span class="text-[11px] text-forest/60 mt-0.5 leading-snug">Styles, Materials, Handles & Printing Finishes</span>
+            </a>
+            <a href="/size-options.html" class="flex flex-col p-3 rounded-xl hover:bg-[#F4F8F5] transition-colors mt-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-forest">Size Options</span>
+                <span class="text-[9.5px] font-bold px-2 py-0.5 rounded-full bg-forest/10 text-forest">38 Sizes</span>
+              </div>
+              <span class="text-[11px] text-forest/60 mt-0.5 leading-snug">Substrates, Popular Dimensions & 38 Sizes</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="/blog.html" class="text-forest font-bold border-b-2 border-forest pb-0.5">Blog</a>
+        <a href="/#faq" class="hover:text-forest transition-colors">FAQ</a>
+        <a href="https://wa.me/8613760699327?text=Hi%20Paper%20Bag%20Works%2C%20I%20am%20reading%20your%20packaging%20blog%20and%20would%20like%20to%20consult%20on%20a%20custom%20paper%20bag%20project." target="_blank" rel="noreferrer" class="pill-badge bg-forest text-white hover:bg-forest-light transition-all shadow-sm">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.56 20.16 9.11 19.76 7.85 19.02L7.55 18.84L4.43 19.66L5.26 16.62L5.06 16.3C4.24 15 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67Z"/>
+          </svg>
+          Direct WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================== -->
+    <!-- BREADCRUMBS & HERO SECTION                 -->
+    <!-- ========================================== -->
+    <section class="relative pt-12 pb-14 md:pt-16 md:pb-18 border-b border-[#EBE6DE] bg-gradient-to-b from-[#F7F4EE] to-[#FCFAF7]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Bar -->
+        <div class="flex items-center gap-2 text-xs text-forest/60 mb-6 font-semibold">
+          <a href="/" class="hover:text-forest transition-colors">Home</a>
+          <span>&rsaquo;</span>
+          <span class="text-forest font-bold">Blog</span>
+          <span>&rsaquo;</span>
+          <span class="text-forest/80">Packaging Intelligence</span>
+        </div>
+
+        <div class="text-center max-w-4xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest/5 border border-forest/15 text-forest text-xs font-bold tracking-wider uppercase mb-5">
+            Packaging Intelligence · Factory Insider Guides
+          </div>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-forest tracking-tight leading-[1.15]">
+            The Paper Bag Works Packaging Blog
+          </h1>
+          <p class="mt-5 text-base sm:text-lg text-forest/75 max-w-3xl mx-auto leading-relaxed">
+            Expert B2B guides on custom paper shopping bag engineering, substrate comparisons, flexo vs. offset printing, handle load testing, structural CAD dielines, and factory-direct pricing — written by packaging specialists.
+          </p>
+
+          <!-- Planning Tools Bar (Inspired by LuxoPack Reference) -->
+          <div class="mt-8 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 text-xs font-bold">
+            <span class="text-forest/60 uppercase tracking-wider text-[11px] mr-1">Planning Tools:</span>
+            <a href="/paper-bag-selection.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#E2DBD0] text-forest hover:border-forest hover:bg-forest hover:text-white transition-all shadow-sm">
+              <span>📊 2026 Price Guide</span>
+            </a>
+            <a href="/size-options.html" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#E2DBD0] text-forest hover:border-forest hover:bg-forest hover:text-white transition-all shadow-sm">
+              <span>📐 38 Standard Size Options</span>
+            </a>
+            <a href="/paper-bag-selection.html#materials" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#E2DBD0] text-forest hover:border-forest hover:bg-forest hover:text-white transition-all shadow-sm">
+              <span>🌿 Substrates Guide</span>
+            </a>
+            <a href="/paper-bag-selection.html#process" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#E2DBD0] text-forest hover:border-forest hover:bg-forest hover:text-white transition-all shadow-sm">
+              <span>🏷️ MOQ &amp; Lead Times</span>
+            </a>
+            <a href="https://wa.me/8613760699327?text=Hi%20Paper%20Bag%20Works%2C%20please%20send%20me%20the%20free%20CAD%20dieline%20templates." target="_blank" rel="noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-forest text-white hover:bg-forest-light transition-all shadow-sm">
+              <span>📥 Free CAD Dielines</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- CATEGORY FILTER & REALTIME SEARCH BAR      -->
+    <!-- ========================================== -->
+    <section class="sticky top-20 z-40 bg-[#FCFAF7]/95 backdrop-blur-md border-b border-[#EBE6DE] py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-4">
+        
+        <!-- Category Filter Buttons -->
+        <div class="flex items-center gap-2 overflow-x-auto w-full lg:w-auto pb-2 lg:pb-0 scrollbar-none" id="categoryFilterContainer">
+          <button type="button" class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold border border-[#E2DBD0] whitespace-nowrap" data-category="all">
+            All Guides (18)
+          </button>
+          <button type="button" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-[#E2DBD0] bg-white text-forest hover:border-forest whitespace-nowrap" data-category="sourcing">
+            Sourcing &amp; Pricing
+          </button>
+          <button type="button" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-[#E2DBD0] bg-white text-forest hover:border-forest whitespace-nowrap" data-category="materials">
+            Materials &amp; Substrates
+          </button>
+          <button type="button" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-[#E2DBD0] bg-white text-forest hover:border-forest whitespace-nowrap" data-category="handles">
+            Handles &amp; Structure
+          </button>
+          <button type="button" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-[#E2DBD0] bg-white text-forest hover:border-forest whitespace-nowrap" data-category="printing">
+            Printing &amp; Finishes
+          </button>
+          <button type="button" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-[#E2DBD0] bg-white text-forest hover:border-forest whitespace-nowrap" data-category="qc">
+            QC &amp; Compliance
+          </button>
+          <button type="button" class="filter-btn px-4 py-2 rounded-xl text-xs font-bold border border-[#E2DBD0] bg-white text-forest hover:border-forest whitespace-nowrap" data-category="dielines">
+            Dielines &amp; Artwork
+          </button>
+        </div>
+
+        <!-- Real-time Search Input -->
+        <div class="relative w-full lg:w-72 flex-shrink-0">
+          <input 
+            type="text" 
+            id="blogSearchInput" 
+            placeholder="Search guides (e.g. GSM, flexo, MOQ)..." 
+            class="w-full pl-9 pr-4 py-2 text-xs font-semibold rounded-xl bg-white border border-[#E2DBD0] text-forest placeholder:text-forest/40 focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest transition-all"
+          />
+          <svg class="w-4 h-4 absolute left-3 top-2.5 text-forest/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FEATURED PILLAR ARTICLE SPOTLIGHT          -->
+    <!-- ========================================== -->
+    <section class="py-12 border-b border-[#EBE6DE]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="bg-gradient-to-br from-[#1A3826] to-[#112619] rounded-3xl p-6 sm:p-10 lg:p-12 text-white shadow-xl relative overflow-hidden group">
+          <!-- Background Atmospheric Motif -->
+          <div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-forest-accent/20 blur-3xl pointer-events-none"></div>
+          
+          <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 mb-4">
+                  <span class="px-3 py-1 rounded-full bg-amberaccent/20 border border-amberaccent/40 text-amber-300 text-xs font-bold uppercase tracking-wider">
+                    Pillar Guide · Substrate Engineering
+                  </span>
+                  <span class="text-xs text-white/70 font-semibold">📅 November 2026 · 12 min read</span>
+                </div>
+                
+                <h2 class="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
+                  White Cardboard vs. Virgin White Kraft vs. Natural Brown Kraft: The Complete Substrate Sourcing Guide (2026)
+                </h2>
+                
+                <p class="mt-4 text-sm sm:text-base text-white/80 leading-relaxed font-sans">
+                  Bursting factor comparison, caliper thickness (120–350 GSM), ink holdout, surface smoothness, and cost per 1,000 units across solid bleached sulfate (SBS), unbleached virgin kraft, and recycled duplex boards. How to pick the exact paper stock that balances luxury rigidity with eco-friendly compliance.
+                </p>
+
+                <!-- Key Takeaway Pills -->
+                <div class="mt-6 flex flex-wrap gap-2 text-xs">
+                  <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-white/90 font-medium">120–350 GSM Range</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-white/90 font-medium">Burst Factor: 3.5–5.2 kPa·m²/g</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-white/90 font-medium">FSC® 100% Recyclable</span>
+                  <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-white/90 font-medium">Food-Safe Virgin Fibers</span>
+                </div>
+              </div>
+
+              <div class="mt-8 flex flex-wrap items-center gap-4">
+                <a 
+                  href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20I%20read%20your%20Paper%20Bag%20Works%20Substrate%20Guide%20and%20would%20like%20to%20request%20paper%20swatch%20samples%20and%20a%20wholesale%20quote." 
+                  target="_blank" 
+                  rel="noreferrer"
+                  class="px-6 py-3 rounded-xl bg-amberaccent hover:bg-[#E08332] text-white font-bold text-xs uppercase tracking-wider transition-all shadow-md flex items-center gap-2"
+                >
+                  <span>Request Paper Swatches &amp; Quote</span>
+                  <span>&rarr;</span>
+                </a>
+                <a 
+                  href="/paper-bag-selection.html#materials" 
+                  class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs transition-colors"
+                >
+                  View Interactive Substrate Selector
+                </a>
+              </div>
+            </div>
+
+            <!-- Visual Showcase Badge Box -->
+            <div class="lg:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/15 p-6 flex flex-col justify-between">
+              <span class="text-xs uppercase tracking-wider font-bold text-amber-300">Quick Comparison Matrix</span>
+              <div class="mt-4 space-y-3.5 text-xs text-white/90 font-sans">
+                <div class="flex items-start justify-between pb-2.5 border-b border-white/10">
+                  <span class="font-bold">Solid Bleached Cardboard (SBS)</span>
+                  <span class="text-right text-white/70">210–350 GSM · Ultra-Smooth · High Rigidity</span>
+                </div>
+                <div class="flex items-start justify-between pb-2.5 border-b border-white/10">
+                  <span class="font-bold">Virgin White Kraft</span>
+                  <span class="text-right text-white/70">120–200 GSM · High Tear · Natural Texture</span>
+                </div>
+                <div class="flex items-start justify-between pb-2.5 border-b border-white/10">
+                  <span class="font-bold">Natural Brown Kraft</span>
+                  <span class="text-right text-white/70">100–230 GSM · Unbleached · Organic Appeal</span>
+                </div>
+                <div class="flex items-start justify-between">
+                  <span class="font-bold">Black / Dyed Color Card</span>
+                  <span class="text-right text-white/70">180–300 GSM · Solid Core · Zero White Edge</span>
+                </div>
+              </div>
+              <div class="mt-5 pt-4 border-t border-white/10 flex items-center justify-between text-[11px] text-white/60">
+                <span>Free 1:1 Sample Swatch Booklet Available</span>
+                <span class="text-amber-300 font-bold">24h Dispatch &check;</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- ARTICLES GRID CONTAINER                   -->
+    <!-- ========================================== -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h3 class="font-serif text-2xl font-bold text-forest" id="catalogHeading">Packaging Intelligence Articles</h3>
+            <p class="text-xs sm:text-sm text-forest/70 mt-1">Sourcing frameworks, dieline engineering, print finishing and quality inspection</p>
+          </div>
+          <span class="text-xs font-bold text-forest/60 bg-forest/5 px-3 py-1.5 rounded-full border border-forest/10" id="articleCountBadge">
+            Showing 18 Articles
+          </span>
+        </div>
+
+        <!-- Dynamic Grid of 18 B2B Packaging Articles -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogArticlesGrid">
+          
+          <!-- Article 1: Handles Load Rating -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="handles">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-forest-surface text-forest text-[10.5px] font-bold uppercase tracking-wider">Handles &amp; Structure</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Nov 2026 · 8 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Paper Bag Handle Engineering: Twisted Paper vs. Cotton Rope vs. Grosgrain Ribbon vs. Die-Cut Load Ratings (3.5kg–8kg)
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Detailed load pull testing, handle glue formulation (hot melt vs. water-based PVA), turn-top card reinforcements, and ergonomic grip comfort compared across retail, takeaway, and luxury boutique applications.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">3.5–8.0 kg Rating</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Rivet &amp; Eyelet Options</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Turn-Top Reinforcement</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20I%20would%20like%20to%20learn%20more%20about%20Paper%20Bag%20Handle%20Load%20Ratings%20and%20request%20samples." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Read Guide &amp; Sample Handles</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 2: Flexo vs Offset Printing -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="printing">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-amberaccent/10 text-amberaccent text-[10.5px] font-bold uppercase tracking-wider">Printing &amp; Finishes</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Nov 2026 · 10 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Flexographic Printing vs. Offset Printing for Custom Paper Bags: Cost, MOQ &amp; Screen Resolution Breakdown
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                When to use 1–4 color water-based in-line flexography (low unit cost, high run) versus Heidelberg 6-color offset lithography (2400 DPI, full-bleed micro-halftones). Includes plate setup economics.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Heidelberg Offset</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Water-Based Flexo</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Pantone Solid Match</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20please%20consult%20me%20on%20Flexo%20vs%20Offset%20printing%20for%20our%20paper%20bag%20project." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Read Guide &amp; Print Specs</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 3: Luxury Packaging Finishes -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="printing">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-amberaccent/10 text-amberaccent text-[10.5px] font-bold uppercase tracking-wider">Printing &amp; Finishes</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Nov 2026 · 7 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Luxury Finishes Guide: Metallic Hot Foil, Multi-Level Blind Embossing, Spot UV &amp; Anti-Scuff Lamination
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Kurz gold/silver/rose-gold foil stamping temperatures, brass CNC deboss dies, high-build tactile UV varnish, and velvet soft-touch film lamination without edge delamination.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Kurz Hot Foil</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Multi-Level Deboss</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Anti-Scuff Matte</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20please%20send%20me%20your%20Luxury%20Finishes%20Guide%20and%20finish%20sample%20swatches." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Read Guide &amp; View Swatches</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 4: Dieline Setup & Print-Ready Artwork -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="dielines">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-forest-surface text-forest text-[10.5px] font-bold uppercase tracking-wider">Dielines &amp; Artwork</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Oct 2026 · 9 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                How to Set Up Print-Ready Artwork &amp; CAD Dielines for Custom Paper Shopping Bags
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Step-by-step prepress checklist: bleed tolerances (3mm), fold crease lines vs. cut lines, safe margins around eyelets, CMYK to Pantone conversion, and separate vector layers for foil stamping.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">1:1 Vector Dielines</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">3mm Bleed Zone</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Layered AI / PDF</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20please%20send%20me%20the%201%3A1%20CAD%20Dieline%20Artwork%20Setup%20Kit." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Download Dieline Template</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 5: 2026 Factory Pricing Breakdown -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="sourcing">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-kraft/10 text-kraft text-[10.5px] font-bold uppercase tracking-wider">Sourcing &amp; Pricing</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Oct 2026 · 11 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                How Much Do Custom Paper Bags Cost Wholesale in China? Real 2026 Factory-Direct Price Breakdown
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Raw paper pulp costs, CTP plate fees, die-cutting tooling, handle assembly labor, and international sea/air freight landed cost calculations for orders of 300, 1,000, 5,000, and 20,000 units.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Factory Direct EXW/FOB</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">MOQ Tier Benchmarks</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">DDP Landed Cost</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20I%20would%20like%20a%202026%20Wholesale%20Price%20Quote%20for%20custom%20paper%20bags." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Get Instant Price Quote</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 6: MOQ Guide -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="sourcing">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-kraft/10 text-kraft text-[10.5px] font-bold uppercase tracking-wider">Sourcing &amp; Pricing</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Oct 2026 · 6 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Custom Paper Bags MOQ Guide: 100 vs 300 vs 1,000 pcs (Plate Setup Fees &amp; Unit Economics)
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Why small batch digital runs (100–300 pcs) have higher unit costs, where the offset plate amortization inflection point happens, and how to optimize order frequency for retail store networks.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">MOQ from 100 PCS</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Tooling Amortization</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Inventory Turnover</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20what%20is%20the%20best%20MOQ%20and%20pricing%20tier%20for%20my%20bag%20dimensions%3F" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Compare MOQ Tiers</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 7: AQL 2.5 Quality Control -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="qc">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-forest-surface text-forest text-[10.5px] font-bold uppercase tracking-wider">QC &amp; Compliance</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Oct 2026 · 8 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                AQL 2.5 Incoming Quality Inspection Checklist for Paper Bags: Tensile Strength, Bottom Glue &amp; Handle Pull Tests
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Critical, major, and minor defect classifications: bottom seam adhesion under 5kg weight hold, handle rivet shear testing, color delta E measurement, and moisture barrier export packing audits.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">AQL Level II Standard</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Bottom Seam Pull Test</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Spectrophotometer Delta E</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20please%20send%20me%20the%20Paper%20Bag%20Works%20AQL%202.5%20QC%20Checklist." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Download QC Checklist</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 8: Food-Contact Safe Paper Bags -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="qc">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-forest-surface text-forest text-[10.5px] font-bold uppercase tracking-wider">QC &amp; Compliance</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Oct 2026 · 7 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Food-Contact Safe Kraft Paper Bags: FDA 21 CFR &amp; EU 1935/2004 Compliance for Bakery &amp; Takeaway
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Virgin unbleached wood pulp standards, greaseproof glassine laminations, low-migration soy-based inks, and heavy metal testing required for direct food contact in US and European markets.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">FDA 21 CFR 176.170</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Low-Migration Soy Ink</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Greaseproof Barrier</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20we%20need%20FDA%2FEU%20compliant%20food%20grade%20kraft%20bags%20for%20bakery%20takeaway." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Read Food Compliance Guide</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 9: FSC Certification & EUDR -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="materials">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-forest-surface text-forest text-[10.5px] font-bold uppercase tracking-wider">Materials &amp; Substrates</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Oct 2026 · 6 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                FSC® Certified Paper Packaging: Chain of Custody, EUDR Compliance &amp; Sustainable Retail Sourcing
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                What FSC Mix, FSC 100%, and FSC Recycled labels actually mean, how to verify supplier Chain of Custody certificates, and complying with the European Deforestation Regulation (EUDR).
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">FSC® CoC Verification</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">EUDR Compliant</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">100% Recyclable</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20please%20share%20FSC%20certified%20paper%20bag%20specifications%20and%20documentation." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Verify FSC Standards</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 10: Standard Export Packaging -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="qc">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-forest-surface text-forest text-[10.5px] font-bold uppercase tracking-wider">QC &amp; Compliance</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Sep 2026 · 7 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Standard Export Packaging: 5-Ply Corrugated Cartons, Desiccants &amp; Palletization for Zero In-Transit Creasing
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                How we pack custom paper bags for global sea freight: polybag dust sleeves, 250 lbs/sq.in burst cartons, corner edge protectors, and shrink-wrapped ISPM-15 heat-treated export pallets.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">5-Ply K=K Master Carton</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Moisture Barrier Polybags</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">ISPM-15 Heat Treated</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20I%20would%20like%20to%20review%20your%20Export%20Packaging%20and%20Container%20Loading%20Specs." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>View Export Packing Specs</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 11: Turn-Top Hem & Bottom Reinforcement -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="handles">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-forest-surface text-forest text-[10.5px] font-bold uppercase tracking-wider">Handles &amp; Structure</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Sep 2026 · 8 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Turn-Top Hem &amp; Reinforced Bottom Board Engineering: How to Prevent Handle Pull-Out on Heavyweight Apparel Bags
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Why 350 GSM greyboard inserts at top collar and base gusset are essential for luxury fashion apparel, winter coats, and shoe boxes. Load stress distribution mechanics explained.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">350 GSM Greyboard Collar</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Base Reinforcement</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Zero Sag Guarantee</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20please%20consult%20me%20on%20heavy-duty%20apparel%20bag%20reinforcement%20and%20structure." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Read Structural Specs</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 12: Pantone Color Matching -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="printing">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-amberaccent/10 text-amberaccent text-[10.5px] font-bold uppercase tracking-wider">Printing &amp; Finishes</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Aug 2026 · 10 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Pantone Color Matching on Uncoated Kraft vs. Coated Cardboard: Controlling Ink Absorption &amp; Delta E Shifts
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Why Pantone Solid Coated (C) looks darker on unbleached brown kraft paper, using opaque white underbases, and establishing spectral tolerances (Delta E &lt; 2.0) for brand identity consistency.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Pantone Solid Match</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Opaque White Underbase</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Delta E &lt; 2.0 Tolerance</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20we%20have%20strict%20Pantone%20brand%20colors%20and%20need%20expert%20color%20matching%20for%20our%20bags." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Read Color Matching Guide</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 13: Fold-Over Envelope Ribbon Bow Bags -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="handles">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-forest-surface text-forest text-[10.5px] font-bold uppercase tracking-wider">Handles &amp; Structure</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Aug 2026 · 7 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Fold-Over Envelope &amp; Ribbon Bow Closure Bags: Luxury Presentation Specs for High Jewelry &amp; Haute Parfumerie
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Die-cut envelope flap geometry, pre-threaded double-faced satin ribbon knots, concealed magnetic catch closures, and velvet lining inserts for VIP gift launches and fine jewelry packaging.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Fold-Over Envelope Flap</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Double-Faced Satin Bow</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Haute Joaillerie Specs</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20please%20share%20specs%20and%20dielines%20for%20Envelope%20Ribbon%20Bow%20Gift%20Bags." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>View Envelope Gift Bags</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 14: Dimensional Weight vs E-Com Bags -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="sourcing">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-kraft/10 text-kraft text-[10.5px] font-bold uppercase tracking-wider">Sourcing &amp; Pricing</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Aug 2026 · 8 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                E-Commerce Retail Poly-Mailers vs. High-GSM Gusseted Kraft Bags: Unboxing Experience &amp; DIM Weight Math
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Compare customer retention metrics, unboxing prestige, volumetric shipping costs, and peel-and-seal adhesive strip options on heavyweight expandable kraft paper mailer totes.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Volumetric Weight Math</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Peel &amp; Seal Strips</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Retail Unboxing ROI</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20I%20would%20like%20to%20compare%20e-commerce%20kraft%20bags%20and%20shipping%20dimensions." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Compare E-Com Bag Costs</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 15: Chinese New Year Production Timeline -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="sourcing">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-kraft/10 text-kraft text-[10.5px] font-bold uppercase tracking-wider">Sourcing &amp; Pricing</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Jul 2026 · 6 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Chinese New Year 2027: The Paper Packaging Order Deadlines That Actually Matter
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Reverse planning calendar for holiday and spring retail launches: artwork sign-off dates, proofing windows, container vessel booking cut-offs, and avoiding pre-holiday port congestion.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Reverse Sourcing Calendar</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Vessel Booking Windows</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Holiday Rush Protection</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20what%20are%20the%20current%20production%20lead%20times%20and%20shipping%20cut-offs%3F" target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>View Production Timelines</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 16: Small Business First Run Guide -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="sourcing">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-kraft/10 text-kraft text-[10.5px] font-bold uppercase tracking-wider">Sourcing &amp; Pricing</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Jul 2026 · 8 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Custom Paper Bags for Small Businesses: A Practical 100–300 PCS First-Run Sourcing Playbook
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                How indie boutiques, artisan bakeries, and popup brands can launch branded shopping bags without huge inventory liabilities. Tooling sharing and standard die catalog optimization.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Low MOQ Strategy</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Standard Tooling Dies</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Working Capital Protection</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20we%20are%20a%20small%20business%20looking%20to%20order%20our%20first%20run%20of%20custom%20bags." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>Start Small-Batch Project</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 17: Die-Cut vs Folded Patch Handle -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="handles">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-forest-surface text-forest text-[10.5px] font-bold uppercase tracking-wider">Handles &amp; Structure</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Jun 2026 · 6 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                Die-Cut Punch Handle vs. Folded Patch Handle: Flat-Fold Sizing &amp; High-Volume Event Economics
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Space-saving flat pack geometry for trade shows, literature distribution, bookstores, and retail events. Internal reinforced patch card specs for tear-resistant finger grip.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Flat-Pack Efficiency</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Internal Patch Reinforce</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">High-Volume Events</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20please%20send%20me%20pricing%20and%20specs%20for%20Die-Cut%20Handle%20Kraft%20Bags." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>View Die-Cut Handle Bags</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 18: China Supplier Audit Documents -->
+          <article class="article-card bg-white rounded-2xl border border-[#E2DBD0] shadow-card hover:shadow-card-hover hover:border-forest/40 transition-all duration-300 flex flex-col justify-between overflow-hidden group" data-category="qc">
+            <div class="p-6">
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-md bg-forest-surface text-forest text-[10.5px] font-bold uppercase tracking-wider">QC &amp; Compliance</span>
+                <span class="text-[11px] text-forest/60 font-medium">📅 Jun 2026 · 11 min read</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-forest group-hover:text-forest-accent transition-colors leading-snug">
+                12 Supplier Audit Documents to Check Before Placing a Wholesale Custom Paper Bag Order in China
+              </h4>
+              <p class="mt-2.5 text-xs text-forest/75 leading-relaxed">
+                Business license validation, FSC Chain-of-Custody codes, ISO 9001/14001 certificates, bank beneficiary matching, physical pre-production sign-off sheets, and final OQC inspection release reports.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-1.5 text-[10.5px] text-forest/70">
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">12-Point Audit Checklist</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">FSC CoC Verification</span>
+                <span class="bg-[#F4F1EA] px-2 py-0.5 rounded">Risk Mitigation</span>
+              </div>
+            </div>
+            <div class="px-6 py-3.5 border-t border-[#ECE7DF] bg-[#FAF8F5] flex items-center justify-between text-xs font-bold text-forest group-hover:text-amberaccent transition-colors">
+              <a href="https://wa.me/8613760699327?text=Hi%20Wing%2C%20please%20share%20Paper%20Bag%20Works%20factory%20audit%20credentials%20and%20certifications." target="_blank" rel="noreferrer" class="flex items-center gap-1.5 w-full justify-between">
+                <span>View Factory Audit Guide</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FACTORY DIRECT CONVERSION CTA              -->
+    <!-- ========================================== -->
+    <section class="py-16 bg-[#F4F1EA] border-t border-[#E2DBD0]">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest/10 text-forest text-xs font-bold uppercase tracking-wider mb-4">
+          Direct Factory Manufacturing · Zero Middleman Markup
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-forest tracking-tight">
+          Ready to Engineer Your Custom Paper Bags?
+        </h2>
+        <p class="mt-4 text-base sm:text-lg text-forest/75 max-w-2xl mx-auto leading-relaxed">
+          Get a factory-direct quote in 24 hours. Free structural CAD dielines. Low MOQ from 100 pcs. Paper swatch kits delivered to your door.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href="/#quote" 
+            class="w-full sm:w-auto px-8 py-4 rounded-xl bg-forest hover:bg-forest-light text-white font-bold text-sm tracking-wide transition-all shadow-md flex items-center justify-center gap-2"
+          >
+            <span>Start a Quote Project</span>
+            <span class="text-base">&rarr;</span>
+          </a>
+          <a 
+            href="https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20would%20like%20to%20discuss%20a%20custom%20paper%20bag%20project%20and%20request%20samples." 
+            target="_blank" 
+            rel="noreferrer" 
+            class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white border border-[#D6E4DB] hover:border-forest text-forest font-bold text-sm transition-all shadow-sm flex items-center justify-center gap-2.5"
+          >
+            <svg class="w-5 h-5 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.16 12.04 20.16C10.56 20.16 9.11 19.76 7.85 19.02L7.55 18.84L4.43 19.66L5.26 16.62L5.06 16.3C4.24 15 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67Z"/>
+            </svg>
+            <span>Chat via WhatsApp (+86 13760699327)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="bg-forest-deep text-white/80 py-12 border-t border-forest">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-xs leading-relaxed">
+        
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2.5 mb-3">
+            <div class="w-8 h-8 rounded-lg bg-forest-light flex items-center justify-center text-white">
+              <svg class="w-5 h-5" viewBox="0 0 48 48" fill="none"><path d="M18 17V12C18 8.68629 20.6863 6 24 6C27.3137 6 30 8.68629 30 12V17" stroke="white" stroke-width="3.5" stroke-linecap="round"/><path d="M11 16H37L34.5 40C34.5 41.1046 33.6046 42 32.5 42H15.5C14.3954 42 13.5 41.1046 13.5 40L11 16Z" fill="white"/></svg>
+            </div>
+            <span class="font-extrabold text-sm tracking-wider text-white uppercase">PAPER BAG WORKS</span>
+          </div>
+          <p class="text-white/60 max-w-sm">
+            B2B custom printed paper bags manufacturer for retail, food takeaway, fashion apparel, cosmetics, and luxury gifting brands worldwide. FSC® certified sustainable packaging.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Navigation</h5>
+          <ul class="space-y-2 text-white/70">
+            <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="/products.html" class="hover:text-white transition-colors">Products Collection</a></li>
+            <li><a href="/paper-bag-selection.html" class="hover:text-white transition-colors">Paper Bag Selection</a></li>
+            <li><a href="/size-options.html" class="hover:text-white transition-colors">Size Options (38 Sizes)</a></li>
+            <li><a href="/blog.html" class="hover:text-white transition-colors">Packaging Blog</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="text-white font-bold uppercase tracking-wider text-[11px] mb-3">Contact &amp; Factory</h5>
+          <p class="text-white/70">Email: 1@paperbagworks.com</p>
+          <p class="text-white/70 mt-1">WhatsApp / Tel: +86 13760699327</p>
+          <p class="text-white/50 mt-2 text-[11px]">Guangdong Packaging Industrial Park, China</p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] text-white/50 gap-3">
+        <span>&copy; 2026 Paper Bag Works. All rights reserved. B2B Custom Paper Packaging Manufacturer.</span>
+        <span>FSC® Certified · Heidelberg Offset · Heidelberg Speedmaster</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- UNIFIED FLOATING CONTACT WIDGET            -->
+  <!-- ========================================== -->
+  <aside class="floating-bag-widget" id="floatingBagWidget" aria-label="Quick contact widget">
+    <div class="bag-popover" id="bagPopover">
+      <div class="bag-popover-header">
+        <span class="popover-badge">DIRECT FACTORY CONTACT</span>
+        <h4 style="margin:0; font-size:15px; font-weight:800; color:#1A3826; letter-spacing:-.02em;">Paper Bag Works</h4>
+        <p style="margin:3px 0 0; color:#586b60; font-size:11.5px;">Fast wholesale quote &amp; dieline advice</p>
+      </div>
+      <div class="bag-popover-actions">
+        <a href="https://wa.me/8613760699327?text=Hello%20Paper%20Bag%20Works%2C%20I%20would%20like%20to%20inquire%20about%20custom%20paper%20bag%20production." target="_blank" rel="noreferrer" class="popover-action">
+          <div class="action-icon wa-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
+          <div class="action-info">
+            <strong>WhatsApp Chat</strong>
+            <span>+86 13760699327 · Instant reply</span>
+          </div>
+        </a>
+        <a href="tel:+8613760699327" class="popover-action">
+          <div class="action-icon phone-bg"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+          <div class="action-info">
+            <strong>Direct Call</strong>
+            <span>+86 13760699327</span>
+          </div>
+        </a>
+        <a href="mailto:1@paperbagworks.com?subject=Custom%20Paper%20Bag%20Quote%20Request" class="popover-action quote-action">
+          <strong>Request Free Sample Kit &amp; Quote</strong>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </a>
+      </div>
+    </div>
+
+    <button type="button" class="bag-trigger-btn" id="bagTriggerBtn" aria-label="Toggle contact menu" title="Contact via WhatsApp & Phone">
+      <div class="bag-shape-container">
+        <div class="bag-rope-handle"></div>
+        <div class="bag-shape-body">
+          <div class="bag-monogram">PBW</div>
+          <div class="bag-icons-row">
+            <span class="wa-icon-badge" title="WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </span>
+            <span class="phone-icon-badge" title="Phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </span>
+          </div>
+          <span class="bag-label-text">HELP</span>
+        </div>
+        <span class="bag-status-dot"></span>
+      </div>
+    </button>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- CLIENT INTERACTIVE JS SCRIPTS              -->
+  <!-- ========================================== -->
+  <script>
+    // Category & Search Filtering
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const searchInput = document.getElementById('blogSearchInput');
+      const articles = document.querySelectorAll('.article-card');
+      const countBadge = document.getElementById('articleCountBadge');
+      let currentCategory = 'all';
+
+      function applyFilters() {
+        const query = (searchInput.value || '').toLowerCase().trim();
+        let visibleCount = 0;
+
+        articles.forEach(card => {
+          const cat = card.getAttribute('data-category');
+          const title = (card.querySelector('h4') ? card.querySelector('h4').textContent : '').toLowerCase();
+          const desc = (card.querySelector('p') ? card.querySelector('p').textContent : '').toLowerCase();
+          
+          const matchCat = (currentCategory === 'all' || cat === currentCategory);
+          const matchQuery = !query || title.includes(query) || desc.includes(query);
+
+          if (matchCat && matchQuery) {
+            card.style.display = 'flex';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (countBadge) {
+          countBadge.textContent = 'Showing ' + visibleCount + ' Article' + (visibleCount === 1 ? '' : 's');
+        }
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filterBtns.forEach(b => {
+            b.classList.remove('active', 'bg-forest', 'text-white');
+            b.classList.add('bg-white', 'text-forest');
+          });
+          this.classList.add('active', 'bg-forest', 'text-white');
+          this.classList.remove('bg-white', 'text-forest');
+          currentCategory = this.getAttribute('data-category');
+          applyFilters();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', applyFilters);
+      }
+
+      // Floating Widget Toggle
+      const widget = document.getElementById('floatingBagWidget');
+      const btn = document.getElementById('bagTriggerBtn');
+      if (btn && widget) {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          widget.classList.toggle('is-active');
+        });
+        document.addEventListener('click', function(e) {
+          if (!widget.contains(e.target)) {
+            widget.classList.remove('is-active');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

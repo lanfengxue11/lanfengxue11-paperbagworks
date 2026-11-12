@@ -15,7 +15,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         sizeOptions: resolve(__dirname, 'size-options.html'),
         quote: resolve(__dirname, 'request-a-quote.html'),
-        paperBagSelection: resolve(__dirname, 'paper-bag-selection.html')
+        paperBagSelection: resolve(__dirname, 'paper-bag-selection.html'),
+        blog: resolve(__dirname, 'blog.html')
       }
     }
   }

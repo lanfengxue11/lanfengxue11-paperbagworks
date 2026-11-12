@@ -1123,7 +1123,7 @@ def generate_signature_pdp_html(prod):
         </div>
       </div>
 
-      <a href="/#process">Blog</a>
+      <a href="/blog.html">Blog</a>
       <a href="/#faq">FAQ</a>
       <a href="/#quote" class="nav-quote">Get a Quote &rarr;</a>
     </nav>
@@ -1464,7 +1464,7 @@ def generate_scenario_pdp_html(sc):
         </div>
       </div>
 
-      <a href="/#process">Blog</a>
+      <a href="/blog.html">Blog</a>
       <a href="/#faq">FAQ</a>
       <a href="/#quote" class="nav-quote">Get a Quote &rarr;</a>
     </nav>
@@ -1932,7 +1932,7 @@ def generate_products_hub_html():
         </div>
       </div>
 
-      <a href="./index.html#process">Blog</a>
+      <a href="/blog.html">Blog</a>
       <a href="./index.html#faq">FAQ</a>
       <a href="./index.html#quote" class="nav-quote">Get a Quote &rarr;</a>
     </nav>
