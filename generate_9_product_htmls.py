@@ -676,7 +676,7 @@ def render_html_page(sc):
       <a href="{home_link}#applications">Applications</a>
       <a href="../products.html" style="color:var(--eco); font-weight:800;">Products</a>
       <a href="../size-options.html">Custom Options</a>
-      <a href="{home_link}#process">Our Process</a>
+      <a href="{home_link}#process">Blog</a>
       <a href="{home_link}#faq">FAQ</a>
       <a class="nav-quote" href="{wa_link}" target="_blank" rel="noreferrer">
         WhatsApp Us &rarr;

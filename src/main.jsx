@@ -49,7 +49,7 @@ export const NAV_ITEMS = [
       }
     ]
   },
-  { label: 'Our Process', href: '#process' },
+  { label: 'Blog', href: '#process' },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -310,7 +310,7 @@ export function App() {
             </div>
           </div>
 
-          {/* Our Process */}
+          {/* Blog */}
           <a 
             href="#process" 
             onClick={(e) => {
@@ -318,7 +318,7 @@ export function App() {
               navigateToHomeSection('#process');
             }}
           >
-            Our Process
+            Blog
           </a>
 
           {/* FAQ */}
