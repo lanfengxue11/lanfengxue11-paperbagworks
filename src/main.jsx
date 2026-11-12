@@ -718,7 +718,7 @@ export function App() {
               <a href="/paper-gift-bags.html"><img src="/assets/images/categories/gift.webp" alt="Forest green gift bag with champagne ribbon handles" width="960" height="720" loading="lazy" /><h3>Paper gift bags</h3><p>Plan branded gifts, event packaging and boutique presentation with a suitable paper and finish.</p><span>Explore gift bags →</span></a>
               <a href="/products/sourdough-bread-bags.html"><img src="/assets/images/categories/bread-carrier.webp" alt="Individually wrapped loaf in a kraft carry bag with twisted paper handles" width="960" height="720" loading="lazy" /><h3>Paper bags for bread</h3><p>Carry individually wrapped loaves in kraft paper bags with twisted paper handles.</p><span>Explore bakery bags →</span></a>
             </div>
-            <p className="sourcing-note">For paper bags wholesale, share your quantity, finished dimensions, artwork, delivery country and required date. A clear brief helps us quote the right construction and shipping scope.</p>
+            <p><a href="/industries">Find paper bags for your industry →</a></p><p className="sourcing-note">For paper bags wholesale, share your quantity, finished dimensions, artwork, delivery country and required date. A clear brief helps us quote the right construction and shipping scope.</p>
           </section>
           <section className="faq-section section-pad" id="faq">
             <div className="faq-intro"><span className="eyebrow">FREQUENTLY ASKED QUESTIONS</span><h2>A few questions<br /><i>about paper bags.</i></h2><p>If you do not see your question here, send us your brief and we will answer directly.</p><a className="text-link" href="#quote">Ask us directly <MoveRight size={18} /></a></div>

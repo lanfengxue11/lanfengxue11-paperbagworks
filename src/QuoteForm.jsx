@@ -44,7 +44,7 @@ export default function QuoteForm({ prefilledNote = '', setPrefilledNote = () =>
                 <input type="hidden" name="_subject" value="New Inquiry from Paper Bag Works Website" />
                 <div className="form-row">
                   <label>Your name<input name="name" required placeholder="e.g. Alex" /></label>
-                  <label>Company / brand<input name="company" required placeholder="Brand name" /></label>
+                  <label>Company / brand (optional)<input name="company" placeholder="Brand name" /></label>
                 </div>
                 <div className="form-row">
                   <label>Email address<input name="email" required type="email" placeholder="name@brand.com" /></label>
@@ -70,13 +70,14 @@ export default function QuoteForm({ prefilledNote = '', setPrefilledNote = () =>
                     <select name="quantity" defaultValue="100-300">
                       <option value="" disabled>Select a quantity</option>
                       <option value="100-300">100–300 pieces (Low MOQ)</option>
-                      <option value="500-1000">500–1,000 pieces (Popular Run)</option>
+                      <option value="301-499">301–499 pieces</option><option value="500-1000">500–1,000 pieces (Popular Run)</option>
                       <option value="1000-3000">1,000–3,000 pieces (Wholesale)</option>
                       <option value="3000-5000">3,000–5,000 pieces (Bulk Export)</option>
                       <option value="5000+">5,000+ pieces (High Volume Container)</option>
                     </select>
                   </label>
                 </div>
+                <label>Delivery country (optional)<input name="delivery_country" placeholder="Country and postal code" /></label>
                 <label>Size and finish requirements
                   <textarea 
                     name="requirements" 
